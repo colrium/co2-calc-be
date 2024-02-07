@@ -1,0 +1,14 @@
+{
+	"byLocation": {
+		"scope1": false,
+		"scope2": false,
+		"scope3Downstream": false,
+		"scope3Upstream": false
+	},
+	"byMarket": {
+		"scope1": false,
+		"scope2": false,
+		"scope3Downstream": false,
+		"scope3Upstream": false
+	}
+}

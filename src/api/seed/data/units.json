@@ -1,0 +1,212 @@
+[
+	{
+		"name": "CO2",
+		"label": "CO₂",
+		"id": 1
+	},
+	{
+		"name": "PerKg",
+		"label": "/ kg",
+		"id": 2
+	},
+	{
+		"name": "days",
+		"label": "vrk",
+		"id": 3
+	},
+	{
+		"name": "dperyear",
+		"label": "vrk / vuosi",
+		"id": 4
+	},
+	{
+		"name": "ha",
+		"label": "ha",
+		"id": 5
+	},
+	{
+		"name": "kg",
+		"label": "kg",
+		"id": 6
+	},
+	{
+		"name": "kgCO2",
+		"label": "kg CO₂",
+		"id": 7
+	},
+	{
+		"name": "kgCO2e",
+		"label": "kg CO₂e",
+		"id": 8
+	},
+	{
+		"name": "kgCO2ePerKg",
+		"label": "kg CO₂e / kg",
+		"id": 9
+	},
+	{
+		"name": "kgCO2ePerKgUppercase",
+		"label": "KG CO₂e / KG",
+		"id": 10
+	},
+	{
+		"name": "kgCO2ePerKwh",
+		"label": "kg CO₂e / kWh",
+		"id": 11
+	},
+	{
+		"name": "kgCO2ePerKwhUppercase",
+		"label": "KG CO₂e / KWH",
+		"id": 12
+	},
+	{
+		"name": "kgCO2ePerTkm",
+		"label": "kg CO₂e / tkm",
+		"id": 13
+	},
+	{
+		"name": "kgCO2ePerTkmUppercase",
+		"label": "KG CO₂e / TKM",
+		"id": 14
+	},
+	{
+		"name": "kgCO2ePerUnit",
+		"label": "KG CO₂e / yksikkö",
+		"id": 15
+	},
+	{
+		"name": "kgCO2ePerUnitUppercase",
+		"label": "KG CO₂e / YKSIKKÖ",
+		"id": 16
+	},
+	{
+		"name": "kgCO2eUppercase",
+		"label": "KG CO₂e",
+		"id": 17
+	},
+	{
+		"name": "kgDM",
+		"label": "kg ka",
+		"id": 18
+	},
+	{
+		"name": "kgDMperha",
+		"label": "kg ka / ha",
+		"id": 19
+	},
+	{
+		"name": "kgnperha",
+		"label": "kg N / ha",
+		"id": 20
+	},
+	{
+		"name": "kgp2o5perha",
+		"label": "kg P₂O₅ / ha",
+		"id": 21
+	},
+	{
+		"name": "kgperanimal",
+		"label": "kg / eläin",
+		"id": 22
+	},
+	{
+		"name": "kgperha",
+		"label": "kg / ha",
+		"id": 23
+	},
+	{
+		"name": "kgpperha",
+		"label": "kg P / ha",
+		"id": 24
+	},
+	{
+		"name": "kgstoragedry",
+		"label": "kg varastokosteaa satoa",
+		"id": 25
+	},
+	{
+		"name": "khperhaper5years",
+		"label": "kg/ha/5v",
+		"id": 26
+	},
+	{
+		"name": "km",
+		"label": "km",
+		"id": 27
+	},
+	{
+		"name": "kwh",
+		"label": "kWh",
+		"id": 28
+	},
+	{
+		"name": "l",
+		"label": "l",
+		"id": 29
+	},
+	{
+		"name": "lFOperha",
+		"label": "l PÖ / ha",
+		"id": 30
+	},
+	{
+		"name": "lperha",
+		"label": "l / ha",
+		"id": 31
+	},
+	{
+		"name": "m3",
+		"label": "m³",
+		"id": 32
+	},
+	{
+		"name": "months",
+		"label": "kk",
+		"id": 33
+	},
+	{
+		"name": "pcs",
+		"label": "kpl",
+		"id": 34
+	},
+	{
+		"name": "percent",
+		"label": "%",
+		"id": 35
+	},
+	{
+		"name": "tCO2",
+		"label": "t CO₂",
+		"id": 36
+	},
+	{
+		"name": "tCO2e",
+		"label": "t CO₂e",
+		"id": 37
+	},
+	{
+		"name": "tCO2ePerKg",
+		"label": "t CO₂e / kg",
+		"id": 38
+	},
+	{
+		"name": "tCO2ePerKgUppercase",
+		"label": "T CO₂e / KG",
+		"id": 39
+	},
+	{
+		"name": "tCO2ePerTon",
+		"label": "t CO₂e / ton",
+		"id": 40
+	},
+	{
+		"name": "tCO2eUppercase",
+		"label": "T CO₂e",
+		"id": 41
+	},
+	{
+		"name": "valuePerKg",
+		"label": "arvo / kg",
+		"id": 42
+	}
+]
