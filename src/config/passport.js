@@ -5,9 +5,24 @@ const { jwtSecret } = require('./vars');
 const authProviders = require('../api/services/authProviders');
 const User = require('../api/models/user.model');
 
+
+const headerOrCookieExtractor = function (req) {
+	let token = null;
+	if (req && req.signedCookies && req.signedCookies.accessToken) {
+		token = req.signedCookies['accessToken'];
+	}
+	if (!token && req && req.cookies && req.cookies.accessToken) {
+		token = req.cookies['accessToken'];
+	}
+	if (!token) {
+		token = ExtractJwt.fromAuthHeaderWithScheme('Bearer')(req);
+	}
+	return token;
+};
+
 const jwtOptions = {
-  secretOrKey: jwtSecret,
-  jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('Bearer'),
+	secretOrKey: jwtSecret,
+	jwtFromRequest: headerOrCookieExtractor
 };
 
 const jwt = async (payload, done) => {
@@ -19,6 +34,8 @@ const jwt = async (payload, done) => {
     return done(error, false);
   }
 };
+
+
 
 const oAuth = (service) => async (token, done) => {
   try {

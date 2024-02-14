@@ -42,6 +42,7 @@
 		"bluebird": "^3.5.0",
 		"body-parser": "^1.17.0",
 		"compression": "^1.6.2",
+		"cookie-parser": "^1.4.6",
 		"cors": "^2.8.3",
 		"cross-env": "^7.0.3",
 		"dotenv-safe": "^8.2.0",
