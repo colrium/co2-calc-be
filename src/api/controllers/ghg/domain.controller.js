@@ -2,16 +2,15 @@
 
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
-const Factor = require('../../models/ghg/factor.model');
+const Domain = require('../../models/ghg/domain.model');
 
-const Context = Factor;
+const Context = Domain;
 /**
  * Get factor
  * @public
  */
 exports.get = async (req, res) => {
 	try {
-		
 		const factor = await Context.get(req.params.id);
 		if (factor) {
 			return res.status(httpStatus.FOUND).json(factor.transform());
@@ -84,7 +83,7 @@ exports.list = async (req, res, next) => {
 	if (user?.role === 'admin' && req.query?.userId) {
 		userId = req.query?.userId || userId;
 	}
-	const q = { ...req.query, userId: { $in: [null, userId] }}
+	const q = { ...req.query, userId: { $in: [null, userId] } };
 	try {
 		const { page = 1, perPage = 30 } = req.query;
 		const count = await Context.count(q);

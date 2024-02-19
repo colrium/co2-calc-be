@@ -45,7 +45,7 @@ exports.totals = async (req, res, next) => {
 			(acc, curr) => {
 					const {
 						byScope: { scope1 = 0, scope2 = 0, scope3us = 0, scope3ds = 0 },
-						byEmissionsType: { biogenic = 0, fossil = 0 }
+						byemissionType: { biogenic = 0, fossil = 0 }
 					} = {
 						byScope: {
 							scope1: 0,
@@ -53,7 +53,7 @@ exports.totals = async (req, res, next) => {
 							scope3us: 0,
 							scope3ds: 0
 						},
-						byEmissionsType: {
+						byemissionType: {
 							biogenic: 0,
 							fossil: 0
 						},

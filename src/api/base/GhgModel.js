@@ -84,13 +84,13 @@ class GhgModel extends mongoose.Schema {
 			},
 			count({ page = 1, perPage = 30, sort, ...query }) {
 				// const options = omitBy({ ...query }, isNil);
-				const options = Object.entries(omitBy({ ...query }, isNil)).reduce((acc, [key, value]) => {
+				const options = Object.entries({...query }).reduce((acc, [key, value]) => {
 					try {
-						acc[key] = JSON.parse(value.replaceAll(`'`, '"'));
+						acc[key] = value;
 					} catch (error) {}
 					return acc;
 				}, {});
-
+				console.log('options', options);
 				return this.countDocuments(options).exec();
 			},
 			...currentStatics

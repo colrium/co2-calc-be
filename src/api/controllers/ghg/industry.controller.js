@@ -2,19 +2,18 @@
 
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
-const Factor = require('../../models/ghg/factor.model');
+const Industry = require('../../models/ghg/industry.model');
 
-const Context = Factor;
+const Context = Industry;
 /**
- * Get factor
+ * Get activity
  * @public
  */
 exports.get = async (req, res) => {
 	try {
-		
-		const factor = await Context.get(req.params.id);
-		if (factor) {
-			return res.status(httpStatus.FOUND).json(factor.transform());
+		const doc = await Context.get(req.params.id);
+		if (doc) {
+			return res.status(httpStatus.FOUND).json(doc.transform());
 		} else {
 			return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
 		}
@@ -24,13 +23,13 @@ exports.get = async (req, res) => {
 };
 
 /**
- * Create new factor
+ * Create new activity
  * @public
  */
 exports.create = async (req, res, next) => {
 	try {
-		const factor = new Context(req.body);
-		const savedFactor = await factor.save();
+		const doc = new Context(req.body);
+		const savedDoc = await doc.save();
 		res.status(httpStatus.CREATED);
 		res.json(savedFactor.transform());
 	} catch (error) {
@@ -39,7 +38,7 @@ exports.create = async (req, res, next) => {
 };
 
 /**
- * Replace existing factor
+ * Replace existing activity
  * @public
  */
 exports.replace = async (req, res, next) => {
@@ -53,7 +52,7 @@ exports.replace = async (req, res, next) => {
 		const ommitUserId = user.role !== 'admin' ? 'userId' : '';
 		const newFactorObject = omit(newFactor.toObject(), '_id', ommitUserId);
 
-		await factor.updateOne(newFactorObject, { override: true, upsert: true });
+		await Context.updateOne(newFactorObject, { override: true, upsert: true });
 		const savedFactor = await Context.findById(req.id);
 
 		res.json(savedFactor.transform());
@@ -63,7 +62,7 @@ exports.replace = async (req, res, next) => {
 };
 
 /**
- * Update existing factor
+ * Update existing activity
  * @public
  */
 exports.update = (req, res, next) => {
@@ -75,20 +74,16 @@ exports.update = (req, res, next) => {
 };
 
 /**
- * Get factor list
+ * Get activity list
  * @public
  */
 exports.list = async (req, res, next) => {
 	const user = req.user;
-	let userId = user?._id || user?.id;
-	if (user?.role === 'admin' && req.query?.userId) {
-		userId = req.query?.userId || userId;
-	}
-	const q = { ...req.query, userId: { $in: [null, userId] }}
+	const { page = 1, perPage = 10, ...q } = req.query;
 	try {
-		const { page = 1, perPage = 30 } = req.query;
-		const count = await Context.count(q);
-		const docs = await Context.list(q);
+		console.log('q', q)
+		const count = await Context.countDocuments(q);
+		const docs = await Context.list(req.query);
 		const data = docs.map((doc) => doc.transform());
 		const pages = Math.ceil(count / perPage);
 		res.json({ data: data, pages: pages, page, perPage, count });
@@ -98,14 +93,12 @@ exports.list = async (req, res, next) => {
 };
 
 /**
- * Delete factor
+ * Delete activity
  * @public
  */
 exports.remove = (req, res, next) => {
-	const user = req.user;
 
-	factor
-		.remove({ _id: req.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+	Context.remove({ _id: req.params.id})
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };

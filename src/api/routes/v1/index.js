@@ -7,6 +7,9 @@ const resultRoutes = require('./ghg/result.route');
 const helpRoutes = require('./ghg/help.route');
 const activityTypeRoutes = require('./ghg/activityType.route');
 const overViewRoutes = require('./ghg/overview.route');
+const activityRoutes = require('./ghg/activity.route');
+const industryRoutes = require('./ghg/industry.route');
+const domainRoutes = require('./ghg/domain.route');
 //
 const router = express.Router();
 
@@ -24,6 +27,9 @@ router.use('/overview', overViewRoutes);
 router.use('/factors', factorRoutes);
 router.use('/results', resultRoutes);
 router.use('/activity-types', activityTypeRoutes);
+router.use('/activities', activityRoutes);
+router.use('/industries', industryRoutes);
+router.use('/domains', domainRoutes);
 router.use('/help', helpRoutes);
 
 

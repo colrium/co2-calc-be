@@ -79,11 +79,15 @@ exports.update = async (req, res, next) => {
 exports.list = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
-	if (user?.role === 'admin' && req.query?.userId) {
-		userId = req.query?.userId || userId;
+	let q = { ...req.query };
+	if (user?.role === 'admin' && req.query?.userId){
+		q = { ...req.query, userId: { $in: [req.query?.userId] } };
 	}
-	const q = { ...req.query, userId: { $in: [null, userId] } };
+	else if (user?.role !== 'admin') {
+		q = { ...req.query, userId: { $in: [userId] } };
+	}
 	try {
+		console.log('req.query?.userId', req.query?.userId);
 		const { page = 1, perPage = 30 } = req.query;
 		const count = await Context.count(q);
 		const docs = await Context.list(q);

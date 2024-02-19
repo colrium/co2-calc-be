@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Anthracite, coal",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -15,7 +15,7 @@
 	{
 		"id": 2,
 		"name": "Black liquor",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -28,7 +28,7 @@
 	{
 		"id": 3,
 		"name": "Brown coal",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -41,7 +41,7 @@
 	{
 		"id": 4,
 		"name": "Diesel",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -54,7 +54,7 @@
 	{
 		"id": 5,
 		"name": "Gasoline, industry use",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -67,7 +67,7 @@
 	{
 		"id": 6,
 		"name": "Hard coal",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -80,7 +80,7 @@
 	{
 		"id": 7,
 		"name": "Heavy fuel oil, suplhur content <0,01%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -93,7 +93,7 @@
 	{
 		"id": 8,
 		"name": "Heavy fuel oil, suplhur content <0,05%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -106,7 +106,7 @@
 	{
 		"id": 9,
 		"name": "Heavy fuel oil, suplhur content <1%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -119,7 +119,7 @@
 	{
 		"id": 10,
 		"name": "Heavy fuel oil, suplhur content >1%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -132,7 +132,7 @@
 	{
 		"id": 11,
 		"name": "Other heavy oils",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -145,7 +145,7 @@
 	{
 		"id": 12,
 		"name": "Light fuel oil, low sulphur content",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -158,7 +158,7 @@
 	{
 		"id": 13,
 		"name": "Light fuel oil, sulphur free",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -171,7 +171,7 @@
 	{
 		"id": 14,
 		"name": "Liquefied natural gas (LNG)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -184,7 +184,7 @@
 	{
 		"id": 15,
 		"name": "Liquefied petroleum gas (LPG)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -197,7 +197,7 @@
 	{
 		"id": 16,
 		"name": "Natural gas",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -210,7 +210,7 @@
 	{
 		"id": 17,
 		"name": "Biogas from landfill",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -223,7 +223,7 @@
 	{
 		"id": 18,
 		"name": "Biogas from waste water plant",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -236,7 +236,7 @@
 	{
 		"id": 19,
 		"name": "Thermic biogas (gasified wood or other biomass)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -249,7 +249,7 @@
 	{
 		"id": 20,
 		"name": "Biomethane from natural gas grid",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -262,7 +262,7 @@
 	{
 		"id": 21,
 		"name": "Biomethane, non-grid sources",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -275,7 +275,7 @@
 	{
 		"id": 22,
 		"name": "Liquefied biomethane (LBG)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -288,7 +288,7 @@
 	{
 		"id": 23,
 		"name": "Other biogas",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "m3",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -301,7 +301,7 @@
 	{
 		"id": 24,
 		"name": "Liquefied biogas / Biopropane ",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -314,7 +314,7 @@
 	{
 		"id": 25,
 		"name": "Biosludge",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -327,7 +327,7 @@
 	{
 		"id": 26,
 		"name": "Energy wood (stems and split firewood)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -340,7 +340,7 @@
 	{
 		"id": 27,
 		"name": "Energy wood (chips from roundwood)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -353,7 +353,7 @@
 	{
 		"id": 28,
 		"name": "Energy wood (forest residue chips)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -366,7 +366,7 @@
 	{
 		"id": 29,
 		"name": "Energy wood (hog fuel from stumps)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -379,7 +379,7 @@
 	{
 		"id": 30,
 		"name": "Energy wood (energy willow)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -392,7 +392,7 @@
 	{
 		"id": 31,
 		"name": "Energy wood (recycled wood)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -405,7 +405,7 @@
 	{
 		"id": 32,
 		"name": "Non-woody biomass",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -418,7 +418,7 @@
 	{
 		"id": 33,
 		"name": "Oat hull",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -431,7 +431,7 @@
 	{
 		"id": 34,
 		"name": "Peat",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -444,7 +444,7 @@
 	{
 		"id": 35,
 		"name": "Municipal waste (bio content 50%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -457,7 +457,7 @@
 	{
 		"id": 36,
 		"name": "Wood pellets",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -470,7 +470,7 @@
 	{
 		"id": 37,
 		"name": "Solar power, electricity",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "icVZU4jzgEGPPuqkBPt4yA",
 		"categoryName": "Electricity, separate production",
@@ -482,7 +482,7 @@
 	{
 		"id": 38,
 		"name": "Wind power, electricity",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "icVZU4jzgEGPPuqkBPt4yA",
 		"categoryName": "Electricity, separate production",
@@ -494,7 +494,7 @@
 	{
 		"id": 39,
 		"name": "Solar energy, heat",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "slePg3PAWEWvOGsriy1NIA",
 		"categoryName": "Heat, separate production",
@@ -505,7 +505,7 @@
 	{
 		"id": 40,
 		"name": "Motor gasoline",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -518,7 +518,7 @@
 	{
 		"id": 41,
 		"name": "Renewable diesel",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -531,7 +531,7 @@
 	{
 		"id": 42,
 		"name": "Bioethanol (biogenic)",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -544,7 +544,7 @@
 	{
 		"id": 43,
 		"name": "Bioethanol (fossil)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "wV_ke_ux-Uej6NzdLcNo5g",
 		"categoryName": "Fuels",
@@ -557,7 +557,7 @@
 	{
 		"id": 44,
 		"name": "Carbon dioxide (CO2)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "co2",
 		"unit": "t",
 		"categoryId": "QiDdMKFRFE_DaaLDLPx5lg",
@@ -571,7 +571,7 @@
 	{
 		"id": 45,
 		"name": "Methane (CH4)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "ch4",
 		"unit": "t",
 		"categoryId": "QiDdMKFRFE_DaaLDLPx5lg",
@@ -585,7 +585,7 @@
 	{
 		"id": 46,
 		"name": "Nitrous oxide (N2O)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "n2o",
 		"unit": "t",
 		"categoryId": "QiDdMKFRFE_DaaLDLPx5lg",
@@ -599,7 +599,7 @@
 	{
 		"id": 47,
 		"name": "Removal of carbon dioxide (CDR), long-term",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"activityGas": "co2",
 		"unit": "t",
 		"categoryId": "QiDdMKFRFE_DaaLDLPx5lg",
@@ -613,7 +613,7 @@
 	{
 		"id": 48,
 		"name": "HFC-32",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "hfc_32",
 		"unit": "t",
 		"categoryId": "ev8OQzg6ZE2sfGeHgg0yTA",
@@ -627,7 +627,7 @@
 	{
 		"id": 49,
 		"name": "HFC-125",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "hfc_125",
 		"unit": "t",
 		"categoryId": "ev8OQzg6ZE2sfGeHgg0yTA",
@@ -641,7 +641,7 @@
 	{
 		"id": 50,
 		"name": "HFC-134",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "hfc_134",
 		"unit": "t",
 		"categoryId": "ev8OQzg6ZE2sfGeHgg0yTA",
@@ -655,7 +655,7 @@
 	{
 		"id": 51,
 		"name": "HFC-134a",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "hfc_134a",
 		"unit": "t",
 		"categoryId": "ev8OQzg6ZE2sfGeHgg0yTA",
@@ -669,7 +669,7 @@
 	{
 		"id": 52,
 		"name": "HFC-152a",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "hfc_152a",
 		"unit": "t",
 		"categoryId": "ev8OQzg6ZE2sfGeHgg0yTA",
@@ -683,7 +683,7 @@
 	{
 		"id": 53,
 		"name": "R-404A",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "r_404a",
 		"unit": "t",
 		"categoryId": "VmOxAhpCYk_zyVfwPqqygA",
@@ -697,7 +697,7 @@
 	{
 		"id": 54,
 		"name": "R-407C",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "r_407c",
 		"unit": "t",
 		"categoryId": "VmOxAhpCYk_zyVfwPqqygA",
@@ -711,7 +711,7 @@
 	{
 		"id": 55,
 		"name": "R-410A",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "r_410a",
 		"unit": "t",
 		"categoryId": "VmOxAhpCYk_zyVfwPqqygA",
@@ -725,7 +725,7 @@
 	{
 		"id": 56,
 		"name": "R-422D",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "r_422d",
 		"unit": "t",
 		"categoryId": "VmOxAhpCYk_zyVfwPqqygA",
@@ -739,7 +739,7 @@
 	{
 		"id": 57,
 		"name": "R-507",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "r_507",
 		"unit": "t",
 		"categoryId": "VmOxAhpCYk_zyVfwPqqygA",
@@ -753,7 +753,7 @@
 	{
 		"id": 58,
 		"name": "PFC-14",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_14",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -767,7 +767,7 @@
 	{
 		"id": 59,
 		"name": "PFC-116",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_116",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -781,7 +781,7 @@
 	{
 		"id": 60,
 		"name": "PFC-218",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_218",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -795,7 +795,7 @@
 	{
 		"id": 61,
 		"name": "PFC-C-318",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_c_318",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -809,7 +809,7 @@
 	{
 		"id": 62,
 		"name": "PFC-31-10",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_31_10",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -823,7 +823,7 @@
 	{
 		"id": 63,
 		"name": "PFC-41-12",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_41_12",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -837,7 +837,7 @@
 	{
 		"id": 64,
 		"name": "PFC-51-14",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_51_14",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -851,7 +851,7 @@
 	{
 		"id": 65,
 		"name": "PFC-61-16",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_61_16",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -865,7 +865,7 @@
 	{
 		"id": 66,
 		"name": "PFC-71-18",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_71_18",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -879,7 +879,7 @@
 	{
 		"id": 67,
 		"name": "PFC-91-18",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_91_18",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -893,7 +893,7 @@
 	{
 		"id": 68,
 		"name": "PFC-1114",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_1114",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -907,7 +907,7 @@
 	{
 		"id": 69,
 		"name": "PFC-1216",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "pfc_1216",
 		"unit": "t",
 		"categoryId": "UmJ-B1AUDkSKA9ph065Gfw",
@@ -921,7 +921,7 @@
 	{
 		"id": 70,
 		"name": "SF6",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "sf6",
 		"unit": "t",
 		"categoryId": "7_59q8Wmv06xqzBveozL_A",
@@ -934,7 +934,7 @@
 	{
 		"id": 71,
 		"name": "NF3",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"activityGas": "nf3",
 		"unit": "t",
 		"categoryId": "uI5tV2Qxl0K4QTqzkUJMqw",
@@ -947,7 +947,7 @@
 	{
 		"id": 72,
 		"name": "Electricity, residual mix, national average",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "MfjgeQvCa02ls99v4jClPA",
 		"categoryName": "Electricity, non-renewable",
@@ -959,7 +959,7 @@
 	{
 		"id": 73,
 		"name": "Electricity grid, Global average",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "MfjgeQvCa02ls99v4jClPA",
 		"categoryName": "Electricity, non-renewable",
@@ -971,7 +971,7 @@
 	{
 		"id": 74,
 		"name": "Electricity, residual mix, average",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "MfjgeQvCa02ls99v4jClPA",
 		"categoryName": "Electricity, non-renewable",
@@ -983,7 +983,7 @@
 	{
 		"id": 75,
 		"name": "Industrial steam, national average",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "DC9PeCRVIUyjky-6ohaE4w",
 		"categoryName": "Steam",
@@ -995,7 +995,7 @@
 	{
 		"id": 76,
 		"name": "Industrial steam, renewable",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "DC9PeCRVIUyjky-6ohaE4w",
 		"categoryName": "Steam",
@@ -1007,7 +1007,7 @@
 	{
 		"id": 77,
 		"name": "Black liquor ",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1019,7 +1019,7 @@
 	{
 		"id": 78,
 		"name": "Heavy fuel oil, sulphur content <1%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1031,7 +1031,7 @@
 	{
 		"id": 79,
 		"name": "Heavy fuel oil, sulphur content >1%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1043,19 +1043,7 @@
 	{
 		"id": 80,
 		"name": "Liquefied natural gas (LNG) ",
-		"emissionsType": "fossil",
-		"unit": "kwh",
-		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
-		"categoryName": "Steam and heat",
-		"regionId": "ZZGLOBAL",
-		"yearFrom": 2022,
-		"yearTo": 2022,
-		"sections": ["scope2_market_steam", "scope2_market_heat"]
-	},
-	{
-		"id": 81,
-		"name": "Liquefied biogas / Biopropane",
-		"emissionsType": "biogenic",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1067,7 +1055,7 @@
 	{
 		"id": 82,
 		"name": "Energy wood",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1079,7 +1067,7 @@
 	{
 		"id": 83,
 		"name": "Cereal crops and straw parts",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1091,7 +1079,7 @@
 	{
 		"id": 84,
 		"name": "Reen canary grass",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1103,7 +1091,7 @@
 	{
 		"id": 85,
 		"name": "Vegetable oils and fats",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1115,7 +1103,7 @@
 	{
 		"id": 86,
 		"name": "Other vegetable-based fuels",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1127,7 +1115,7 @@
 	{
 		"id": 87,
 		"name": "Animals fats",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1139,7 +1127,7 @@
 	{
 		"id": 88,
 		"name": "Manure",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1151,7 +1139,7 @@
 	{
 		"id": 89,
 		"name": "Heavy fuel oil, sulphur content <0,05%",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kwh",
 		"categoryId": "yAEZXtGrBEqiX78PGmtZNg",
 		"categoryName": "Steam and heat",
@@ -1163,7 +1151,7 @@
 	{
 		"id": 90,
 		"name": "Cooling, renewable",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "DYggIlOtskK2RhJ0ONcMFw",
 		"categoryName": "Cooling",
@@ -1175,7 +1163,7 @@
 	{
 		"id": 91,
 		"name": "Electricity, renewable",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "kwh",
 		"categoryId": "NYCofqi5RUqvkVBC6cUdVQ",
 		"categoryName": "Electricity, renewable",
@@ -1187,7 +1175,7 @@
 	{
 		"id": 118,
 		"name": "Wheat grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1199,7 +1187,7 @@
 	{
 		"id": 119,
 		"name": "Oat grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1211,7 +1199,7 @@
 	{
 		"id": 120,
 		"name": "Barley grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1223,7 +1211,7 @@
 	{
 		"id": 121,
 		"name": "Rye grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1235,7 +1223,7 @@
 	{
 		"id": 122,
 		"name": "Pulses",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -1247,7 +1235,7 @@
 	{
 		"id": 123,
 		"name": "Pepper (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -1259,7 +1247,7 @@
 	{
 		"id": 124,
 		"name": "Broccoli (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -1271,7 +1259,7 @@
 	{
 		"id": 125,
 		"name": "Cabbage (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -1283,7 +1271,7 @@
 	{
 		"id": 126,
 		"name": "Carrot (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -1295,7 +1283,7 @@
 	{
 		"id": 127,
 		"name": "Cauliflower (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -1307,7 +1295,7 @@
 	{
 		"id": 128,
 		"name": "Celery (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -1319,7 +1307,7 @@
 	{
 		"id": 129,
 		"name": "Lettuce (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -1331,7 +1319,7 @@
 	{
 		"id": 130,
 		"name": "Spinach (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -1343,7 +1331,7 @@
 	{
 		"id": 131,
 		"name": "Tomato (fresh, greenhouse)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -1355,7 +1343,7 @@
 	{
 		"id": 132,
 		"name": "Tomato (fresh, open field)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -1367,7 +1355,7 @@
 	{
 		"id": 133,
 		"name": "Salt",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "n6PVivHRrEu9qNhC360Sgw",
 		"categoryName": "Spices and their products",
@@ -1379,7 +1367,7 @@
 	{
 		"id": 134,
 		"name": "Sugar",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -1391,7 +1379,7 @@
 	{
 		"id": 135,
 		"name": "Yeast (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -1403,7 +1391,7 @@
 	{
 		"id": 136,
 		"name": "Tap water",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -1415,7 +1403,7 @@
 	{
 		"id": 137,
 		"name": "Potato",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -1427,7 +1415,7 @@
 	{
 		"id": 138,
 		"name": "Rapeseed",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -1439,7 +1427,7 @@
 	{
 		"id": 139,
 		"name": "Maize grain ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1451,7 +1439,7 @@
 	{
 		"id": 140,
 		"name": "Rice grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1463,7 +1451,7 @@
 	{
 		"id": 141,
 		"name": "Pineapple (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1475,7 +1463,7 @@
 	{
 		"id": 142,
 		"name": "Banana (fresh), Central and South Americas",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1487,7 +1475,7 @@
 	{
 		"id": 143,
 		"name": "Banana (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1499,7 +1487,7 @@
 	{
 		"id": 144,
 		"name": "Apple (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1511,7 +1499,7 @@
 	{
 		"id": 145,
 		"name": "Kiwi (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1523,7 +1511,7 @@
 	{
 		"id": 146,
 		"name": "Lemon (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1535,7 +1523,7 @@
 	{
 		"id": 147,
 		"name": "Coconut (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1547,7 +1535,7 @@
 	{
 		"id": 148,
 		"name": "Pear (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1559,7 +1547,7 @@
 	{
 		"id": 149,
 		"name": "Apricot (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1571,7 +1559,7 @@
 	{
 		"id": 150,
 		"name": "Grape (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1583,7 +1571,7 @@
 	{
 		"id": 151,
 		"name": "Melon (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1595,7 +1583,7 @@
 	{
 		"id": 152,
 		"name": "Peaches (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1607,7 +1595,7 @@
 	{
 		"id": 153,
 		"name": "Mandarin (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -1619,7 +1607,7 @@
 	{
 		"id": 154,
 		"name": "Strawberry (open field, fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -1633,7 +1621,7 @@
 	{
 		"id": 155,
 		"name": "Cow's milk",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -1646,7 +1634,7 @@
 	{
 		"id": 156,
 		"name": "Cheese (cow milk based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -1659,7 +1647,7 @@
 	{
 		"id": 157,
 		"name": "Yoghurt (cow milk based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -1672,7 +1660,7 @@
 	{
 		"id": 158,
 		"name": "Butter (milk-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -1684,7 +1672,7 @@
 	{
 		"id": 159,
 		"name": "Beef meat (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -1696,7 +1684,7 @@
 	{
 		"id": 160,
 		"name": "Pork meat (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -1708,7 +1696,7 @@
 	{
 		"id": 161,
 		"name": "Egg (chicken)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "VPrZY4d0UU2fx89Ee40YvA",
 		"categoryName": "Eggs and their products",
@@ -1720,7 +1708,7 @@
 	{
 		"id": 162,
 		"name": "Soybean",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -1732,7 +1720,7 @@
 	{
 		"id": 163,
 		"name": "Soy sauce [R1], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "hx1tMXKLIES3r7PRSG2gyQ",
 		"categoryName": "Custom raw materials",
@@ -1744,7 +1732,7 @@
 	{
 		"id": 164,
 		"name": "Garlic (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -1756,7 +1744,7 @@
 	{
 		"id": 165,
 		"name": "Basil (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -1768,7 +1756,7 @@
 	{
 		"id": 166,
 		"name": "Ammonia (100%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -1780,7 +1768,7 @@
 	{
 		"id": 167,
 		"name": "Phosphoric acid (85%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -1792,7 +1780,7 @@
 	{
 		"id": 168,
 		"name": "Potassium chloride (60%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -1804,7 +1792,7 @@
 	{
 		"id": 169,
 		"name": "Basil-garlic mix (50% / 50%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "n6PVivHRrEu9qNhC360Sgw",
 		"categoryName": "Spices and their products",
@@ -1816,7 +1804,7 @@
 	{
 		"id": 170,
 		"name": "Spice mix (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "n6PVivHRrEu9qNhC360Sgw",
 		"categoryName": "Spices and their products",
@@ -1828,7 +1816,7 @@
 	{
 		"id": 171,
 		"name": "Soy sauce (conventional)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -1840,7 +1828,7 @@
 	{
 		"id": 172,
 		"name": "Soy sauce (organic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -1852,7 +1840,7 @@
 	{
 		"id": 173,
 		"name": "Rapeseed oil",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -1864,7 +1852,7 @@
 	{
 		"id": 174,
 		"name": "Wheat flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1876,7 +1864,7 @@
 	{
 		"id": 175,
 		"name": "Oat flour ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1888,7 +1876,7 @@
 	{
 		"id": 176,
 		"name": "Wheat gluten",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1900,7 +1888,7 @@
 	{
 		"id": 177,
 		"name": "Rye flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1912,7 +1900,7 @@
 	{
 		"id": 178,
 		"name": "Urea ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -1924,7 +1912,7 @@
 	{
 		"id": 179,
 		"name": "Urea",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -1936,7 +1924,7 @@
 	{
 		"id": 180,
 		"name": "Broiler meat (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -1948,7 +1936,7 @@
 	{
 		"id": 181,
 		"name": "Oat grain (organic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1960,7 +1948,7 @@
 	{
 		"id": 182,
 		"name": "Maize flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1972,7 +1960,7 @@
 	{
 		"id": 183,
 		"name": "Potato flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -1984,7 +1972,7 @@
 	{
 		"id": 184,
 		"name": "Rice flour ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -1996,7 +1984,7 @@
 	{
 		"id": 185,
 		"name": "Brussels (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -2008,7 +1996,7 @@
 	{
 		"id": 186,
 		"name": "Quinoa (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2020,7 +2008,7 @@
 	{
 		"id": 187,
 		"name": "Elderberry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2034,7 +2022,7 @@
 	{
 		"id": 188,
 		"name": "Blackberry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2048,7 +2036,7 @@
 	{
 		"id": 189,
 		"name": "Mango (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2060,7 +2048,7 @@
 	{
 		"id": 190,
 		"name": "Cranberry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2074,7 +2062,7 @@
 	{
 		"id": 191,
 		"name": "Gooseberry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2088,7 +2076,7 @@
 	{
 		"id": 192,
 		"name": "Black currant (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2102,7 +2090,7 @@
 	{
 		"id": 193,
 		"name": "Red currant (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2116,7 +2104,7 @@
 	{
 		"id": 194,
 		"name": "Cherry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2130,7 +2118,7 @@
 	{
 		"id": 195,
 		"name": "Raspberry (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -2144,7 +2132,7 @@
 	{
 		"id": 196,
 		"name": "Plum (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2156,7 +2144,7 @@
 	{
 		"id": 197,
 		"name": "Avocado (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2168,7 +2156,7 @@
 	{
 		"id": 198,
 		"name": "Pistachio (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2180,7 +2168,7 @@
 	{
 		"id": 199,
 		"name": "Walnut (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2192,7 +2180,7 @@
 	{
 		"id": 200,
 		"name": "Cashew (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2204,7 +2192,7 @@
 	{
 		"id": 201,
 		"name": "Hazelnut (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2216,7 +2204,7 @@
 	{
 		"id": 202,
 		"name": "Almond (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2228,7 +2216,7 @@
 	{
 		"id": 203,
 		"name": "Peanut (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2240,7 +2228,7 @@
 	{
 		"id": 204,
 		"name": "Portobello mushroom (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2252,7 +2240,7 @@
 	{
 		"id": 205,
 		"name": "Champion mushroom (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2264,7 +2252,7 @@
 	{
 		"id": 206,
 		"name": "Olive, green (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2276,7 +2264,7 @@
 	{
 		"id": 207,
 		"name": "Olive, black (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2288,7 +2276,7 @@
 	{
 		"id": 208,
 		"name": "Chickpea (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2300,7 +2288,7 @@
 	{
 		"id": 209,
 		"name": "Parsley (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -2312,7 +2300,7 @@
 	{
 		"id": 210,
 		"name": "Dill (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -2324,7 +2312,7 @@
 	{
 		"id": 211,
 		"name": "Chives (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -2336,7 +2324,7 @@
 	{
 		"id": 212,
 		"name": "Pumpkin (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2348,7 +2336,7 @@
 	{
 		"id": 213,
 		"name": "Zucchini (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2360,7 +2348,7 @@
 	{
 		"id": 214,
 		"name": "Leek (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -2372,7 +2360,7 @@
 	{
 		"id": 215,
 		"name": "Eggplant (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2384,7 +2372,7 @@
 	{
 		"id": 216,
 		"name": "Beetroot (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2396,7 +2384,7 @@
 	{
 		"id": 217,
 		"name": "Spring onion (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2408,7 +2396,7 @@
 	{
 		"id": 218,
 		"name": "Red onion (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2420,7 +2408,7 @@
 	{
 		"id": 219,
 		"name": "Yellow onion (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2432,7 +2420,7 @@
 	{
 		"id": 220,
 		"name": "Bean (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2444,7 +2432,7 @@
 	{
 		"id": 221,
 		"name": "Artichoke (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2456,7 +2444,7 @@
 	{
 		"id": 222,
 		"name": "Asparagus, green (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2468,7 +2456,7 @@
 	{
 		"id": 223,
 		"name": "Asparagus, white (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2480,7 +2468,7 @@
 	{
 		"id": 224,
 		"name": "Lentils (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2492,7 +2480,7 @@
 	{
 		"id": 225,
 		"name": "Pea (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2504,7 +2492,7 @@
 	{
 		"id": 226,
 		"name": "Ginger (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2516,7 +2504,7 @@
 	{
 		"id": 227,
 		"name": "Fennel (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -2528,7 +2516,7 @@
 	{
 		"id": 228,
 		"name": "Pineapple (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2540,7 +2528,7 @@
 	{
 		"id": 229,
 		"name": "Sunflower seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2552,7 +2540,7 @@
 	{
 		"id": 230,
 		"name": "Millet seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2564,7 +2552,7 @@
 	{
 		"id": 231,
 		"name": "Flax seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -2576,7 +2564,7 @@
 	{
 		"id": 232,
 		"name": "Garlic (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2588,7 +2576,7 @@
 	{
 		"id": 233,
 		"name": "Vanilla sugar",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -2600,7 +2588,7 @@
 	{
 		"id": 234,
 		"name": "Thyme (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -2612,7 +2600,7 @@
 	{
 		"id": 235,
 		"name": "Tomato puree",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2624,7 +2612,7 @@
 	{
 		"id": 236,
 		"name": "Tomato crush",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2636,7 +2624,7 @@
 	{
 		"id": 237,
 		"name": "Onion (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2648,7 +2636,7 @@
 	{
 		"id": 238,
 		"name": "Lemon juice",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -2660,7 +2648,7 @@
 	{
 		"id": 239,
 		"name": "Mushroom (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2672,7 +2660,7 @@
 	{
 		"id": 240,
 		"name": "Mushroom (processed)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2684,7 +2672,7 @@
 	{
 		"id": 241,
 		"name": "Beetroot (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2696,7 +2684,7 @@
 	{
 		"id": 242,
 		"name": "Potato (boiled)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2708,7 +2696,7 @@
 	{
 		"id": 243,
 		"name": "Parsnip (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2720,7 +2708,7 @@
 	{
 		"id": 244,
 		"name": "Parsnip (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2732,7 +2720,7 @@
 	{
 		"id": 245,
 		"name": "Pepper (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2744,7 +2732,7 @@
 	{
 		"id": 246,
 		"name": "Kohlrabi (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -2756,7 +2744,7 @@
 	{
 		"id": 247,
 		"name": "Swede/rutabaga (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2768,7 +2756,7 @@
 	{
 		"id": 248,
 		"name": "Whipped cream (milk-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -2780,7 +2768,7 @@
 	{
 		"id": 249,
 		"name": "Cabbage (groats)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -2792,7 +2780,7 @@
 	{
 		"id": 250,
 		"name": "Sweet potato (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2804,7 +2792,7 @@
 	{
 		"id": 251,
 		"name": "Sweet potato (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -2816,7 +2804,7 @@
 	{
 		"id": 252,
 		"name": "Tofu",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2828,7 +2816,7 @@
 	{
 		"id": 253,
 		"name": "Orange (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2840,7 +2828,7 @@
 	{
 		"id": 254,
 		"name": "Blood orange (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -2852,7 +2840,7 @@
 	{
 		"id": 255,
 		"name": "Chili pepper (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -2864,7 +2852,7 @@
 	{
 		"id": 256,
 		"name": "Coriander (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -2876,7 +2864,7 @@
 	{
 		"id": 257,
 		"name": "Breadcrumbs",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -2888,7 +2876,7 @@
 	{
 		"id": 258,
 		"name": "Aroma (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2900,7 +2888,7 @@
 	{
 		"id": 259,
 		"name": "Preservative (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2912,7 +2900,7 @@
 	{
 		"id": 260,
 		"name": "Acidity regulator (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2924,7 +2912,7 @@
 	{
 		"id": 261,
 		"name": "Thickener (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2936,7 +2924,7 @@
 	{
 		"id": 262,
 		"name": "Emulsifier (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2948,7 +2936,7 @@
 	{
 		"id": 263,
 		"name": "Baking powder (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2960,7 +2948,7 @@
 	{
 		"id": 264,
 		"name": "Baking soda (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -2972,7 +2960,7 @@
 	{
 		"id": 265,
 		"name": "Soy strip (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2984,7 +2972,7 @@
 	{
 		"id": 266,
 		"name": "Soy groat (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -2996,7 +2984,7 @@
 	{
 		"id": 267,
 		"name": "Mini thickens (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -3008,7 +2996,7 @@
 	{
 		"id": 268,
 		"name": "Mint (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -3020,7 +3008,7 @@
 	{
 		"id": 269,
 		"name": "Sesame seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -3032,7 +3020,7 @@
 	{
 		"id": 270,
 		"name": "Chia seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -3044,7 +3032,7 @@
 	{
 		"id": 271,
 		"name": "Lemon grass (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -3056,7 +3044,7 @@
 	{
 		"id": 272,
 		"name": "Sugar pea (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3068,7 +3056,7 @@
 	{
 		"id": 273,
 		"name": "Soy drink",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3080,7 +3068,7 @@
 	{
 		"id": 274,
 		"name": "Lemon juice (concentrate)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -3092,7 +3080,7 @@
 	{
 		"id": 275,
 		"name": "Syrup",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -3104,7 +3092,7 @@
 	{
 		"id": 276,
 		"name": "Maize starch",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3116,7 +3104,7 @@
 	{
 		"id": 277,
 		"name": "Cassava starch",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3128,7 +3116,7 @@
 	{
 		"id": 278,
 		"name": "Sweet chili sauce (generic) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3140,7 +3128,7 @@
 	{
 		"id": 279,
 		"name": "Pork (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -3152,7 +3140,7 @@
 	{
 		"id": 280,
 		"name": "Oat flake",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3164,7 +3152,7 @@
 	{
 		"id": 281,
 		"name": "Wheat flake",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3176,7 +3164,7 @@
 	{
 		"id": 282,
 		"name": "Barley flake",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3188,7 +3176,7 @@
 	{
 		"id": 283,
 		"name": "Rye flake",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3200,7 +3188,7 @@
 	{
 		"id": 284,
 		"name": "Buckwheat flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3212,7 +3200,7 @@
 	{
 		"id": 285,
 		"name": "Mung bean flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3224,7 +3212,7 @@
 	{
 		"id": 286,
 		"name": "Millet flour",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3236,7 +3224,7 @@
 	{
 		"id": 287,
 		"name": "Wheat pasta (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3248,7 +3236,7 @@
 	{
 		"id": 288,
 		"name": "Wheat pasta (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3260,7 +3248,7 @@
 	{
 		"id": 289,
 		"name": "Rice pasta (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3272,7 +3260,7 @@
 	{
 		"id": 290,
 		"name": "Rice pasta (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3284,7 +3272,7 @@
 	{
 		"id": 291,
 		"name": "Oat pasta (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3296,7 +3284,7 @@
 	{
 		"id": 292,
 		"name": "Oat pasta (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3308,7 +3296,7 @@
 	{
 		"id": 293,
 		"name": "Lime (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -3320,7 +3308,7 @@
 	{
 		"id": 294,
 		"name": "Vinegar (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -3332,7 +3320,7 @@
 	{
 		"id": 295,
 		"name": "Colourant (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -3344,7 +3332,7 @@
 	{
 		"id": 296,
 		"name": "Chili paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3356,7 +3344,7 @@
 	{
 		"id": 297,
 		"name": "Ginger paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3368,7 +3356,7 @@
 	{
 		"id": 298,
 		"name": "Mustard seed (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -3380,7 +3368,7 @@
 	{
 		"id": 299,
 		"name": "Mustard",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3392,7 +3380,7 @@
 	{
 		"id": 300,
 		"name": "Cooking cream (milk-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3404,7 +3392,7 @@
 	{
 		"id": 301,
 		"name": "Oat cream (oat-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3416,7 +3404,7 @@
 	{
 		"id": 302,
 		"name": "Coconut cream (coconut-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3428,7 +3416,7 @@
 	{
 		"id": 303,
 		"name": "Vegetable fat blend (milk-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3440,7 +3428,7 @@
 	{
 		"id": 304,
 		"name": "Vegetable fat blend (oat-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3452,7 +3440,7 @@
 	{
 		"id": 305,
 		"name": "Vegetable fat blend (coconut-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3464,7 +3452,7 @@
 	{
 		"id": 306,
 		"name": "Palm oil",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3476,7 +3464,7 @@
 	{
 		"id": 307,
 		"name": "Brown sauce bar",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3488,7 +3476,7 @@
 	{
 		"id": 308,
 		"name": "Light sauce bar ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3500,7 +3488,7 @@
 	{
 		"id": 309,
 		"name": "Brown sauce powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3512,7 +3500,7 @@
 	{
 		"id": 310,
 		"name": "Light sauce powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3524,7 +3512,7 @@
 	{
 		"id": 311,
 		"name": "Meat broth cube",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3536,7 +3524,7 @@
 	{
 		"id": 312,
 		"name": "Chicken broth cube",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3548,7 +3536,7 @@
 	{
 		"id": 313,
 		"name": "Fish broth cube",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3560,7 +3548,7 @@
 	{
 		"id": 314,
 		"name": "Vegetable broth cube",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3572,7 +3560,7 @@
 	{
 		"id": 315,
 		"name": "Meat broth powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3584,7 +3572,7 @@
 	{
 		"id": 316,
 		"name": "Chicken broth powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3596,7 +3584,7 @@
 	{
 		"id": 317,
 		"name": "Fish broth powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3608,7 +3596,7 @@
 	{
 		"id": 318,
 		"name": "Vegetable broth powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3620,7 +3608,7 @@
 	{
 		"id": 319,
 		"name": "Sunflower oil",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3632,7 +3620,7 @@
 	{
 		"id": 320,
 		"name": "Frying oil (sunflower and rapeseed oil based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3644,7 +3632,7 @@
 	{
 		"id": 321,
 		"name": "Devil's jam",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -3656,7 +3644,7 @@
 	{
 		"id": 322,
 		"name": "Flax seed fibre (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -3668,7 +3656,7 @@
 	{
 		"id": 323,
 		"name": "Spice mix (salt-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "n6PVivHRrEu9qNhC360Sgw",
 		"categoryName": "Spices and their products",
@@ -3680,7 +3668,7 @@
 	{
 		"id": 324,
 		"name": "Mung bean pasta (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3692,7 +3680,7 @@
 	{
 		"id": 325,
 		"name": "Mung bean pasta (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3704,7 +3692,7 @@
 	{
 		"id": 326,
 		"name": "Cucumber (fresh, open field)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -3716,7 +3704,7 @@
 	{
 		"id": 327,
 		"name": "Cucumber (fresh, greenhouse)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -3728,7 +3716,7 @@
 	{
 		"id": 328,
 		"name": "Carrot (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -3740,7 +3728,7 @@
 	{
 		"id": 329,
 		"name": "Beef (carcass weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -3752,7 +3740,7 @@
 	{
 		"id": 330,
 		"name": "Beef (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -3764,7 +3752,7 @@
 	{
 		"id": 331,
 		"name": "Bioethanol (maize)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Tckg4-xiKEGNgT5HAZNs2A",
 		"categoryName": "Chemicals and their products",
@@ -3776,7 +3764,7 @@
 	{
 		"id": 332,
 		"name": "Fava bean (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3788,7 +3776,7 @@
 	{
 		"id": 333,
 		"name": "Fava bean (textured)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -3800,7 +3788,7 @@
 	{
 		"id": 334,
 		"name": "Coconut oil",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -3812,7 +3800,7 @@
 	{
 		"id": 335,
 		"name": "Wheat protein",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3824,7 +3812,7 @@
 	{
 		"id": 336,
 		"name": "Tuna (fished by purse seine, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3837,7 +3825,7 @@
 	{
 		"id": 337,
 		"name": "Tuna (fished by long line, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3850,7 +3838,7 @@
 	{
 		"id": 338,
 		"name": "Tuna (fished by large pump boat, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3863,7 +3851,7 @@
 	{
 		"id": 339,
 		"name": "Tuna (fished by small pump boat, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3876,7 +3864,7 @@
 	{
 		"id": 340,
 		"name": "Tuna (fished by purse seine, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3889,7 +3877,7 @@
 	{
 		"id": 341,
 		"name": "Tuna (fished by long line, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3902,7 +3890,7 @@
 	{
 		"id": 342,
 		"name": "Tuna (fished by large pump boat, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3915,7 +3903,7 @@
 	{
 		"id": 343,
 		"name": "Tuna (fished by small pump boat, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3928,7 +3916,7 @@
 	{
 		"id": 344,
 		"name": "Tuna (fished, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3941,7 +3929,7 @@
 	{
 		"id": 345,
 		"name": "Tuna (fished, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3954,7 +3942,7 @@
 	{
 		"id": 346,
 		"name": "Tuna, flavoured (fished, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -3967,7 +3955,7 @@
 	{
 		"id": 347,
 		"name": "Pork (carcass weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -3979,7 +3967,7 @@
 	{
 		"id": 348,
 		"name": "Wheat protein (textured)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -3991,7 +3979,7 @@
 	{
 		"id": 349,
 		"name": "Lecithin (sunflower derivative)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -4003,7 +3991,7 @@
 	{
 		"id": 350,
 		"name": "Sausage (pork meat content 75%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4015,7 +4003,7 @@
 	{
 		"id": 351,
 		"name": "Sausage (pork meat content 50%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4027,7 +4015,7 @@
 	{
 		"id": 352,
 		"name": "Sausage (pork meat content 25%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4039,7 +4027,7 @@
 	{
 		"id": 353,
 		"name": "Leek (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -4051,7 +4039,7 @@
 	{
 		"id": 354,
 		"name": "Pea (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4063,7 +4051,7 @@
 	{
 		"id": 355,
 		"name": "Celery (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -4075,7 +4063,7 @@
 	{
 		"id": 356,
 		"name": "Potato starch",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4087,7 +4075,7 @@
 	{
 		"id": 357,
 		"name": "Potato flake",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4099,7 +4087,7 @@
 	{
 		"id": 358,
 		"name": "Semolina (wheat-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -4111,7 +4099,7 @@
 	{
 		"id": 359,
 		"name": "Shallot (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4123,7 +4111,7 @@
 	{
 		"id": 360,
 		"name": "Galanga root (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4135,7 +4123,7 @@
 	{
 		"id": 361,
 		"name": "Lecithin (rapeseed derivative)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -4147,7 +4135,7 @@
 	{
 		"id": 362,
 		"name": "Lecithin (soya derivative)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -4159,7 +4147,7 @@
 	{
 		"id": 363,
 		"name": "Frying oil [R2], custom ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "hx1tMXKLIES3r7PRSG2gyQ",
 		"categoryName": "Custom raw materials",
@@ -4171,7 +4159,7 @@
 	{
 		"id": 364,
 		"name": "Bacon (craw) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4183,7 +4171,7 @@
 	{
 		"id": 365,
 		"name": "Bacon (carcass weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4195,7 +4183,7 @@
 	{
 		"id": 366,
 		"name": "Shrimp (farmed, gutted, fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4208,7 +4196,7 @@
 	{
 		"id": 367,
 		"name": "Shrimp (farmed, ungutted, fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4221,7 +4209,7 @@
 	{
 		"id": 368,
 		"name": "Shrimp (fished, ungutted, fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4234,7 +4222,7 @@
 	{
 		"id": 369,
 		"name": "Shrimp (fished, gutted, fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4247,7 +4235,7 @@
 	{
 		"id": 370,
 		"name": "Processed cheese (milk based) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -4260,7 +4248,7 @@
 	{
 		"id": 371,
 		"name": "Champion mushroom (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -4272,7 +4260,7 @@
 	{
 		"id": 372,
 		"name": "Tuna paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -4284,7 +4272,7 @@
 	{
 		"id": 373,
 		"name": "Dry yeast (dry matter 95%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4296,7 +4284,7 @@
 	{
 		"id": 374,
 		"name": "Compressed yeast (dry matter 30%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4308,7 +4296,7 @@
 	{
 		"id": 375,
 		"name": "Liquid yeast (dry matter 18%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4320,7 +4308,7 @@
 	{
 		"id": 376,
 		"name": "Shrimp paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -4332,7 +4320,7 @@
 	{
 		"id": 377,
 		"name": "Green curry paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -4344,7 +4332,7 @@
 	{
 		"id": 378,
 		"name": "Broiler meat (carcass weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4356,7 +4344,7 @@
 	{
 		"id": 379,
 		"name": "Broiler meat (live weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4368,7 +4356,7 @@
 	{
 		"id": 380,
 		"name": "Soy protein concentrate ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4380,7 +4368,7 @@
 	{
 		"id": 381,
 		"name": "Soy protein concentrate",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4392,7 +4380,7 @@
 	{
 		"id": 382,
 		"name": "Wheat starch ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -4404,7 +4392,7 @@
 	{
 		"id": 383,
 		"name": "Raising agent (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4416,7 +4404,7 @@
 	{
 		"id": 384,
 		"name": "Apple juice",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -4428,7 +4416,7 @@
 	{
 		"id": 385,
 		"name": "Ginger juice",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -4440,7 +4428,7 @@
 	{
 		"id": 386,
 		"name": "Pea powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4452,7 +4440,7 @@
 	{
 		"id": 387,
 		"name": "Carrot powder",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4464,7 +4452,7 @@
 	{
 		"id": 388,
 		"name": "Tofu, marinated [Jalotofu]",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4476,7 +4464,7 @@
 	{
 		"id": 389,
 		"name": "Tofu, natural [Jalotofu]",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -4488,7 +4476,7 @@
 	{
 		"id": 390,
 		"name": "Potato fibre",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4500,7 +4488,7 @@
 	{
 		"id": 391,
 		"name": "Radish (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -4512,7 +4500,7 @@
 	{
 		"id": 392,
 		"name": "Rucola (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -4524,7 +4512,7 @@
 	{
 		"id": 393,
 		"name": "Red mangold (fresh)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "rjeZmFbIPESRQZ3sR0huYQ",
 		"categoryName": "Leafy vegetables and their products",
@@ -4536,7 +4524,7 @@
 	{
 		"id": 394,
 		"name": "Olive oil",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -4548,7 +4536,7 @@
 	{
 		"id": 395,
 		"name": "Sesame oil ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "i_pa2rI_YUKaJikBXigx2w",
 		"categoryName": "Fats, oils, cream and their products",
@@ -4560,7 +4548,7 @@
 	{
 		"id": 396,
 		"name": "Maltodextrin (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4572,7 +4560,7 @@
 	{
 		"id": 397,
 		"name": "Stabiliser (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4584,7 +4572,7 @@
 	{
 		"id": 398,
 		"name": "Oat fibre",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -4596,7 +4584,7 @@
 	{
 		"id": 399,
 		"name": "Beetroot juice",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -4608,7 +4596,7 @@
 	{
 		"id": 400,
 		"name": "Honey (stationary farm) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -4620,7 +4608,7 @@
 	{
 		"id": 401,
 		"name": "Honey (migratory farm) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -4632,7 +4620,7 @@
 	{
 		"id": 402,
 		"name": "Glucose",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -4644,7 +4632,7 @@
 	{
 		"id": 403,
 		"name": "Sodium nitrite (generic)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -4656,7 +4644,7 @@
 	{
 		"id": 404,
 		"name": "Teriyaki sauce",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -4668,7 +4656,7 @@
 	{
 		"id": 405,
 		"name": "Seaweed",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4681,7 +4669,7 @@
 	{
 		"id": 406,
 		"name": "Miso paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -4693,7 +4681,7 @@
 	{
 		"id": 407,
 		"name": "Oat-based cheese [R4], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "hx1tMXKLIES3r7PRSG2gyQ",
 		"categoryName": "Custom raw materials",
@@ -4705,7 +4693,7 @@
 	{
 		"id": 408,
 		"name": "Oat-based cheese [R3], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "hx1tMXKLIES3r7PRSG2gyQ",
 		"categoryName": "Custom raw materials",
@@ -4717,7 +4705,7 @@
 	{
 		"id": 409,
 		"name": "Oat drink (oat-based)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -4729,7 +4717,7 @@
 	{
 		"id": 410,
 		"name": "Natural sausage casing",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4741,7 +4729,7 @@
 	{
 		"id": 411,
 		"name": "Beef (slaughter by-products, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4753,7 +4741,7 @@
 	{
 		"id": 412,
 		"name": "Pork (slaughter by-products, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4765,7 +4753,7 @@
 	{
 		"id": 413,
 		"name": "Broiler meat (slaughter by-products, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -4777,7 +4765,7 @@
 	{
 		"id": 414,
 		"name": "Roach fish (sorted, gutted, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4790,7 +4778,7 @@
 	{
 		"id": 415,
 		"name": "Whitefish (farmed, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4803,7 +4791,7 @@
 	{
 		"id": 416,
 		"name": "Whitefish (farmed, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4816,7 +4804,7 @@
 	{
 		"id": 417,
 		"name": "Whitefish (farmed, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4829,7 +4817,7 @@
 	{
 		"id": 418,
 		"name": "Rainbow trout (farmed, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4842,7 +4830,7 @@
 	{
 		"id": 419,
 		"name": "Rainbow trout (farmed, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4855,7 +4843,7 @@
 	{
 		"id": 420,
 		"name": "Rainbow trout (farmed, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4868,7 +4856,7 @@
 	{
 		"id": 421,
 		"name": "Salmon (farmed, gutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4881,7 +4869,7 @@
 	{
 		"id": 422,
 		"name": "Salmon (farmed, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4894,7 +4882,7 @@
 	{
 		"id": 423,
 		"name": "Salmon (farmed, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4907,7 +4895,7 @@
 	{
 		"id": 424,
 		"name": "Salmon (farmed, gutted, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4920,7 +4908,7 @@
 	{
 		"id": 425,
 		"name": "Pike (fished by gillnet, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4933,7 +4921,7 @@
 	{
 		"id": 426,
 		"name": "Pike (fished by gillnet, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4946,7 +4934,7 @@
 	{
 		"id": 427,
 		"name": "Pike (fished by gillnet, fillet, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4959,7 +4947,7 @@
 	{
 		"id": 428,
 		"name": "Pike (fished by gillnet, ungutted, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4972,7 +4960,7 @@
 	{
 		"id": 429,
 		"name": "Perch (fished by gillnet, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4985,7 +4973,7 @@
 	{
 		"id": 430,
 		"name": "Perch (fished by gillnet, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -4998,7 +4986,7 @@
 	{
 		"id": 431,
 		"name": "Pike perch (fished by gillnet, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5011,7 +4999,7 @@
 	{
 		"id": 432,
 		"name": "Pike perch (fished by gillnet, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5024,7 +5012,7 @@
 	{
 		"id": 433,
 		"name": "Vendace (fished by seine, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5037,7 +5025,7 @@
 	{
 		"id": 434,
 		"name": "Vendace (fished by seine, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5050,7 +5038,7 @@
 	{
 		"id": 435,
 		"name": "Vendace (fished by trawl, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5063,7 +5051,7 @@
 	{
 		"id": 436,
 		"name": "Vendace (fished by trawl, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5076,7 +5064,7 @@
 	{
 		"id": 437,
 		"name": "Baltic herring (fished by trawl, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5089,7 +5077,7 @@
 	{
 		"id": 438,
 		"name": "Baltic herring (fished by trawl, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5102,7 +5090,7 @@
 	{
 		"id": 439,
 		"name": "Baltic herring (fished by fyke, fillet, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5115,7 +5103,7 @@
 	{
 		"id": 440,
 		"name": "Baltic herring (fished by fyke, ungutted, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5128,7 +5116,7 @@
 	{
 		"id": 441,
 		"name": "Salmon (farmed, fillet, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5141,7 +5129,7 @@
 	{
 		"id": 442,
 		"name": "Venison (live weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5153,7 +5141,7 @@
 	{
 		"id": 443,
 		"name": "Venison (boneless weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5165,7 +5153,7 @@
 	{
 		"id": 444,
 		"name": "Red deer (boneless weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5177,7 +5165,7 @@
 	{
 		"id": 445,
 		"name": "Pea (fresh, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -5189,7 +5177,7 @@
 	{
 		"id": 446,
 		"name": "Chickpea (dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -5201,7 +5189,7 @@
 	{
 		"id": 447,
 		"name": "Maize grain (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -5213,7 +5201,7 @@
 	{
 		"id": 448,
 		"name": "Black beans (canned)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -5225,7 +5213,7 @@
 	{
 		"id": 449,
 		"name": "Broiler meat (carcass weight, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5237,7 +5225,7 @@
 	{
 		"id": 450,
 		"name": "Feta cheese",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -5250,7 +5238,7 @@
 	{
 		"id": 451,
 		"name": "Halloumi cheese",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -5263,7 +5251,7 @@
 	{
 		"id": 452,
 		"name": "Lamb meat ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5275,7 +5263,7 @@
 	{
 		"id": 453,
 		"name": "Quark",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "naZGG1D0iEWbELv19IMczg",
 		"categoryName": "Fish, shellfish and their products",
@@ -5288,7 +5276,7 @@
 	{
 		"id": 454,
 		"name": "Pea protein",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -5300,7 +5288,7 @@
 	{
 		"id": 455,
 		"name": "Tuna, canned",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5313,7 +5301,7 @@
 	{
 		"id": 456,
 		"name": "Saithe, fillet",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5326,7 +5314,7 @@
 	{
 		"id": 457,
 		"name": "Ham (pork meat content 88%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5338,7 +5326,7 @@
 	{
 		"id": 458,
 		"name": "Reindeer meat (raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5350,7 +5338,7 @@
 	{
 		"id": 459,
 		"name": "Venison (boneless weight, dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5362,7 +5350,7 @@
 	{
 		"id": 460,
 		"name": "Venison (boneless weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5374,7 +5362,7 @@
 	{
 		"id": 461,
 		"name": "Venison (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5386,7 +5374,7 @@
 	{
 		"id": 462,
 		"name": "Venison (carcass weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5398,7 +5386,7 @@
 	{
 		"id": 463,
 		"name": "Wild red deer (boneless weight, dried)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5410,7 +5398,7 @@
 	{
 		"id": 464,
 		"name": "Wild red deer (boneless weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5422,7 +5410,7 @@
 	{
 		"id": 465,
 		"name": "Wild red deer (carcass weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5434,7 +5422,7 @@
 	{
 		"id": 466,
 		"name": "Wild red deer (carcass weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5446,7 +5434,7 @@
 	{
 		"id": 467,
 		"name": "Wild red deer (live weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5458,7 +5446,7 @@
 	{
 		"id": 468,
 		"name": "Beef (meat weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5470,7 +5458,7 @@
 	{
 		"id": 469,
 		"name": "Beef (meat weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5482,7 +5470,7 @@
 	{
 		"id": 470,
 		"name": "Beef (meat weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5494,7 +5482,7 @@
 	{
 		"id": 471,
 		"name": "Pork (meat weight, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5506,7 +5494,7 @@
 	{
 		"id": 472,
 		"name": "Pork (meat weight, cooked)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5518,7 +5506,7 @@
 	{
 		"id": 473,
 		"name": "Pork (meat weight, raw, frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "sMGbZMIVLUqgE2jk0OOOJQ",
 		"categoryName": "Meat and its products",
@@ -5530,7 +5518,7 @@
 	{
 		"id": 474,
 		"name": "Meat protein",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6d88-wTuMU_p6g0crL9w5w",
 		"categoryName": "Preservatives and extracts",
@@ -5542,7 +5530,7 @@
 	{
 		"id": 475,
 		"name": "Sugar from sugar cane",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -5554,7 +5542,7 @@
 	{
 		"id": 476,
 		"name": "Logistics of intermediate products",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -5566,7 +5554,7 @@
 	{
 		"id": 477,
 		"name": "Lingonberry",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -5580,7 +5568,7 @@
 	{
 		"id": 478,
 		"name": "White wine (in a glass bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -5592,7 +5580,7 @@
 	{
 		"id": 479,
 		"name": "Cognac",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -5604,7 +5592,7 @@
 	{
 		"id": 480,
 		"name": "Ketchup",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -5616,7 +5604,7 @@
 	{
 		"id": 481,
 		"name": "Fish sauce",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -5628,7 +5616,7 @@
 	{
 		"id": 482,
 		"name": "Crab sauce",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -5640,7 +5628,7 @@
 	{
 		"id": 483,
 		"name": "Palm sugar",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "vW3CLWcEHU6iNeHfD0dmWQ",
 		"categoryName": "Sweeteners and their products",
@@ -5652,7 +5640,7 @@
 	{
 		"id": 484,
 		"name": "Pomegranate",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5664,7 +5652,7 @@
 	{
 		"id": 485,
 		"name": "Papaya",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5676,7 +5664,7 @@
 	{
 		"id": 486,
 		"name": "Red wine (in a glass bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -5688,7 +5676,7 @@
 	{
 		"id": 487,
 		"name": "Red wine (bag-in-box)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -5700,7 +5688,7 @@
 	{
 		"id": 488,
 		"name": "Herb (fresh, general)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6D0yz-4iuEm2vuQml3EIIw",
 		"categoryName": "Herbs and their products",
@@ -5712,7 +5700,7 @@
 	{
 		"id": 489,
 		"name": "Cantaloupe melon",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5724,7 +5712,7 @@
 	{
 		"id": 490,
 		"name": "Guava",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5736,7 +5724,7 @@
 	{
 		"id": 491,
 		"name": "Quince",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5748,7 +5736,7 @@
 	{
 		"id": 492,
 		"name": "Date",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5760,7 +5748,7 @@
 	{
 		"id": 493,
 		"name": "Grape",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5772,7 +5760,7 @@
 	{
 		"id": 494,
 		"name": "Butter bean",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -5784,7 +5772,7 @@
 	{
 		"id": 495,
 		"name": "Fig",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -5796,7 +5784,7 @@
 	{
 		"id": 496,
 		"name": "Chestnut",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -5808,7 +5796,7 @@
 	{
 		"id": 497,
 		"name": "Pilchard",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -5821,7 +5809,7 @@
 	{
 		"id": 498,
 		"name": "Oat bran",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -5833,7 +5821,7 @@
 	{
 		"id": 499,
 		"name": "Crushed oat grain",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -5845,7 +5833,7 @@
 	{
 		"id": 500,
 		"name": "Wheat tortilla",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -5857,7 +5845,7 @@
 	{
 		"id": 501,
 		"name": "Wheat flour (Finland)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -5869,7 +5857,7 @@
 	{
 		"id": 502,
 		"name": "Paper sack (bleached and unbleached)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -5881,7 +5869,7 @@
 	{
 		"id": 503,
 		"name": "Kraft paper ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -5893,7 +5881,7 @@
 	{
 		"id": 504,
 		"name": "Wrapping paper (combined)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -5905,7 +5893,7 @@
 	{
 		"id": 505,
 		"name": "Packaging glass (combined)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -5917,7 +5905,7 @@
 	{
 		"id": 506,
 		"name": "Aluminium, Europe and USA",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -5929,7 +5917,7 @@
 	{
 		"id": 507,
 		"name": "Aluminium",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -5941,7 +5929,7 @@
 	{
 		"id": 508,
 		"name": "Aluminium, recycled ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -5953,7 +5941,7 @@
 	{
 		"id": 509,
 		"name": "Low density polyethylene (LDPE)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -5965,7 +5953,7 @@
 	{
 		"id": 510,
 		"name": "High density polyethylene (HDPE), recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -5977,7 +5965,7 @@
 	{
 		"id": 511,
 		"name": "Polyethylene terephthalate (PET, PETE)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -5989,7 +5977,7 @@
 	{
 		"id": 512,
 		"name": "Polyethylene terephthalate (PET, PETE), recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6001,7 +5989,7 @@
 	{
 		"id": 513,
 		"name": "Polystyrene (PS)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6013,7 +6001,7 @@
 	{
 		"id": 514,
 		"name": "Expandable polystyrene (EPS)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6025,7 +6013,7 @@
 	{
 		"id": 515,
 		"name": "Polyvinyl chloride (PVC, Vinyl)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6037,7 +6025,7 @@
 	{
 		"id": 516,
 		"name": "Corrugated box (virgin)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -6049,7 +6037,7 @@
 	{
 		"id": 517,
 		"name": "Fibre, flax",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "KbfY7qnJyUihmusO2D6hFQ",
 		"categoryName": "Fibre and its products",
@@ -6061,7 +6049,7 @@
 	{
 		"id": 518,
 		"name": "Fibre, hemp",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "KbfY7qnJyUihmusO2D6hFQ",
 		"categoryName": "Fibre and its products",
@@ -6073,7 +6061,7 @@
 	{
 		"id": 519,
 		"name": "Fibre, jute",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "KbfY7qnJyUihmusO2D6hFQ",
 		"categoryName": "Fibre and its products",
@@ -6085,7 +6073,7 @@
 	{
 		"id": 520,
 		"name": "Corrugated board, single wall",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -6097,7 +6085,7 @@
 	{
 		"id": 521,
 		"name": "Corrugated board, double wall",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -6109,7 +6097,7 @@
 	{
 		"id": 522,
 		"name": "Corrugated board, triple wall",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -6121,7 +6109,7 @@
 	{
 		"id": 523,
 		"name": "Pallet, EUR-flat",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gLa_9y-9Ik6BNWjsrSEqfA",
 		"categoryName": "Wood and its products",
@@ -6133,7 +6121,7 @@
 	{
 		"id": 524,
 		"name": "Carton (bleached and unbleached)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "mLgBeZu9r0G1ilq3zij1RA",
 		"categoryName": "Paper and its products",
@@ -6145,7 +6133,7 @@
 	{
 		"id": 525,
 		"name": "Plastic-mix: PP (50%) and PA (50%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6157,7 +6145,7 @@
 	{
 		"id": 526,
 		"name": "Plastic-mix: PP (30%) and PA (70%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6169,7 +6157,7 @@
 	{
 		"id": 527,
 		"name": "Plastic-mix: PP (70%) and PA (30%)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6181,7 +6169,7 @@
 	{
 		"id": 528,
 		"name": "Polyamide (PA, nylon)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6193,7 +6181,7 @@
 	{
 		"id": 529,
 		"name": "Polypropylene (PP)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6205,7 +6193,7 @@
 	{
 		"id": 530,
 		"name": "PA-PP plastic film [P1], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6217,7 +6205,7 @@
 	{
 		"id": 531,
 		"name": "Corrugated box (virgin) [P2], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6229,7 +6217,7 @@
 	{
 		"id": 532,
 		"name": "Corrugated box (98% virgin) [P2], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6241,7 +6229,7 @@
 	{
 		"id": 533,
 		"name": "Corrugated box (64% virgin [P2], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6253,7 +6241,7 @@
 	{
 		"id": 534,
 		"name": "Oriented polyamide (OPA)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6265,7 +6253,7 @@
 	{
 		"id": 535,
 		"name": "Artificial intestine [P3], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6277,7 +6265,7 @@
 	{
 		"id": 536,
 		"name": "Recyclable cardboard laminate [P6], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6289,7 +6277,7 @@
 	{
 		"id": 537,
 		"name": "Linear low-density polyethylene (LLDPE)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6301,7 +6289,7 @@
 	{
 		"id": 538,
 		"name": "Corrugated box with plastic lid [P4], custom ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6313,7 +6301,7 @@
 	{
 		"id": 539,
 		"name": "Metallized plastic laminate, custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6325,7 +6313,7 @@
 	{
 		"id": 540,
 		"name": "Recyclable cardboard laminate without aluminium, custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6337,7 +6325,7 @@
 	{
 		"id": 541,
 		"name": "Bio-based packaging plastic [P5], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6349,7 +6337,7 @@
 	{
 		"id": 542,
 		"name": "Transbox packaging box 42,3 litres",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6361,7 +6349,7 @@
 	{
 		"id": 543,
 		"name": "Corrugated board box [P7], custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6373,7 +6361,7 @@
 	{
 		"id": 544,
 		"name": "Plastic film (ECO PE, PE and PA), custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6385,7 +6373,7 @@
 	{
 		"id": 545,
 		"name": "Flexible cast plastic film PA/PE, custom",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6397,7 +6385,7 @@
 	{
 		"id": 546,
 		"name": "Bulk bag, polypropylene",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6409,7 +6397,7 @@
 	{
 		"id": 547,
 		"name": "Polyolefin (75% LDPE , 25% PP)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6421,7 +6409,7 @@
 	{
 		"id": 548,
 		"name": "Thermal transfer label",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6433,7 +6421,7 @@
 	{
 		"id": 549,
 		"name": "Office paper",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "rfkRbYgpRkabr8nfffggUg",
 		"categoryName": "Office equipment",
@@ -6445,7 +6433,7 @@
 	{
 		"id": 550,
 		"name": "Plastic bag, waste bag (LDPE)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "rfkRbYgpRkabr8nfffggUg",
 		"categoryName": "Office equipment",
@@ -6457,7 +6445,7 @@
 	{
 		"id": 551,
 		"name": "Coffee",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6469,7 +6457,7 @@
 	{
 		"id": 552,
 		"name": "Plastic film (LDPE)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6481,7 +6469,7 @@
 	{
 		"id": 553,
 		"name": "Natural cork",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gLa_9y-9Ik6BNWjsrSEqfA",
 		"categoryName": "Wood and its products",
@@ -6493,7 +6481,7 @@
 	{
 		"id": 554,
 		"name": "Plastic glove (PVC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "rfkRbYgpRkabr8nfffggUg",
 		"categoryName": "Office equipment",
@@ -6505,7 +6493,7 @@
 	{
 		"id": 555,
 		"name": "Baked goods",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "hx1tMXKLIES3r7PRSG2gyQ",
 		"categoryName": "Custom raw materials",
@@ -6517,7 +6505,7 @@
 	{
 		"id": 556,
 		"name": "Other berry (general)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "L4bS1YRKPk6_iuYEtZtYzw",
 		"categoryName": "Berries and their products",
@@ -6531,7 +6519,7 @@
 	{
 		"id": 557,
 		"name": "Beer",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6543,7 +6531,7 @@
 	{
 		"id": 558,
 		"name": "Glass bottle (0.2 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6555,7 +6543,7 @@
 	{
 		"id": 559,
 		"name": "Glass bottle (0.33 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6567,7 +6555,7 @@
 	{
 		"id": 560,
 		"name": "Glass bottle (0,375 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6579,7 +6567,7 @@
 	{
 		"id": 561,
 		"name": "Glass bottle (0.66 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6591,7 +6579,7 @@
 	{
 		"id": 562,
 		"name": "Glass bottle (0.75 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6603,7 +6591,7 @@
 	{
 		"id": 563,
 		"name": "Glass bottle (1 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6615,7 +6603,7 @@
 	{
 		"id": 564,
 		"name": "Glass bottle (1.5 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "D1WBgWs1D02XqsHcEVIycA",
 		"categoryName": "Glass and its products",
@@ -6627,7 +6615,7 @@
 	{
 		"id": 565,
 		"name": "Aluminium can (0.2-0.5 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -6639,7 +6627,7 @@
 	{
 		"id": 566,
 		"name": "Plastic bottle (0.5 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6651,7 +6639,7 @@
 	{
 		"id": 567,
 		"name": "Plastic bottle (1.5 L)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "3T0lLM789UGWytvtOH45ZQ",
 		"categoryName": "Plastic and its products",
@@ -6663,7 +6651,7 @@
 	{
 		"id": 568,
 		"name": "Bag-in-box for wine (BIB, packaging only)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "vYrSlBA1YEyk8NdZz2xBRw",
 		"categoryName": "Cardboard and its products",
@@ -6675,7 +6663,7 @@
 	{
 		"id": 569,
 		"name": "Keg package (steel)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -6687,7 +6675,7 @@
 	{
 		"id": 570,
 		"name": "Label (mix of paper and PET)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "inPuLfH6BUC1B96CyvEaxg",
 		"categoryName": "Custom packaging materials",
@@ -6699,7 +6687,7 @@
 	{
 		"id": 571,
 		"name": "Carbonated soft drink (in glass bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6711,7 +6699,7 @@
 	{
 		"id": 572,
 		"name": "Carbonated soft drink (in aluminium can)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6723,7 +6711,7 @@
 	{
 		"id": 573,
 		"name": "Carbonated soft drink (in a plastic bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6735,7 +6723,7 @@
 	{
 		"id": 574,
 		"name": "Spirits (in a glass bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6747,7 +6735,7 @@
 	{
 		"id": 575,
 		"name": "Beer (in glass bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6759,7 +6747,7 @@
 	{
 		"id": 576,
 		"name": "Beer (in an aluminium can)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6771,7 +6759,7 @@
 	{
 		"id": 577,
 		"name": "Beer (in a plastic bottle)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6783,7 +6771,7 @@
 	{
 		"id": 578,
 		"name": "Crown cork (steel)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kpl",
 		"categoryId": "-KG90pGzCEywQRmel9P1WQ",
 		"categoryName": "Metal and its products",
@@ -6795,7 +6783,7 @@
 	{
 		"id": 579,
 		"name": "Hops",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -6807,7 +6795,7 @@
 	{
 		"id": 580,
 		"name": "Malt",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -6819,7 +6807,7 @@
 	{
 		"id": 581,
 		"name": "Cider",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "l",
 		"categoryId": "jPsj3X29vEqe1U7O46d5Pg",
 		"categoryName": "Beverages",
@@ -6831,7 +6819,7 @@
 	{
 		"id": 582,
 		"name": "Vegetable",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -6843,7 +6831,7 @@
 	{
 		"id": 583,
 		"name": "Fruit",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "-QxaygvCXk2f8cSMRGhA5Q",
 		"categoryName": "Fruits and their products",
@@ -6855,7 +6843,7 @@
 	{
 		"id": 584,
 		"name": "Nut ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "gk6U6VMC8Ui2Jrzn12qqfg",
 		"categoryName": "Seeds, nuts and their products",
@@ -6867,7 +6855,7 @@
 	{
 		"id": 585,
 		"name": "Pulled oats",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -6879,7 +6867,7 @@
 	{
 		"id": 586,
 		"name": "Seasoning paste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Pb8u6ys17U_1Gyc5VmvYDQ",
 		"categoryName": "Prepared and preserved foods",
@@ -6891,7 +6879,7 @@
 	{
 		"id": 587,
 		"name": "Falafel",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "6RHhseeJdEmAC0nwEnNwCQ",
 		"categoryName": "Pulses and their products",
@@ -6903,7 +6891,7 @@
 	{
 		"id": 588,
 		"name": "Bread",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Dxq-xP2H7Uy4bbhfOGds1Q",
 		"categoryName": "Cereals and their products",
@@ -6915,7 +6903,7 @@
 	{
 		"id": 589,
 		"name": "Vegetable (frozen)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "dvyQQ89tMUO494bVnEEC-A",
 		"categoryName": "Vegetables and their products",
@@ -6927,7 +6915,7 @@
 	{
 		"id": 590,
 		"name": "Root vegetable",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "UPaUqJLYZkyGGNblHpAwSw",
 		"categoryName": "Roots, tubers, plantains and their products",
@@ -6939,7 +6927,7 @@
 	{
 		"id": 591,
 		"name": "Chocolate",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "Qs_BAXN0qkeTELE_YOCZdw",
 		"categoryName": "Other raw materials",
@@ -6951,7 +6939,7 @@
 	{
 		"id": 592,
 		"name": "Pike perch (fished by gillnet, bleed, raw)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "kg",
 		"categoryId": "0iXH8ZuMKUqPhPw0KoXu2Q",
 		"categoryName": "Fish, shellfish and their products",
@@ -6964,7 +6952,7 @@
 	{
 		"id": 593,
 		"name": "Delivery lorries (6 ton)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -6977,7 +6965,7 @@
 	{
 		"id": 594,
 		"name": "Delivery lorries (15 ton)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -6990,7 +6978,7 @@
 	{
 		"id": 595,
 		"name": "Full trailer (60 ton)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -7003,7 +6991,7 @@
 	{
 		"id": 596,
 		"name": "Full trailer (75 ton)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -7016,7 +7004,7 @@
 	{
 		"id": 597,
 		"name": "Bulk carrier (medium)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7029,7 +7017,7 @@
 	{
 		"id": 598,
 		"name": "Bulk carrier (large)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7042,7 +7030,7 @@
 	{
 		"id": 599,
 		"name": "General cargo (small)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7055,7 +7043,7 @@
 	{
 		"id": 600,
 		"name": "General cargo (multi-purpose carrier)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7068,7 +7056,7 @@
 	{
 		"id": 601,
 		"name": "Container ship (1 000 TEU)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7081,7 +7069,7 @@
 	{
 		"id": 602,
 		"name": "Container ship (2 000 TEU) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7094,7 +7082,7 @@
 	{
 		"id": 603,
 		"name": "Semi-trailer (25 ton)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -7108,7 +7096,7 @@
 	{
 		"id": 604,
 		"name": "Train freight",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "XG7Fp6KrV0aRDnuLe1hr8Q",
 		"categoryName": "Rail transportation",
@@ -7121,7 +7109,7 @@
 	{
 		"id": 605,
 		"name": "Aircraft freight",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "sRSJReaXl0Ow0TsHT-cfMw",
 		"categoryName": "Air transportation",
@@ -7134,7 +7122,7 @@
 	{
 		"id": 606,
 		"name": "Cargo freight",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "AOg-CSM99UOHb1DWTnc2RQ",
 		"categoryName": "Ship transportation",
@@ -7147,7 +7135,7 @@
 	{
 		"id": 607,
 		"name": "Road freight",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "tkm",
 		"categoryId": "Em32u7u11E_BuiEWGn3dzA",
 		"categoryName": "Road transportation",
@@ -7161,7 +7149,7 @@
 	{
 		"id": 608,
 		"name": "Bio waste",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7174,7 +7162,7 @@
 	{
 		"id": 609,
 		"name": "Paper waste, recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7187,7 +7175,7 @@
 	{
 		"id": 610,
 		"name": "Plastic waste, recycled ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7200,7 +7188,7 @@
 	{
 		"id": 611,
 		"name": "Electronic waste, recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7213,7 +7201,7 @@
 	{
 		"id": 612,
 		"name": "Municipal waste, to combustion",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7226,7 +7214,7 @@
 	{
 		"id": 613,
 		"name": "Municipal waste, to landifill",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7239,7 +7227,7 @@
 	{
 		"id": 614,
 		"name": "Metal, recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7252,7 +7240,7 @@
 	{
 		"id": 615,
 		"name": "Wood waste, recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7265,7 +7253,7 @@
 	{
 		"id": 616,
 		"name": "Hazardous waste",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7278,7 +7266,7 @@
 	{
 		"id": 617,
 		"name": "Construction waste, recycled",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "t",
 		"categoryId": "rPiLK72gEEagmam4haqI5w",
 		"categoryName": "Waste",
@@ -7291,7 +7279,7 @@
 	{
 		"id": 618,
 		"name": "Passenger car, general (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7304,7 +7292,7 @@
 	{
 		"id": 619,
 		"name": "Passenger car, diesel (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7317,7 +7305,7 @@
 	{
 		"id": 620,
 		"name": "Passenger car, gasoline (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7330,7 +7318,7 @@
 	{
 		"id": 621,
 		"name": "Passenger car, methane (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7343,7 +7331,7 @@
 	{
 		"id": 622,
 		"name": "Passenger car, hybrid diesel (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7356,7 +7344,7 @@
 	{
 		"id": 623,
 		"name": "Passenger car, hybrid gasoline (NEDC)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7369,7 +7357,7 @@
 	{
 		"id": 624,
 		"name": "Passenger car, electricity ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "B_uXOYPnaEOqTUqoCcW8Gg",
 		"categoryName": "Passenger car traveling",
@@ -7382,7 +7370,7 @@
 	{
 		"id": 625,
 		"name": "Train (regional and long distance trains)",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "Qg13TXHxok2A2c1F8Wtm-A",
 		"categoryName": "Public transportation",
@@ -7395,7 +7383,7 @@
 	{
 		"id": 626,
 		"name": "Tram and metro",
-		"emissionsType": "biogenic",
+		"emissionType": "biogenic",
 		"unit": "pkm",
 		"categoryId": "Qg13TXHxok2A2c1F8Wtm-A",
 		"categoryName": "Public transportation",
@@ -7408,7 +7396,7 @@
 	{
 		"id": 627,
 		"name": "Passenger car, gasoline (NEDC) ",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "R-REJtpMi06orzq-q8AZjQ",
 		"categoryName": "Passenger car traveling, annual",
@@ -7420,7 +7408,7 @@
 	{
 		"id": 628,
 		"name": "Passenger car, electric",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "R-REJtpMi06orzq-q8AZjQ",
 		"categoryName": "Passenger car traveling, annual",
@@ -7432,7 +7420,7 @@
 	{
 		"id": 629,
 		"name": "Bus",
-		"emissionsType": "fossil",
+		"emissionType": "fossil",
 		"unit": "pkm",
 		"categoryId": "Qg13TXHxok2A2c1F8Wtm-A",
 		"categoryName": "Public transportation",

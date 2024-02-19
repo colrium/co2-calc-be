@@ -8,15 +8,15 @@ module.exports = {
 	listFactors: {
 		query: {
 			page: Joi.number().min(1),
-			perPage: Joi.number().min(1).max(100),
+			perPage: Joi.number().default(10).max(100),
 			name: Joi.string(),
-			emissionsType: Joi.string(),
+			emissionType: Joi.string(),
 			unit: Joi.any(),
 			categoryName: Joi.string(),
 			region: Joi.string(),
 			yearFrom: Joi.number(),
 			yearTo: Joi.number(),
-			emmissionFactor: Joi.number(),
+			emissionFactor: Joi.number(),
 			sections: Joi.string(),
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		}
@@ -26,13 +26,13 @@ module.exports = {
 	createFactor: {
 		body: {
 			name: Joi.string(),
-			emissionsType: Joi.string(),
+			emissionType: Joi.string(),
 			unit: Joi.any(),
 			categoryName: Joi.string(),
 			region: Joi.string(),
 			yearFrom: Joi.number(),
 			yearTo: Joi.number(),
-			emmissionFactor: Joi.number(),
+			emissionFactor: Joi.number(),
 			sections: Joi.array().items(Joi.number(), Joi.string()).default([]),
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		}
@@ -42,13 +42,13 @@ module.exports = {
 	replaceFactor: {
 		body: {
 			name: Joi.string(),
-			emissionsType: Joi.string(),
+			emissionType: Joi.string(),
 			unit: Joi.any(),
 			categoryName: Joi.string(),
 			region: Joi.string(),
 			yearFrom: Joi.number(),
 			yearTo: Joi.number(),
-			emmissionFactor: Joi.number(),
+			emissionFactor: Joi.number(),
 			sections: Joi.array().items(Joi.number(), Joi.string()).default([]),
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		},
@@ -63,13 +63,13 @@ module.exports = {
 	updateFactor: {
 		body: {
 			name: Joi.string(),
-			emissionsType: Joi.string(),
+			emissionType: Joi.string(),
 			unit: Joi.any(),
 			categoryName: Joi.string(),
 			region: Joi.string(),
 			yearFrom: Joi.number(),
 			yearTo: Joi.number(),
-			emmissionFactor: Joi.number(),
+			emissionFactor: Joi.number(),
 			sections: Joi.array().items(Joi.number(), Joi.string()).default([]),
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		},

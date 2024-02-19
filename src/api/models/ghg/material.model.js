@@ -28,7 +28,7 @@ const schema = GhgModel(
 			max: 2050,
 			default: 2024
 		},
-		emmissionFactor: {
+		emissionFactor: {
 			type: Number,
 			default: 0
 		},
