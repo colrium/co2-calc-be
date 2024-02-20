@@ -43,25 +43,25 @@ module.exports = {
 		}
 	},
 
-	// PUT /v1/results/:resultId
+	// PUT /v1/results/:id
 	replaceResult: {
 		body: {
 			...getValidations()
 		},
 		params: {
-			resultId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}
 	},
 
-	// PATCH /v1/results/:resultId
+	// PATCH /v1/results/:id
 	updateResult: {
 		body: {
 			...getValidations()
 		},
 		params: {
-			resultId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}

@@ -3,19 +3,45 @@
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
 const Domain = require('../../models/ghg/domain.model');
+const mongoose = require('mongoose');
+const { loadLookups } = require('./utils');
 
 const Context = Domain;
+
+
 /**
- * Get factor
+ * Get record
  * @public
  */
 exports.get = async (req, res) => {
+	
+
 	try {
-		const factor = await Context.get(req.params.id);
-		if (factor) {
-			return res.status(httpStatus.FOUND).json(factor.transform());
+		const id = req.params?.id;
+		if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
+			const doc = await Context?.get(id);
+			
+			if (doc) {
+				const response = {
+					data: doc.transform()
+				};
+				if (Boolean(req.query.lookups)) {
+					response.lookups = await loadLookups(Context, req);
+				}
+				return res.status(httpStatus.OK).json(response);
+			} else {
+				return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			}
+		} else if (['new', '0', 0].includes(id)) {
+			const response = {
+				data: new Context({userId: req.user._id}).transform()
+			};
+			if (Boolean(req.query.lookups)) {
+				response.lookups = await loadLookups(Context, req);
+			}
+			return res.status(httpStatus.OK).json(response);
 		} else {
-			return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			return res.status(httpStatus.BAD_REQUEST).json({ message: httpStatus['422_MESSAGE'] });
 		}
 	} catch (error) {
 		return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
@@ -23,58 +49,58 @@ exports.get = async (req, res) => {
 };
 
 /**
- * Create new factor
+ * Create new record
  * @public
  */
 exports.create = async (req, res, next) => {
 	try {
-		const factor = new Context(req.body);
-		const savedFactor = await factor.save();
+		const record = new Context(req.body);
+		const savedDoc = await record.save();
 		res.status(httpStatus.CREATED);
-		res.json(savedFactor.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
 };
 
 /**
- * Replace existing factor
+ * Replace existing record
  * @public
  */
 exports.replace = async (req, res, next) => {
 	try {
 		const user = req.user;
-		const newFactor = new Context(req.body);
+		const newRecord = new Context(req.body);
 		let userId = user?._id || user?.id;
 		if (user?.role === 'admin' && req.query?.userId) {
 			userId = req.query?.userId || userId;
 		}
 		const ommitUserId = user.role !== 'admin' ? 'userId' : '';
-		const newFactorObject = omit(newFactor.toObject(), '_id', ommitUserId);
+		const newRecordObject = omit(newRecord.toObject(), '_id', ommitUserId);
 
-		await factor.updateOne(newFactorObject, { override: true, upsert: true });
-		const savedFactor = await Context.findById(req.id);
+		await Context.updateOne(newRecordObject, { override: true, upsert: true });
+		const savedDoc = await Context.findById(req.params.id);
 
-		res.json(savedFactor.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
 };
 
 /**
- * Update existing factor
+ * Update existing record
  * @public
  */
 exports.update = (req, res, next) => {
 	const data = req.body;
-	const factorId = req.params.factorId;
-	Context.findByIdAndUpdate(factorId, data)
-		.then((savedFactor) => res.json(savedFactor.transform()))
+	const id = req.params.id;
+	Context.findByIdAndUpdate(id, data)
+		.then((savedDoc) => res.json(savedDoc.transform()))
 		.catch((e) => next(e));
 };
 
 /**
- * Get factor list
+ * Get record list
  * @public
  */
 exports.list = async (req, res, next) => {
@@ -97,14 +123,14 @@ exports.list = async (req, res, next) => {
 };
 
 /**
- * Delete factor
+ * Delete record
  * @public
  */
 exports.remove = (req, res, next) => {
 	const user = req.user;
 
-	factor
-		.remove({ _id: req.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+	record
+		.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };

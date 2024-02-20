@@ -13,7 +13,7 @@ const schema = new GhgModel(
 		description: {
 			type: String
 		},
-		averageEstimates: {
+		averageEmission: {
 			type: Number,
 			default: 0
 		}

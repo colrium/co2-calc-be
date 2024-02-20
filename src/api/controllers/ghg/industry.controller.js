@@ -3,24 +3,44 @@
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
 const Industry = require('../../models/ghg/industry.model');
+const { loadLookups } = require('./utils');
 
 const Context = Industry;
 /**
  * Get activity
  * @public
- */
-exports.get = async (req, res) => {
-	try {
-		const doc = await Context.get(req.params.id);
-		if (doc) {
-			return res.status(httpStatus.FOUND).json(doc.transform());
-		} else {
-			return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+ */exports.get = async (req, res) => {
+		try {
+			const id = req.params?.id;
+			if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
+				const doc = await Context?.get(id);
+
+				if (doc) {
+					const response = {
+						data: doc.transform()
+					};
+					if (Boolean(req.query.lookups)) {
+						response.lookups = await loadLookups(Context, req);
+					}
+					return res.status(httpStatus.OK).json(response);
+				} else {
+					return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+				}
+			} else if (['new', '0', 0].includes(id)) {
+				const response = {
+					data: new Context({ userId: req.user._id }).transform()
+				};
+				if (Boolean(req.query.lookups)) {
+					response.lookups = await loadLookups(Context, req);
+				}
+				return res.status(httpStatus.OK).json(response);
+			} else {
+				return res.status(httpStatus.BAD_REQUEST).json({ message: httpStatus['422_MESSAGE'] });
+			}
+		} catch (error) {
+			return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
 		}
-	} catch (error) {
-		return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
-	}
-};
+ };
 
 /**
  * Create new activity
@@ -31,7 +51,7 @@ exports.create = async (req, res, next) => {
 		const doc = new Context(req.body);
 		const savedDoc = await doc.save();
 		res.status(httpStatus.CREATED);
-		res.json(savedFactor.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
@@ -44,18 +64,18 @@ exports.create = async (req, res, next) => {
 exports.replace = async (req, res, next) => {
 	try {
 		const user = req.user;
-		const newFactor = new Context(req.body);
+		const newRecord = new Context(req.body);
 		let userId = user?._id || user?.id;
 		if (user?.role === 'admin' && req.query?.userId) {
 			userId = req.query?.userId || userId;
 		}
 		const ommitUserId = user.role !== 'admin' ? 'userId' : '';
-		const newFactorObject = omit(newFactor.toObject(), '_id', ommitUserId);
+		const newRecordObject = omit(newRecord.toObject(), '_id', ommitUserId);
 
-		await Context.updateOne(newFactorObject, { override: true, upsert: true });
-		const savedFactor = await Context.findById(req.id);
+		await Context.updateOne(newRecordObject, { override: true, upsert: true });
+		const savedDoc = await Context.findById(req.params.id);
 
-		res.json(savedFactor.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
@@ -67,9 +87,9 @@ exports.replace = async (req, res, next) => {
  */
 exports.update = (req, res, next) => {
 	const data = req.body;
-	const factorId = req.params.factorId;
-	Context.findByIdAndUpdate(factorId, data)
-		.then((savedFactor) => res.json(savedFactor.transform()))
+	const id = req.params.id;
+	Context.findByIdAndUpdate(id, data)
+		.then((savedDoc) => res.json(savedDoc.transform()))
 		.catch((e) => next(e));
 };
 

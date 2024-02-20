@@ -33,7 +33,14 @@ module.exports = {
 			...getValidations(true)
 		}
 	},
-
+	// GET /v1/activities/:id
+	get: {
+		params: {
+			id: Joi.alternatives()
+				.try(Joi.string(), Joi.string().regex(/^[a-fA-F0-9]{24}$/))
+				.required()
+		}
+	},
 	// POST /v1/activities
 	create: {
 		body: {

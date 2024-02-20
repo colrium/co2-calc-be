@@ -7,18 +7,22 @@ const schema = new GhgModel(
 	{
 		name: {
 			type: String,
-			required: true,			
+			required: true,
 			trim: true
 		},
 		description: {
 			type: String
 		},
 		industry: {
-			type:  mongoose.Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Industry'
 		},
 		email: {
-			type: String,
+			type: String
+		},
+		active: {
+			type: Boolean,
+			default: true
 		},
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,

@@ -38,7 +38,7 @@ module.exports = {
 		}
 	},
 
-	// PUT /v1/factors/:factorId
+	// PUT /v1/factors/:id
 	replaceFactor: {
 		body: {
 			name: Joi.string(),
@@ -53,13 +53,13 @@ module.exports = {
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		},
 		params: {
-			factorId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}
 	},
 
-	// PATCH /v1/factors/:factorId
+	// PATCH /v1/factors/:id
 	updateFactor: {
 		body: {
 			name: Joi.string(),
@@ -74,7 +74,7 @@ module.exports = {
 			userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/)
 		},
 		params: {
-			factorId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}

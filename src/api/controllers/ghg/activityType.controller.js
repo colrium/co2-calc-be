@@ -3,6 +3,7 @@
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
 const ActivityType = require('../../models/ghg/activityType.model');
+const { loadLookups } = require('./utils');
 
 const Context = ActivityType;
 /**
@@ -11,11 +12,31 @@ const Context = ActivityType;
  */
 exports.get = async (req, res) => {
 	try {
-		const activityType = await Context.get(req.id);
-		if (activityType) {
-			return res.status(httpStatus.FOUND).json(activityType.transform());
+		const id = req.params?.id;
+		if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
+			const doc = await Context?.get(id);
+
+			if (doc) {
+				const response = {
+					data: doc.transform()
+				};
+				if (Boolean(req.query.lookups)) {
+					response.lookups = await loadLookups(Context, req);
+				}
+				return res.status(httpStatus.OK).json(response);
+			} else {
+				return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			}
+		} else if (['new', '0', 0].includes(id)) {
+			const response = {
+				data: new Context({ userId: req.user._id }).transform()
+			};
+			if (Boolean(req.query.lookups)) {
+				response.lookups = await loadLookups(Context, req);
+			}
+			return res.status(httpStatus.OK).json(response);
 		} else {
-			return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			return res.status(httpStatus.BAD_REQUEST).json({ message: httpStatus['422_MESSAGE'] });
 		}
 	} catch (error) {
 		return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
@@ -49,7 +70,7 @@ exports.replace = async (req, res, next) => {
 		const newActivityTypeObject = omit(newActivityType.toObject(), '_id', ommitRole);
 
 		await activityType.updateOne(newActivityTypeObject, { override: true, upsert: true });
-		const savedActivityType = await Context.findById(req.id);
+		const savedActivityType = await Context.findById(req.params.id);
 
 		res.json(savedActivityType.transform());
 	} catch (error) {
@@ -109,7 +130,7 @@ exports.remove = (req, res, next) => {
 	const user = req.user;
 
 	activityType
-		.remove({ _id: req.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+		.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };

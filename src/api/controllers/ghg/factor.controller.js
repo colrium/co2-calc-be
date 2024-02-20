@@ -30,9 +30,9 @@ exports.get = async (req, res) => {
 exports.create = async (req, res, next) => {
 	try {
 		const factor = new Context(req.body);
-		const savedFactor = await factor.save();
+		const savedDoc = await factor.save();
 		res.status(httpStatus.CREATED);
-		res.json(savedFactor.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
@@ -45,16 +45,16 @@ exports.create = async (req, res, next) => {
 exports.replace = async (req, res, next) => {
 	try {
 		const user = req.user;
-		const newFactor = new Context(req.body);
+		const newRecord = new Context(req.body);
 		let userId = user?._id || user?.id;
 		if (user?.role === 'admin' && req.query?.userId) {
 			userId = req.query?.userId || userId;
 		}
 		const ommitUserId = user.role !== 'admin' ? 'userId' : '';
-		const newFactorObject = omit(newFactor.toObject(), '_id', ommitUserId);
+		const newRecordObject = omit(newRecord.toObject(), '_id', ommitUserId);
 
-		await factor.updateOne(newFactorObject, { override: true, upsert: true });
-		const savedFactor = await Context.findById(req.id);
+		await Context.updateOne(newRecordObject, { override: true, upsert: true });
+		const savedFactor = await Context.findById(req.params.id);
 
 		res.json(savedFactor.transform());
 	} catch (error) {
@@ -68,8 +68,8 @@ exports.replace = async (req, res, next) => {
  */
 exports.update = (req, res, next) => {
 	const data = req.body;
-	const factorId = req.params.factorId;
-	Context.findByIdAndUpdate(factorId, data)
+	const id = req.params.id;
+	Context.findByIdAndUpdate(id, data)
 		.then((savedFactor) => res.json(savedFactor.transform()))
 		.catch((e) => next(e));
 };
@@ -105,7 +105,7 @@ exports.remove = (req, res, next) => {
 	const user = req.user;
 
 	factor
-		.remove({ _id: req.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+		.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };

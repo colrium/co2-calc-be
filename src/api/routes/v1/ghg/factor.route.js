@@ -62,7 +62,7 @@ router
 
 
 router
-	.route('/:factorId')
+	.route('/:id')
 	/**
 	 * @api {get} v1/factors/:id Get Factor
 	 * @apiDescription Get factor information

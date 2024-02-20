@@ -31,14 +31,15 @@ const schema = new GhgModel(
 			required: true,
 			default: {}
 		},
-		estimate: {
+		total: {
 			type: Number,
 			default: 0.0
 		},
-		userId: {
+		domainId: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
-			default: null
+			ref: 'Domain',
+			default: null,
+			displayValue: 'name'
 		}
 	},
 	{

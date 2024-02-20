@@ -60,7 +60,7 @@ router
 	.post(authorize(LOGGED_USER), validate(create), controller.create);
 
 router
-	.route('/:resultId')
+	.route('/:id')
 	/**
 	 * @api {get} v1/industries/:id Get Result
 	 * @apiDescription Get result information

@@ -3,6 +3,8 @@
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
 const Result = require('../../models/ghg/result.model');
+const Domain = require('../../models/ghg/domain.model');
+const { loadLookups } = require('./utils');
 
 const Context = Result;
 /**
@@ -11,12 +13,31 @@ const Context = Result;
  */
 exports.get = async (req, res) => {
 	try {
-		const resultId = req.params?.resultId;
-		const result = await Context.get(resultId);
-		if (result) {
-			return res.status(httpStatus.OK).json(result.transform());
+		const id = req.params?.id;
+		if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
+			const doc = await Context?.get(id);
+
+			if (doc) {
+				const response = {
+					data: doc.transform()
+				};
+				if (Boolean(req.query.lookups)) {
+					response.lookups = await loadLookups(Context, req);
+				}
+				return res.status(httpStatus.OK).json(response);
+			} else {
+				return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			}
+		} else if (['new', '0', 0].includes(id)) {
+			const response = {
+				data: new Context({ userId: req.user._id }).transform()
+			};
+			if (Boolean(req.query.lookups)) {
+				response.lookups = await loadLookups(Context, req);
+			}
+			return res.status(httpStatus.OK).json(response);
 		} else {
-			return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			return res.status(httpStatus.BAD_REQUEST).json({ message: httpStatus['422_MESSAGE'] });
 		}
 	} catch (error) {
 		return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
@@ -45,13 +66,13 @@ exports.create = async (req, res, next) => {
 exports.replace = async (req, res, next) => {
 	try {
 		const user = req.user;
-		const resultId = req.params?.resultId;
+		const id = req.params?.id;
 		const newResult = new Context(req.body);
 		const ommitRole = user.role !== 'admin' ? 'role' : '';
 		const newResultObject = omit(newResult.toObject(), '_id', ommitRole);
-		await Context.findByIdAndUpdate(resultId, req.body);
+		await Context.findByIdAndUpdate(id, req.body);
 		await Context.updateOne(newResultObject, { override: true, upsert: true });
-		const savedResult = await Context.findById(resultId);
+		const savedResult = await Context.findById(id);
 
 		res.json(savedResult.transform());
 	} catch (error) {
@@ -65,9 +86,9 @@ exports.replace = async (req, res, next) => {
  */
 exports.update = async (req, res, next) => {
 	
-	const resultId = req.params.resultId;
-	const result = Context.findById(resultId);
-	Context.findByIdAndUpdate(resultId, req.body)
+	const id = req.params.id;
+	const result = Context.findById(id);
+	Context.findByIdAndUpdate(id, req.body)
 		.then((savedResult) => res.json(savedResult.transform()))
 		.catch((e) => next(e));
 };
@@ -80,14 +101,15 @@ exports.list = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
 	let q = { ...req.query };
-	if (user?.role === 'admin' && req.query?.userId){
-		q = { ...req.query, userId: { $in: [req.query?.userId] } };
-	}
-	else if (user?.role !== 'admin') {
-		q = { ...req.query, userId: { $in: [userId] } };
+	if (user?.role === 'admin' && req.query?.domainId) {
+		q = { ...req.query, domainId: { $in: [req.query?.domainId] } };
+	} else if (user?.role !== 'admin') {		
+		const userDomains = await Domain.list({userId: userId, ...(req.query?.domainId? {domainId: req.query?.domainId} : {})})
+		const userDomainsIds = userDomains.map(({ _id }) => _id);
+		q = { ...req.query, domainId: { $in: userDomainsIds } };
 	}
 	try {
-		console.log('req.query?.userId', req.query?.userId);
+		
 		const { page = 1, perPage = 30 } = req.query;
 		const count = await Context.count(q);
 		const docs = await Context.list(q);
@@ -107,7 +129,7 @@ exports.remove = (req, res, next) => {
 	const user = req.user;
 
 	result
-		.remove({ _id: req.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+		.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };
