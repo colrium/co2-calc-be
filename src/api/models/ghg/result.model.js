@@ -3,13 +3,14 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Result = GhgModel.create(
+	'Result',
 	{
 		name: {
 			type: String,
 			required: true,
 			// unique: true,
-			trim: true,
+			trim: true
 			// lowercase: true
 		},
 		description: {
@@ -24,7 +25,7 @@ const schema = new GhgModel(
 		type: {
 			type: String,
 			default: 'company',
-            enum: ['company', 'product']
+			enum: ['company', 'product']
 		},
 		activities: {
 			type: Object,
@@ -36,8 +37,8 @@ const schema = new GhgModel(
 			default: 0.0
 		},
 		domainId: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Domain',
+			type: String,
+			// ref: 'Domain',
 			default: null,
 			displayValue: 'name'
 		}
@@ -46,5 +47,5 @@ const schema = new GhgModel(
 		timestamps: true
 	}
 );
-const Result = mongoose.model('Result', schema);
+// const Result = mongoose.model('Result', schema);
 module.exports = Result;

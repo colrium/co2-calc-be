@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Domain = GhgModel.create(
+	'Domain',
 	{
 		name: {
 			type: String,
@@ -13,9 +14,10 @@ const schema = new GhgModel(
 		description: {
 			type: String
 		},
-		industry: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Industry'
+		industryId: {
+			type: mongoose.Schema.Types.ObjectId,			
+			ref: 'Industry',
+			default: null
 		},
 		email: {
 			type: String
@@ -34,5 +36,4 @@ const schema = new GhgModel(
 		timestamps: true
 	}
 );
-const Domain = mongoose.model('Domain', schema);
 module.exports = Domain;

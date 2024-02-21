@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = GhgModel(
+const Material = GhgModel(
+	'Material',
 	{
 		name: {
 			type: String,
@@ -43,6 +44,6 @@ const schema = GhgModel(
 	}
 );
 
-const Material = mongoose.model('Material', schema);
+// const Material = mongoose.model('Material', schema);
 
 module.exports = Material;

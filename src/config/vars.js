@@ -6,11 +6,18 @@ require('dotenv-safe').config({
   example: path.join(__dirname, '../../.env.example'),
 });
 
+let defaultPagination = 50;
+try {
+	defaultPagination = parseInt(process.env.PAGINATION_PER_PAGE)
+} catch (error) {
+	
+}
 module.exports = {
 	env: process.env.NODE_ENV,
 	port: process.env.PORT,
 	jwtSecret: process.env.JWT_SECRET,
 	jwtExpirationInterval: process.env.JWT_EXPIRATION_MINUTES,
+	defaultPagination: defaultPagination,
 	mongo: {
 		uri: process.env.NODE_ENV === 'test' ? process.env.MONGO_URI_TESTS : process.env.MONGO_URI
 	},

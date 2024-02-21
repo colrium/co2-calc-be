@@ -1,11 +1,34 @@
 /** @format */
 
 const mongoose = require('mongoose');
-const { omitBy, isNil } = require('lodash');
-
-class GhgModel extends mongoose.Schema {
+const { omitBy, isNil, omit } = require('lodash');
+const { defaultPagination } = require('../../config/vars');
+const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup'];
+exports.reservedWords = reservedWords;
+const omitReservedKeys = (q) => {
+	return omit({ ...q }, reservedWords);
+};
+exports.omitReservedKeys = omitReservedKeys;
+exports.evalSoftLookups = async (model) => {
+	const paths = model.schema.paths;
+	const lookups = {};
+	for (const [name, path] of Object.entries(paths)) {
+		if (path instanceof mongoose.Schema.Types.ObjectId && name !== '_id') {
+			const modelName = path.options.ref;
+			const displayValue = path.options.displayValue || 'name';
+			const Model = mongoose.model(modelName);
+			if (Model) {
+				lookups[name] = { [displayValue]: 1 };
+			}
+		}
+	}
+	return lookups;
+};
+class GhgSchema extends mongoose.Schema {
 	constructor(...args) {
 		super(...args);
+		this.initGhgMethods = this.initGhgMethods.bind(this);
+		this.initGhgStatics = this.initGhgStatics.bind(this);
 		this.initGhgMethods();
 		this.initGhgStatics();
 	}
@@ -13,15 +36,20 @@ class GhgModel extends mongoose.Schema {
 	initGhgMethods() {
 		const pathnames = Object.keys(this.paths);
 		const paths = Object.values(this.paths);
-		const excludedPathnames = paths.reduce((acc, curr, index) => {
-			if (curr.internal) {
-				acc.push(pathnames[index]);
-			}
-			return acc;
-		}, ['_id', '_v']);
+		const excludedPathnames = paths.reduce(
+			(acc, curr, index) => {
+				if (curr.internal) {
+					acc.push(pathnames[index]);
+				}
+				return acc;
+			},
+			['_id', '_v']
+		);
 		this.pathnames = pathnames;
+		
 		this.method({
 			transform() {
+				const json = this.toJSON();
 				const transformed = {};
 				const fields = ['id', ...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
 
@@ -29,7 +57,7 @@ class GhgModel extends mongoose.Schema {
 					transformed[field] = this[field];
 				});
 
-				return transformed;
+				return { ...json, ...transformed };
 			}
 		});
 	}
@@ -37,10 +65,11 @@ class GhgModel extends mongoose.Schema {
 	initGhgStatics() {
 		const currentStatics = this.statics;
 		this.statics = {
+			
 			/**
-			 * Get factor
+			 * Get record
 			 *
-			 * @param {ObjectId} id - The objectId of factor.
+			 * @param {ObjectId} id - The objectId of record.
 			 * @returns {Promise<Factor, APIError>}
 			 */
 			async get(id) {
@@ -65,8 +94,18 @@ class GhgModel extends mongoose.Schema {
 			 * @param {number} limit - Limit number of factors to be returned.
 			 * @returns {Promise<Factor[]>}
 			 */
-			list({ page = 1, perPage = 30, sort = 'createdAt', sortDir=-1, select, ...query }) {
-				const findQuery = omitBy({ ...query }, isNil);
+			async list({
+				page = 1,
+				perPage = defaultPagination,
+				sort = 'createdAt',
+				sortDir = -1,
+				select,
+				populate = null,
+				lookup = false,
+				...query
+			}) {
+				const lookupsa = this.schema.lookups;
+				const findQuery = omitReservedKeys(query);
 				const options = Object.entries(findQuery).reduce((acc, [key, value]) => {
 					try {
 						acc[key] = JSON.parse(value.replaceAll(`'`, '"'));
@@ -75,23 +114,67 @@ class GhgModel extends mongoose.Schema {
 					}
 					return acc;
 				}, {});
-
-				return this.find(options)
-					.sort({ [sort]: parseInt(sortDir) })
-					.skip(perPage * (page - 1))
-					.limit(perPage)
-					.exec();
+				let findQ = this.find(options);
+				if (sort) {
+					findQ = findQ.sort({ [sort]: parseInt(sortDir) });
+				}
+				if (lookup) {
+					const lookups = this.schema.lookups;
+					for (const {foreignField, localField, ref, virtualField, displayField} of lookups) {
+						findQ = findQ.populate({
+							path: virtualField,
+							select: `${displayField}`,
+							transform: (doc, id) => {
+								if (!doc) {
+									return id
+								}
+								return displayField.split(" ").reduce((acc, key) => {
+									acc += doc[key]? ' '+doc[key] : ''
+									return acc
+								}, '').trim()
+							}
+						});
+					}
+				}
+				if (typeof select === 'string') {
+					findQ = findQ.select(select.replaceAll(',', ' '));
+				}
+				if (populate) {
+					findQ = findQ.populate(populate);
+				}
+				if (perPage >= 1 && page >= 1) {
+					findQ = findQ.skip(perPage * (page - 1)).limit(perPage);
+				}
+				const results = await findQ.exec();
+				return await results;
 			},
-			count({ page = 1, perPage = 30, sort, ...query }) {
-				// const options = omitBy({ ...query }, isNil);
-				const options = Object.entries({...query }).reduce((acc, [key, value]) => {
+			count({ page = 1, perPage = defaultPagination, sort, sortDir, select, populate, shallowPopulate, ...query }) {
+				const findQuery = omitReservedKeys(query);
+				const options = Object.entries(findQuery).reduce((acc, [key, value]) => {
 					try {
 						acc[key] = value;
 					} catch (error) {}
 					return acc;
 				}, {});
-				console.log('options', options);
 				return this.countDocuments(options).exec();
+			},
+			async evalSoftLookups() {
+				const virtuals = this.virtuals || this.schema.virtuals;
+				const paths = this.paths || this.schema.paths;
+				const fields = { ...paths, ...virtuals };
+				const lookups = {};
+				for (const [name, path] of Object.entries(fields)) {
+					if (path.options.lookup && name !== '_id') {
+						const modelName = path.options.lookup;
+						const displayValue = path.options.displayValue || 'name';
+						const Model = mongoose.model(modelName);
+						if (Model) {
+							// lookups[name] = { [displayValue]: 1 };
+							lookups[name.replace('Id', '')] = displayValue;
+						}
+					}
+				}
+				return lookups;
 			},
 			...currentStatics
 		};
@@ -111,5 +194,42 @@ class GhgModel extends mongoose.Schema {
 		};
 	}
 }
-
+class GhgModel {
+	static create(name, ...args) {
+		const schema = new GhgSchema(...args);
+		
+		const lookups = [];
+		const lookupFields = [];
+		for (const [name, path] of Object.entries(schema.paths)) {
+			if ((path.options.lookup || path.options.ref) && name !== '_id') {
+				const modelName = path.options.lookup || path.options.ref;
+				const displayValue = path.options.displayValue || 'name';
+				// const Model = mongoose.model(modelName);
+				if (modelName && name.endsWith('Id')) {
+					// lookups[name] = { [displayValue]: 1 };
+					lookupFields.push(name);
+					lookups.push({
+						virtualField: name.replaceAll('Id', ''),
+						localField: name,
+						ref: modelName,
+						foreignField: '_id',
+						displayField: displayValue,
+						justOne: true
+					});
+				}
+			}
+		}
+		const model = mongoose.model(name, schema);
+		schema.set('toObject', { virtuals: true });
+		schema.set('toJSON', { virtuals: true });
+		for (const { virtualField, ...lookup } of lookups) {
+			schema.virtual(virtualField, lookup);
+		}
+		schema.lookups = lookups;
+		schema.lookupFields = lookupFields;
+		
+		
+		return model;
+	}
+}
 module.exports = GhgModel;

@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const GhgModel = require("../../base/GhgModel");
 
-const schema = new GhgModel(
+const ActivityType = GhgModel.create(
+	'ActivityType',
 	{
 		name: {
 			type: String,
@@ -19,10 +20,10 @@ const schema = new GhgModel(
 			enum: ['scope1', 'scope2', 'scope3us', 'scope3ds']
 		},
 		definition: {
-			type: String,
+			type: String
 		},
 		example: {
-			type: String,
+			type: String
 		},
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
@@ -35,6 +36,6 @@ const schema = new GhgModel(
 	}
 );
 
-const ActivityType = mongoose.model('ActivityType', schema);
+// const ActivityType = mongoose.model('ActivityType', schema);
 
 module.exports = ActivityType;

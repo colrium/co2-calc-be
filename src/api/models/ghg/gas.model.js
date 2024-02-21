@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Gas = GhgModel.create(
+	'Gas',
 	{
 		name: {
 			type: String,
@@ -21,5 +22,5 @@ const schema = new GhgModel(
 		timestamps: true
 	}
 );
-const Gas = mongoose.model('Gas', schema);
+// const Gas = mongoose.model('Gas', schema);
 module.exports = Gas;

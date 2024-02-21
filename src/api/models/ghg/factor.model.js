@@ -4,28 +4,28 @@ const mongoose = require('mongoose');
 const { omitBy, isNil } = require('lodash');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Factor = GhgModel.create('Factor',
 	{
 		name: {
 			type: String,
 			required: true,
 			// unique: true,
-			trim: true,
+			trim: true
 			// lowercase: true
 		},
 		emissionType: {
 			type: String,
-			enum: ['fossil', 'biogenic'],
+			enum: ['fossil', 'biogenic']
 		},
 		unit: {
-			type: String,
+			type: String
 			// required: true
 		},
 		categoryName: {
 			type: String
 		},
 		region: {
-			type: String,
+			type: String
 		},
 		yearFrom: {
 			type: Number,
@@ -47,7 +47,7 @@ const schema = new GhgModel(
 			}
 		],
 		userId: {
-			type: mongoose.Schema.Types.ObjectId,
+			type: String,
 			ref: 'User',
 			default: null
 		}
@@ -61,9 +61,7 @@ const schema = new GhgModel(
 /**
  * Statics
  */
-schema.addStatics({
-	
-
+Factor.schema.addStatics({
 	/**
 	 * Return new validation error
 	 * if error is a mongoose duplicate key error
@@ -91,5 +89,5 @@ schema.addStatics({
 	}
 });
 
-const Factor = mongoose.model('Factor', schema);
+// const Factor = mongoose.model('Factor', schema);
 module.exports = Factor;

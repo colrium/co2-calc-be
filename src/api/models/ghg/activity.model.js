@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const { omitBy, isNil } = require('lodash');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Activity = GhgModel.create(
+	'Activity',
 	{
 		name: {
 			type: String,
@@ -49,6 +50,7 @@ const schema = new GhgModel(
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
+			displayValue: 'firstName',
 			default: null
 		}
 	},
@@ -59,5 +61,5 @@ const schema = new GhgModel(
 
 
 
-const Activity = mongoose.model('Activity', schema);
+// const Activity = mongoose.model('Activity', schema);
 module.exports = Activity;

@@ -29,7 +29,7 @@ module.exports = {
 	listActivityTypes: {
 		query: {
 			page: Joi.number().min(1),
-			perPage: Joi.number().min(1).max(1000),
+			perPage: Joi.number().min(1).max(10000),
 			...getValidations(true)
 		}
 	},

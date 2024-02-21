@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Unit = GhgModel.create(
+	'Unit',
 	{
 		name: {
 			type: String,
@@ -26,5 +27,5 @@ const schema = new GhgModel(
 		timestamps: true
 	}
 );
-const Unit = mongoose.model('Unit', schema);
+// const Unit = mongoose.model('Unit', schema);
 module.exports = Unit;

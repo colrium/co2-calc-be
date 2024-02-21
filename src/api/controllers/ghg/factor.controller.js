@@ -3,6 +3,7 @@
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
 const Factor = require('../../models/ghg/factor.model');
+const { defaultPagination } = require('../../../config/vars');
 
 const Context = Factor;
 /**
@@ -86,7 +87,7 @@ exports.list = async (req, res, next) => {
 	}
 	const q = { ...req.query, userId: { $in: [null, userId] }}
 	try {
-		const { page = 1, perPage = 30 } = req.query;
+		const { page = 1, perPage = defaultPagination } = req.query;
 		const count = await Context.count(q);
 		const docs = await Context.list(q);
 		const data = docs.map((doc) => doc.transform());

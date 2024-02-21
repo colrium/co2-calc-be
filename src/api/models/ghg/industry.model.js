@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 const GhgModel = require('../../base/GhgModel');
 
-const schema = new GhgModel(
+const Industry = GhgModel.create(
+	'Industry',
 	{
 		name: {
 			type: String,
@@ -13,7 +14,7 @@ const schema = new GhgModel(
 		description: {
 			type: String
 		},
-		averageEmission: {
+		annualAvgEmission: {
 			type: Number,
 			default: 0
 		}
@@ -22,5 +23,5 @@ const schema = new GhgModel(
 		timestamps: true
 	}
 );
-const Industry = mongoose.model('Industry', schema);
+// const Industry = mongoose.model('Industry', schema);
 module.exports = Industry;

@@ -20,7 +20,8 @@ const roles = ['user', 'admin'];
  * User Schema
  * @private
  */
-const schema = new GhgModel(
+const User = GhgModel.create(
+	'User',
 	{
 		email: {
 			type: String,
@@ -74,12 +75,12 @@ const schema = new GhgModel(
  * - virtuals
 //  */
 
-
+User.roles = roles;
 /**
  * Methods
  */
-schema.addMethods({
-	sanitize: function() {
+User.schema.addMethods({
+	sanitize: function () {
 		if (this.isModified('firstname')) {
 			this.firstname = `${this.firstname?.trim()?.charAt(0)?.toUpperCase()}${this.firstname?.slice(1)?.toLowerCase()}`;
 		}
@@ -110,7 +111,7 @@ schema.addMethods({
 /**
  * Statics
  */
-schema.addStatics({
+User.schema.addStatics({
 	roles,
 
 	/**
@@ -192,7 +193,7 @@ schema.addStatics({
 
 
 
-schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function save(next) {
+User.schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function save(next) {
 	try {
 		this.sanitize();
 		return next();
@@ -201,8 +202,8 @@ schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|updat
 	}
 });
 
-schema.virtual('name').get(function () {
+User.schema.virtual('name').get(function () {
 	return `${this.firstname || ''}${this.firstname ? ' ' : ''}${this.lastname || ''}`;
 });
-const User = mongoose.model('User', schema);
+// const User = mongoose.model('User', schema);
 module.exports = User;

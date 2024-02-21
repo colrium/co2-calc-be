@@ -10,8 +10,9 @@
 		"node": ">=8",
 		"yarn": "*"
 	},
+	"type": "module",
 	"scripts": {
-		"seed": "node ./src/api/seed/seeder.js",
+		"seed": "node --experimental-modules ./src/api/seed/seeder.js",
 		"precommit": "yarn lint",
 		"prestart": "yarn docs",
 		"start": "cross-env NODE_ENV=production pm2 start ./src/index.js --name ghg",

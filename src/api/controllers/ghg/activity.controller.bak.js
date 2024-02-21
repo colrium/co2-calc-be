@@ -2,13 +2,12 @@
 
 const httpStatus = require('http-status');
 const { omit } = require('lodash');
-const ActivityType = require('../../models/ghg/activityType.model');
+const Activity = require('../../models/ghg/activity.model');
 const { loadLookups } = require('./utils');
-const { defaultPagination } = require('../../../config/vars');
 
-const Context = ActivityType;
+const Context = Activity;
 /**
- * Get activityType
+ * Get activity
  * @public
  */
 exports.get = async (req, res) => {
@@ -45,62 +44,71 @@ exports.get = async (req, res) => {
 };
 
 /**
- * Create new activityType
+ * Create new activity
  * @public
  */
 exports.create = async (req, res, next) => {
 	try {
-		const activityType = new Context(req.body);
-		const savedActivityType = await activityType.save();
+		const doc = new Activity(req.body);
+		const savedDoc = await doc.save();
 		res.status(httpStatus.CREATED);
-		res.json(savedActivityType.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
 };
 
 /**
- * Replace existing activityType
+ * Replace existing activity
  * @public
  */
 exports.replace = async (req, res, next) => {
 	try {
 		const user = req.user;
-		const newActivityType = new Context(req.body);
-		const ommitRole = user.role !== 'admin' ? 'role' : '';
-		const newActivityTypeObject = omit(newActivityType.toObject(), '_id', ommitRole);
+		const newRecord = new Activity(req.body);
+		let userId = user?._id || user?.id;
+		if (user?.role === 'admin' && req.query?.userId) {
+			userId = req.query?.userId || userId;
+		}
+		const ommitUserId = user.role !== 'admin' ? 'userId' : '';
+		const newRecordObject = omit(newRecord.toObject(), '_id', ommitUserId);
 
-		await activityType.updateOne(newActivityTypeObject, { override: true, upsert: true });
-		const savedActivityType = await Context.findById(req.params.id);
+		await Activity.updateOne(newRecordObject, { override: true, upsert: true });
+		const savedDoc = await Activity.findById(req.params.id);
 
-		res.json(savedActivityType.transform());
+		res.json(savedDoc.transform());
 	} catch (error) {
 		next(error);
 	}
 };
 
 /**
- * Update existing activityType
+ * Update existing activity
  * @public
  */
 exports.update = (req, res, next) => {
-	const activityType = req.body;
-
-	Context.create()
-		.then((savedActivityType) => res.json(savedActivityType.transform()))
+	const data = req.body;
+	const id = req.params.id;
+	Activity.findByIdAndUpdate(id, data)
+		.then((savedDoc) => res.json(savedDoc.transform()))
 		.catch((e) => next(e));
 };
 
 /**
- * Get activityType list
+ * Get activity list
  * @public
  */
 exports.list = async (req, res, next) => {
 	const user = req.user;
+	let userId = user?._id || user?.id;
+	if (user?.role === 'admin' && req.query?.userId) {
+		userId = req.query?.userId || userId;
+	}
+	const q = { ...req.query, ...(user?.role !== 'admin' ? { userId: { $in: [null, userId] } } : {}) };
 	try {
-		const { page = 1, perPage = defaultPagination } = req.query;
-		const count = await Context.count({ ...req.query, ...(user?.role !== 'admin' ? { userId: { $in: [null, user?._id] } } : {}) });
-		const docs = await Context.list({ ...req.query, ...(user?.role !== 'admin' ? { userId: { $in: [null, user?._id] } } : {}) });
+		const { page = 1, perPage = 10 } = req.query;
+		const count = await Activity.count(q);
+		const docs = await Activity.list(q);
 		const data = docs.map((doc) => doc.transform());
 		const pages = Math.ceil(count / perPage);
 		res.json({ data: data, pages: pages, page, perPage, count });
@@ -109,29 +117,14 @@ exports.list = async (req, res, next) => {
 	}
 };
 
-exports.help = async (req, res, next) => {
-	try {
-		const q = { ...req.query, userId: { $in: [null] } };
-		const { page = 1, perPage = defaultPagination } = req.query;
-		const count = await Context.count(q);
-		const docs = await Context.list(q);
-		const data = docs.map((doc) => doc.transform());	
-		const pages = Math.ceil(count / perPage);
-		res.json({ data: data, pages: pages, page, perPage, count });
-	} catch (error) {
-		next(error);
-	}
-};
-
 /**
- * Delete activityType
+ * Delete activity
  * @public
  */
 exports.remove = (req, res, next) => {
 	const user = req.user;
 
-	activityType
-		.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
+	Activity.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })
 		.then(() => res.status(httpStatus.NO_CONTENT).end())
 		.catch((e) => next(e));
 };
