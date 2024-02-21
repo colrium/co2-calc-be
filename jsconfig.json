@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"rootDirs": ["./src"],
+		"lib": ["es7", "dom"],
+		"moduleResolution": "node",
+		"removeComments": true,
+		"sourceMap": true,
+		"declaration": false,
+		"allowJs": true,
+		"target": "es5",
+		"module": "commonjs",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": false,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"exclude": ["node_modules"]
+}
