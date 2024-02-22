@@ -1,9 +1,7 @@
 /** @format */
 
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
-const Result = require('../../models/ghg/result.model');
-const { defaultPagination } = require('../../../config/vars');
+import { defaultPagination } from "../../../config/vars.js";
+import Result from "../../models/ghg/result.model.js";
 
 const Context = Result;
 
@@ -11,7 +9,7 @@ const Context = Result;
  * Get result list
  * @public
  */
-exports.list = async (req, res, next) => {
+export const list = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
 	if (user?.role === 'admin' && req.query?.userId) {
@@ -33,7 +31,7 @@ exports.list = async (req, res, next) => {
  * Get result list
  * @public
  */
-exports.totals = async (req, res, next) => {
+export const totals = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
 	if (user?.role === 'admin' && req.query?.userId) {

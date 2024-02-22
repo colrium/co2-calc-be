@@ -1,15 +1,15 @@
-const express = require('express');
-const userRoutes = require('./user.route');
-const authRoutes = require('./auth.route');
+import express from "express";
+import authRoutes from "./auth.route.js";
+import userRoutes from "./user.route.js";
 //
-const factorRoutes = require('./ghg/factor.route');
-const resultRoutes = require('./ghg/result.route');
-const helpRoutes = require('./ghg/help.route');
-const activityTypeRoutes = require('./ghg/activityType.route');
-const overViewRoutes = require('./ghg/overview.route');
-const activityRoutes = require('./ghg/activity.route');
-const industryRoutes = require('./ghg/industry.route');
-const domainRoutes = require('./ghg/domain.route');
+import activityRoutes from "./ghg/activity.route.js";
+import activityTypeRoutes from "./ghg/activityType.route.js";
+import domainRoutes from "./ghg/domain.route.js";
+import factorRoutes from "./ghg/factor.route.js";
+import helpRoutes from "./ghg/help.route.js";
+import industryRoutes from "./ghg/industry.route.js";
+import overViewRoutes from "./ghg/overview.route.js";
+import resultRoutes from "./ghg/result.route.js";
 //
 const router = express.Router();
 
@@ -36,4 +36,4 @@ router.use('/help', helpRoutes);
 router.use('/users', userRoutes);
 router.use('/auth', authRoutes);
 
-module.exports = router;
+export default router;

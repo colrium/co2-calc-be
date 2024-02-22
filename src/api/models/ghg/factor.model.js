@@ -1,8 +1,6 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const { omitBy, isNil } = require('lodash');
-const GhgModel = require('../../base/GhgModel');
+import GhgModel from "../../base/GhgModel.js";
 
 const Factor = GhgModel.create('Factor',
 	{
@@ -90,4 +88,4 @@ Factor.schema.addStatics({
 });
 
 // const Factor = mongoose.model('Factor', schema);
-module.exports = Factor;
+export default Factor;

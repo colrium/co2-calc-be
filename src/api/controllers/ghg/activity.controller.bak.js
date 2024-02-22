@@ -1,16 +1,17 @@
 /** @format */
 
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
-const Activity = require('../../models/ghg/activity.model');
-const { loadLookups } = require('./utils');
+import httpStatus from "http-status";
+import lodash from 'lodash';
+import Activity from '../../models/ghg/activity.model.js';
+import { loadLookups } from './utils.js';
+const { omit } = lodash;
 
 const Context = Activity;
 /**
  * Get activity
  * @public
  */
-exports.get = async (req, res) => {
+export const get = async (req, res) => {
 	try {
 		const id = req.params?.id;
 		if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
@@ -47,7 +48,7 @@ exports.get = async (req, res) => {
  * Create new activity
  * @public
  */
-exports.create = async (req, res, next) => {
+export const create = async (req, res, next) => {
 	try {
 		const doc = new Activity(req.body);
 		const savedDoc = await doc.save();
@@ -62,7 +63,7 @@ exports.create = async (req, res, next) => {
  * Replace existing activity
  * @public
  */
-exports.replace = async (req, res, next) => {
+export const replace = async (req, res, next) => {
 	try {
 		const user = req.user;
 		const newRecord = new Activity(req.body);
@@ -86,7 +87,7 @@ exports.replace = async (req, res, next) => {
  * Update existing activity
  * @public
  */
-exports.update = (req, res, next) => {
+export const update = (req, res, next) => {
 	const data = req.body;
 	const id = req.params.id;
 	Activity.findByIdAndUpdate(id, data)
@@ -98,7 +99,7 @@ exports.update = (req, res, next) => {
  * Get activity list
  * @public
  */
-exports.list = async (req, res, next) => {
+export const list = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
 	if (user?.role === 'admin' && req.query?.userId) {
@@ -121,7 +122,7 @@ exports.list = async (req, res, next) => {
  * Delete activity
  * @public
  */
-exports.remove = (req, res, next) => {
+export const remove = (req, res, next) => {
 	const user = req.user;
 
 	Activity.remove({ _id: req.params.id, ...(user?.role !== 'admin' ? { userId: user?._id } : {}) })

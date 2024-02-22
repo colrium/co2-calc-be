@@ -1,15 +1,15 @@
 /* eslint-disable arrow-body-style */
-const request = require('supertest');
-const httpStatus = require('http-status');
-const { expect } = require('chai');
-const sinon = require('sinon');
-const moment = require('moment-timezone');
-const app = require('../../../index');
-const User = require('../../models/user.model');
-const RefreshToken = require('../../models/refreshToken.model');
-const PasswordResetToken = require('../../models/passwordResetToken.model');
-const authProviders = require('../../services/authProviders');
-const emailProvider = require('../../services/emails/emailProvider');
+import { expect } from "chai";
+import httpStatus from "http-status";
+import moment from "moment-timezone";
+import sinon from "sinon";
+import request from "supertest";
+import app from "../../../index";
+import PasswordResetToken from "../../models/passwordResetToken.model.js";
+import RefreshToken from "../../models/refreshToken.model.js";
+import User from "../../models/user.model.js";
+import authProviders from "../../services/authProviders";
+import emailProvider from "../../services/emails/emailProvider";
 
 const sandbox = sinon.createSandbox();
 

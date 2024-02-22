@@ -1,21 +1,12 @@
 {
 	"compilerOptions": {
-		"rootDirs": ["./src"],
-		"lib": ["es7", "dom"],
+		"baseUrl": ".",
 		"moduleResolution": "node",
-		"removeComments": true,
-		"sourceMap": true,
-		"declaration": false,
-		"allowJs": true,
 		"target": "es5",
-		"module": "commonjs",
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": false,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"paths": {
-			"@/*": ["./src/*"]
-		}
+		"module": "esnext",
+		"allowSyntheticDefaultImports": true
+		
 	},
 	"exclude": ["node_modules"]
+	
 }

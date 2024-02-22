@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const crypto = require('crypto');
-const moment = require('moment-timezone');
+import crypto from "crypto";
+import moment from "moment-timezone";
+import mongoose from "mongoose";
 
 /**
  * Refresh Token Schema
@@ -54,4 +54,4 @@ passwordResetTokenSchema.statics = {
  * @typedef RefreshToken
  */
 const PasswordResetToken = mongoose.model('PasswordResetToken', passwordResetTokenSchema);
-module.exports = PasswordResetToken;
+export default PasswordResetToken;

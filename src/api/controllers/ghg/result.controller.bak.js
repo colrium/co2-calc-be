@@ -1,17 +1,18 @@
 /** @format */
 
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
-const Result = require('../../models/ghg/result.model');
-const Domain = require('../../models/ghg/domain.model');
-const { loadLookups } = require('./utils');
+import httpStatus from "http-status";
+import lodash from 'lodash';
+import Domain from "../../models/ghg/domain.model.js";
+import Result from "../../models/ghg/result.model.js";
+import { loadLookups } from "./utils.js";
+const { omit } = lodash;
 
 const Context = Result;
 /**
  * Get result
  * @public
  */
-exports.get = async (req, res) => {
+export const get = async (req, res) => {
 	try {
 		const id = req.params?.id;
 		if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
@@ -48,7 +49,7 @@ exports.get = async (req, res) => {
  * Create new result
  * @public
  */
-exports.create = async (req, res, next) => {
+export const create = async (req, res, next) => {
 	try {
 		const result = new Context(req.body);
 		const savedResult = await result.save();
@@ -63,7 +64,7 @@ exports.create = async (req, res, next) => {
  * Replace existing result
  * @public
  */
-exports.replace = async (req, res, next) => {
+export const replace = async (req, res, next) => {
 	try {
 		const user = req.user;
 		const id = req.params?.id;
@@ -84,7 +85,7 @@ exports.replace = async (req, res, next) => {
  * Update existing result
  * @public
  */
-exports.update = async (req, res, next) => {
+export const update = async (req, res, next) => {
 	const id = req.params.id;
 	const result = Context.findById(id);
 	Context.findByIdAndUpdate(id, req.body)
@@ -96,7 +97,7 @@ exports.update = async (req, res, next) => {
  * Get result list
  * @public
  */
-exports.list = async (req, res, next) => {
+export const list = async (req, res, next) => {
 	const user = req.user;
 	let userId = user?._id || user?.id;
 	let q = { ...req.query };
@@ -123,7 +124,7 @@ exports.list = async (req, res, next) => {
  * Delete result
  * @public
  */
-exports.remove = (req, res, next) => {
+export const remove = (req, res, next) => {
 	const user = req.user;
 
 	result

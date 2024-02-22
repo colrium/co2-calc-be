@@ -1,16 +1,9 @@
-const express = require('express');
-const validate = require('express-validation');
-const controller = require('../../controllers/auth.controller');
-const oAuthLogin = require('../../middlewares/auth').oAuth;
-const {
-  login,
-  register,
-  oAuth,
-  refresh,
-  sendPasswordReset,
-  passwordReset,
-} = require('../../validations/auth.validation');
-
+import express from "express";
+import validate from "express-validation";
+import * as controller from "../../controllers/auth.controller.js";
+import { oAuth as oAuthLogin } from "../../middlewares/auth.js";
+import validitions from "../../validations/auth.validation.js";
+const { login, oAuth, passwordReset, refresh, register, sendPasswordReset } = validitions;
 const router = express.Router();
 
 /**
@@ -143,4 +136,4 @@ router.route('/facebook')
 router.route('/google')
   .post(validate(oAuth), oAuthLogin('google'), controller.oAuth);
 
-module.exports = router;
+export default router;

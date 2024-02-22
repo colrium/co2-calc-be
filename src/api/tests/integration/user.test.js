@@ -1,15 +1,15 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable no-unused-expressions */
-const request = require('supertest');
-const httpStatus = require('http-status');
-const { expect } = require('chai');
-const sinon = require('sinon');
-const bcrypt = require('bcryptjs');
-const { some, omitBy, isNil } = require('lodash');
-const app = require('../../../index');
-const User = require('../../models/user.model');
-const JWT_EXPIRATION = require('../../../config/vars').jwtExpirationInterval;
-
+import bcrypt from "bcryptjs";
+import { expect } from "chai";
+import httpStatus from "http-status";
+import lodash from 'lodash';
+import sinon from "sinon";
+import request from "supertest";
+import { jwtExpirationInterval as JWT_EXPIRATION } from "../../../config/vars.js";
+import app from "../../../index";
+import User from "../../models/user.model.js";
+const { isNil, omitBy, some } = lodash;
 /**
  * root level hooks
  */

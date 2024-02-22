@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const GhgModel = require("../../base/GhgModel");
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const ActivityType = GhgModel.create(
 	'ActivityType',
@@ -38,4 +38,4 @@ const ActivityType = GhgModel.create(
 
 // const ActivityType = mongoose.model('ActivityType', schema);
 
-module.exports = ActivityType;
+export default ActivityType;

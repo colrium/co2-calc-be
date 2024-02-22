@@ -1,15 +1,14 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const { omitBy, isNil, omit } = require('lodash');
-const { defaultPagination } = require('../../config/vars');
-const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup'];
-exports.reservedWords = reservedWords;
-const omitReservedKeys = (q) => {
+import lodash from 'lodash';
+import mongoose from "mongoose";
+import { defaultPagination } from '../../config/vars.js';
+const { omit } = lodash;
+export const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup'];
+export const omitReservedKeys = (q) => {
 	return omit({ ...q }, reservedWords);
 };
-exports.omitReservedKeys = omitReservedKeys;
-exports.evalSoftLookups = async (model) => {
+export const evalSoftLookups = async (model) => {
 	const paths = model.schema.paths;
 	const lookups = {};
 	for (const [name, path] of Object.entries(paths)) {
@@ -232,4 +231,4 @@ class GhgModel {
 		return model;
 	}
 }
-module.exports = GhgModel;
+export default GhgModel;

@@ -1,7 +1,7 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const Unit = GhgModel.create(
 	'Unit',
@@ -28,4 +28,4 @@ const Unit = GhgModel.create(
 	}
 );
 // const Unit = mongoose.model('Unit', schema);
-module.exports = Unit;
+export default Unit;

@@ -1,7 +1,7 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const Domain = GhgModel.create(
 	'Domain',
@@ -36,4 +36,4 @@ const Domain = GhgModel.create(
 		timestamps: true
 	}
 );
-module.exports = Domain;
+export default Domain;

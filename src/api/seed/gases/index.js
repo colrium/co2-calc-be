@@ -1,9 +1,9 @@
 /** @format */
 
-const Factor = require('../../models/ghg/factor.model');
-const seeds = require('./seeds.json');
+import Factor from "../../models/ghg/factor.model.js";
+import seeds from "./seeds.json";
 
-module.exports = async () => {
+export default async () => {
 	const existing = await Factor.find({}).lean();
 	const existingNames = Array.isArray(existing) ? existing.map(({ name }) => name) : [];
 	const inserts = seeds.filter(({ name }) => !existingNames.includes(name)).map(({ id, ...factor }) => factor);

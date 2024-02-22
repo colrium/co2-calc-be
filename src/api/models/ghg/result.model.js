@@ -1,7 +1,6 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import GhgModel from "../../base/GhgModel.js";
 
 const Result = GhgModel.create(
 	'Result',
@@ -48,4 +47,4 @@ const Result = GhgModel.create(
 	}
 );
 // const Result = mongoose.model('Result', schema);
-module.exports = Result;
+export default Result;

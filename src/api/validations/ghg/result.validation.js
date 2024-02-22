@@ -1,7 +1,7 @@
 /** @format */
 
-const Joi = require('joi');
-const Model = require('../../models/ghg/result.model');
+import Joi from "joi";
+import Model from "../../models/ghg/result.model.js";
 
 const validatorFns = {
 	String: Joi.string(),
@@ -26,7 +26,7 @@ for (const [name, path] of Object.entries(Model.schema.paths)) {
     
 
 
-module.exports = {
+export default {
 	// GET /v1/results
 	listResults: {
 		query: {

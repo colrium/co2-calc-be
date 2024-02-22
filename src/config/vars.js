@@ -1,38 +1,38 @@
-const path = require('path');
-
+import dotenv from "dotenv-safe";
+import path from "path";
 // import .env variables
-require('dotenv-safe').config({
-  path: path.join(__dirname, '../../.env'),
-  example: path.join(__dirname, '../../.env.example'),
+dotenv.config({
+	path: path.join(process.cwd(), './.env'),
+	example: path.join(process.cwd(), './.env.example')
 });
 
-let defaultPagination = 50;
+let pagination = 50;
 try {
-	defaultPagination = parseInt(process.env.PAGINATION_PER_PAGE)
+	pagination = parseInt(process.env.PAGINATION_PER_PAGE)
 } catch (error) {
 	
 }
-module.exports = {
-	env: process.env.NODE_ENV,
-	port: process.env.PORT,
-	jwtSecret: process.env.JWT_SECRET,
-	jwtExpirationInterval: process.env.JWT_EXPIRATION_MINUTES,
-	defaultPagination: defaultPagination,
-	mongo: {
-		uri: process.env.NODE_ENV === 'test' ? process.env.MONGO_URI_TESTS : process.env.MONGO_URI
-	},
-	logs: process.env.NODE_ENV === 'production' ? 'combined' : 'dev',
-	emailConfig: {
+
+
+	export const env =  process.env.NODE_ENV;
+	export const port =  process.env.PORT;
+	export const jwtSecret =  process.env.JWT_SECRET;
+	export const jwtExpirationInterval =  process.env.JWT_EXPIRATION_MINUTES;
+	export const defaultPagination =  pagination
+	export const mongo =  {
+		uri:  process.env.NODE_ENV === 'test' ? process.env.MONGO_URI_TESTS  :  process.env.MONGO_URI
+	};
+	export const logs =  process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
+	export const emailConfig =  {
 		host: process.env.EMAIL_HOST,
-		port: process.env.EMAIL_PORT,
-		username: process.env.EMAIL_USERNAME,
-		password: process.env.EMAIL_PASSWORD
-	},
-	adminUser: {
-		email: process.env.ADMIN_EMAIL,
-		password: process.env.ADMIN_PASSWORD,
-		username: process.env.ADMIN_USERNAME,
-		firstname: 'Admin',
-		lastname: 'Administrator'
-	}
-};
+		port:  process.env.EMAIL_PORT,
+		username:  process.env.EMAIL_USERNAME,
+		password:  process.env.EMAIL_PASSWORD
+	};
+	export const adminUser =  {
+		email:  process.env.ADMIN_EMAIL,
+		password:  process.env.ADMIN_PASSWORD,
+		username:  process.env.ADMIN_USERNAME,
+		firstname:  'Admin',
+		lastname:  'Administrator'
+	};

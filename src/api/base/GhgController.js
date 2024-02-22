@@ -1,11 +1,9 @@
 /** @format */
 
-const { defaultPagination } = require('../../config/vars');
-
-const mongoose = require('mongoose');
-const { omitBy, isNil } = require('lodash');
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
+import httpStatus from "http-status";
+import lodash from "lodash";
+import { defaultPagination } from '../../config/vars.js';
+const { omit } = lodash;
 
 class GhgController {
 	constructor(config = {}) {
@@ -133,4 +131,4 @@ class GhgController {
 	};
 }
 
-module.exports = GhgController;
+export default GhgController;

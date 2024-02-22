@@ -1,16 +1,16 @@
-const express = require('express');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const compress = require('compression');
-const methodOverride = require('method-override');
-const cors = require('cors');
-const helmet = require('helmet');
-const passport = require('passport');
-const routes = require('../api/routes/v1');
-const { logs } = require('./vars');
-const strategies = require('./passport');
-const error = require('../api/middlewares/error');
+import bodyParser from "body-parser";
+import compress from "compression";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import express from "express";
+import helmet from "helmet";
+import methodOverride from "method-override";
+import morgan from "morgan";
+import passport from "passport";
+import * as error from "../api/middlewares/error.js";
+import routes from "../api/routes/v1/index.js";
+import * as strategies from "./passport.js";
+import { logs } from "./vars.js";
 
 /**
 * Express instance
@@ -56,4 +56,4 @@ app.use(error.notFound);
 // error handler, send stacktrace only during development
 app.use(error.handler);
 
-module.exports = app;
+export default app;

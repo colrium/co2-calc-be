@@ -1,7 +1,7 @@
 {
 	"name": "ghg-be",
 	"version": "1.0.0",
-	"description": "Carbon emmissions caclulator data",
+	"description": "GHG emmissions calulator api",
 	"author": "Mutugi Riungu <colrium@gmail.com>",
 	"main": "src/index.js",
 	"private": false,
@@ -13,7 +13,6 @@
 	"type": "module",
 	"scripts": {
 		"seed": "node --experimental-modules ./src/api/seed/seeder.js",
-		"precommit": "yarn lint",
 		"prestart": "yarn docs",
 		"start": "cross-env NODE_ENV=production pm2 start ./src/index.js --name ghg",
 		"stop": "pm2 stop ghg",

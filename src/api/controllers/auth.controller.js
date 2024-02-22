@@ -1,13 +1,13 @@
-const httpStatus = require('http-status');
-const moment = require('moment-timezone');
-const { omit } = require('lodash');
-const User = require('../models/user.model');
-const RefreshToken = require('../models/refreshToken.model');
-const PasswordResetToken = require('../models/passwordResetToken.model');
-const { jwtExpirationInterval } = require('../../config/vars');
-const APIError = require('../errors/api-error');
-const emailProvider = require('../services/emails/emailProvider');
-
+import httpStatus from "http-status";
+import lodash from 'lodash';
+import moment from "moment-timezone";
+import { jwtExpirationInterval } from "../../config/vars.js";
+import APIError from "../errors/api-error.js";
+import PasswordResetToken from "../models/passwordResetToken.model.js";
+import RefreshToken from "../models/refreshToken.model.js";
+import User from "../models/user.model.js";
+import { sendPasswordChangeEmail, sendPasswordReset as sendPasswordResetEmail } from '../services/emails/emailProvider.js';
+const { omit } = lodash;
 /**
  * Returns a formated object with tokens
  * @private
@@ -28,7 +28,7 @@ function generateTokenResponse(user, accessToken) {
  * Returns jwt token if registration was successful
  * @public
  */
-exports.register = async (req, res, next) => {
+export const register = async (req, res, next) => {
   try {
     const userData = omit(req.body, 'role');
     const user = await new User(userData).save();
@@ -46,7 +46,7 @@ exports.register = async (req, res, next) => {
  * Returns jwt token if valid username and password is provided
  * @public
  */
-exports.login = async (req, res, next) => {
+export const login = async (req, res, next) => {
   try {
     const { user, accessToken } = await User.findAndGenerateToken(req.body);
     const token = generateTokenResponse(user, accessToken);
@@ -62,7 +62,7 @@ exports.login = async (req, res, next) => {
  * Returns jwt token
  * @public
  */
-exports.oAuth = async (req, res, next) => {
+export const oAuth = async (req, res, next) => {
   try {
     const { user } = req;
     const accessToken = user.token();
@@ -78,7 +78,7 @@ exports.oAuth = async (req, res, next) => {
  * Returns a new jwt when given a valid refresh token
  * @public
  */
-exports.refresh = async (req, res, next) => {
+export const refresh = async (req, res, next) => {
   try {
     const { email, refreshToken } = req.body;
     const refreshObject = await RefreshToken.findOneAndRemove({
@@ -93,14 +93,14 @@ exports.refresh = async (req, res, next) => {
   }
 };
 
-exports.sendPasswordReset = async (req, res, next) => {
+export const sendPasswordReset = async (req, res, next) => {
   try {
     const { email } = req.body;
     const user = await User.findOne({ email }).exec();
 
     if (user) {
       const passwordResetObj = await PasswordResetToken.generate(user);
-      emailProvider.sendPasswordReset(passwordResetObj);
+      sendPasswordResetEmail(passwordResetObj);
       res.status(httpStatus.OK);
       return res.json('success');
     }
@@ -113,7 +113,7 @@ exports.sendPasswordReset = async (req, res, next) => {
   }
 };
 
-exports.resetPassword = async (req, res, next) => {
+export const resetPassword = async (req, res, next) => {
   try {
     const { email, password, resetToken } = req.body;
     const resetTokenObject = await PasswordResetToken.findOneAndRemove({
@@ -137,7 +137,7 @@ exports.resetPassword = async (req, res, next) => {
     const user = await User.findOne({ email: resetTokenObject.userEmail }).exec();
     user.password = password;
     await user.save();
-    emailProvider.sendPasswordChangeEmail(user);
+    sendPasswordChangeEmail(user);
 
     res.status(httpStatus.OK);
     return res.json('Password Updated');

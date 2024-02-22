@@ -1,7 +1,6 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import GhgModel from "../../base/GhgModel.js";
 
 const Gas = GhgModel.create(
 	'Gas',
@@ -23,4 +22,4 @@ const Gas = GhgModel.create(
 	}
 );
 // const Gas = mongoose.model('Gas', schema);
-module.exports = Gas;
+export default Gas;

@@ -1,7 +1,7 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const Material = GhgModel(
 	'Material',
@@ -46,4 +46,4 @@ const Material = GhgModel(
 
 // const Material = mongoose.model('Material', schema);
 
-module.exports = Material;
+export default Material;

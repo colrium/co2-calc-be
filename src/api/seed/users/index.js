@@ -1,12 +1,12 @@
 /** @format */
 
-const { adminUser } = require('../../../config/vars');
-const otherSeeds = require('./seeds.json');
-const User = require('../../models/user.model');
+import { adminUser } from "../../../config/vars.js";
+import User from "../../models/user.model.js";
+import otherSeeds from "./seeds.json";
 
 const Context = User;
 const uniqueField = 'email';
-exports.seedUsers = async () => {
+export const seedUsers = async () => {
 	const seeds = [...otherSeeds, {...adminUser, role: 'admin'}];
 	const uniqueFieldValues = seeds.map((seed) => seed[uniqueField]);
 	const existing = await Context.find({ [uniqueField]: { $in: uniqueFieldValues } }).lean();

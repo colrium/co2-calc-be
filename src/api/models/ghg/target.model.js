@@ -1,7 +1,7 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const Target = GhgModel.create(
 	'Target',
@@ -25,4 +25,4 @@ const Target = GhgModel.create(
 		timestamps: true
 	}
 );
-module.exports = Target;
+export default Target;

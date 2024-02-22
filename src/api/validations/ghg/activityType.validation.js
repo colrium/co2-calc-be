@@ -1,7 +1,7 @@
 /** @format */
 
-const Joi = require('joi');
-const Model = require('../../models/ghg/activityType.model');
+import Joi from "joi";
+import Model from "../../models/ghg/activityType.model.js";
 
 const validatorFns = {
 	String: Joi.string(),
@@ -24,7 +24,7 @@ const getValidations = (list = false) => {
 	}
 };
 
-module.exports = {
+export default {
 	// GET /v1/activityTypes
 	listActivityTypes: {
 		query: {

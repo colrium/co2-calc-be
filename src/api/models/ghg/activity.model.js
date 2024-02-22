@@ -1,8 +1,7 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const { omitBy, isNil } = require('lodash');
-const GhgModel = require('../../base/GhgModel');
+import mongoose from "mongoose";
+import GhgModel from "../../base/GhgModel.js";
 
 const Activity = GhgModel.create(
 	'Activity',
@@ -62,4 +61,4 @@ const Activity = GhgModel.create(
 
 
 // const Activity = mongoose.model('Activity', schema);
-module.exports = Activity;
+export default Activity;

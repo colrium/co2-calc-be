@@ -1,5 +1,5 @@
-const GhgController = require('../../base/GhgController');
-const Model = require('../../models/ghg/domain.model');
+import GhgController from "../../base/GhgController.js";
+import Model from "../../models/ghg/domain.model.js";
 
 
 class DomainController extends GhgController {
@@ -8,4 +8,4 @@ class DomainController extends GhgController {
 	}
 }
 
-module.exports = new DomainController();
+export default new DomainController();

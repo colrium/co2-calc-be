@@ -1,9 +1,8 @@
-const JwtStrategy = require('passport-jwt').Strategy;
-const BearerStrategy = require('passport-http-bearer');
-const { ExtractJwt } = require('passport-jwt');
-const { jwtSecret } = require('./vars');
-const authProviders = require('../api/services/authProviders');
-const User = require('../api/models/user.model');
+import BearerStrategy from "passport-http-bearer";
+import { ExtractJwt, Strategy as JwtStrategy } from "passport-jwt";
+import User from "../api/models/user.model.js";
+import * as authProviders from "../api/services/authProviders.js";
+import { jwtSecret } from "./vars.js";
 
 
 const headerOrCookieExtractor = function (req) {
@@ -25,7 +24,7 @@ const jwtOptions = {
 	jwtFromRequest: headerOrCookieExtractor
 };
 
-const jwt = async (payload, done) => {
+const jwtStrategy = async (payload, done) => {
   try {
     const user = await User.findById(payload.sub);
     if (user) return done(null, user);
@@ -47,6 +46,6 @@ const oAuth = (service) => async (token, done) => {
   }
 };
 
-exports.jwt = new JwtStrategy(jwtOptions, jwt);
-exports.facebook = new BearerStrategy(oAuth('facebook'));
-exports.google = new BearerStrategy(oAuth('google'));
+export const jwt = new JwtStrategy(jwtOptions, jwtStrategy);
+export const facebook = new BearerStrategy(oAuth('facebook'));
+export const google = new BearerStrategy(oAuth('google'));

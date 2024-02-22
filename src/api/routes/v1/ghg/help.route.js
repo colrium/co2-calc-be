@@ -1,12 +1,10 @@
 /** @format */
 
-const express = require('express');
-const validate = require('express-validation');
-const controller = require('../../../controllers/ghg/activityType.controller');
-const {
-	listActivityTypes
-} = require('../../../validations/ghg/activityType.validation');
-
+import express from "express";
+import validate from "express-validation";
+import controller from "../../../controllers/ghg/activityType.controller.js";
+import validitions from "../../../validations/ghg/activityType.validation.js";
+const { listActivityTypes } = validitions;
 const router = express.Router();
 
 router
@@ -32,4 +30,4 @@ router
 	.get(validate(listActivityTypes), controller.help);
 
 
-    module.exports = router;
+    export default router;

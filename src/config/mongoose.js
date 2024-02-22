@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const logger = require('./logger');
-const { mongo, env } = require('./vars');
+import mongoose from "mongoose";
+import logger from "./logger.js";
+import { env, mongo } from "./vars.js";
 
 // set mongoose Promise to Bluebird
 mongoose.Promise = Promise;
@@ -22,7 +22,7 @@ if (env === 'development') {
  * @returns {object} Mongoose connection
  * @public
  */
-exports.connect = () => {
+export const connect = () => {
   mongoose
     .connect(mongo.uri, {
       useCreateIndex: true,

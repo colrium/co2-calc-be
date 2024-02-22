@@ -1,12 +1,13 @@
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
-const User = require('../models/user.model');
+import httpStatus from "http-status";
+import lodash from 'lodash';
+import User from "../models/user.model.js";
+const { omit } = lodash;
 
 /**
  * Load user and append to req.
  * @public
  */
-exports.load = async (req, res, next, id) => {
+export const load = async (req, res, next, id) => {
   try {
     const user = await User.get(id);
     req.locals = { user };
@@ -20,19 +21,19 @@ exports.load = async (req, res, next, id) => {
  * Get user
  * @public
  */
-exports.get = (req, res) => res.json(req.locals.user.transform());
+export const get = (req, res) => res.json(req.locals.user.transform());
 
 /**
  * Get logged in user info
  * @public
  */
-exports.loggedIn = (req, res) => res.json(req.user.transform());
+export const loggedIn = (req, res) => res.json(req.user.transform());
 
 /**
  * Create new user
  * @public
  */
-exports.create = async (req, res, next) => {
+export const create = async (req, res, next) => {
   try {
     const user = new User(req.body);
     const savedUser = await user.save();
@@ -47,7 +48,7 @@ exports.create = async (req, res, next) => {
  * Replace existing user
  * @public
  */
-exports.replace = async (req, res, next) => {
+export const replace = async (req, res, next) => {
   try {
     const { user } = req.locals;
     const newUser = new User(req.body);
@@ -67,7 +68,7 @@ exports.replace = async (req, res, next) => {
  * Update existing user
  * @public
  */
-exports.update = (req, res, next) => {
+export const update = (req, res, next) => {
   const ommitRole = req.locals.user.role !== 'admin' ? 'role' : '';
   const updatedUser = omit(req.body, ommitRole);
   const user = Object.assign(req.locals.user, updatedUser);
@@ -81,7 +82,7 @@ exports.update = (req, res, next) => {
  * Get user list
  * @public
  */
-exports.list = async (req, res, next) => {
+export const list = async (req, res, next) => {
   try {
     const users = await User.list(req.query);
     const transformedUsers = users.map((user) => user.transform());
@@ -95,7 +96,7 @@ exports.list = async (req, res, next) => {
  * Delete user
  * @public
  */
-exports.remove = (req, res, next) => {
+export const remove = (req, res, next) => {
   const { user } = req.locals;
 
   user.remove()

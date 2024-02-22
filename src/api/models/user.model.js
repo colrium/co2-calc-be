@@ -1,15 +1,13 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const httpStatus = require('http-status');
-const { omitBy, isNil } = require('lodash');
-const bcrypt = require('bcryptjs');
-const moment = require('moment-timezone');
-const jwt = require('jwt-simple');
-const uuidv4 = require('uuid/v4');
-const APIError = require('../errors/api-error');
-const { env, jwtSecret, jwtExpirationInterval } = require('../../config/vars');
-const GhgModel = require('../base/GhgModel');
+import bcrypt from "bcryptjs";
+import httpStatus from "http-status";
+import jwt from "jwt-simple";
+import moment from "moment-timezone";
+import uuidv4 from "uuid/v4.js";
+import { env, jwtExpirationInterval, jwtSecret } from "../../config/vars.js";
+import GhgModel from "../base/GhgModel.js";
+import APIError from "../errors/api-error.js";
 
 /**
  * User Roles
@@ -206,4 +204,4 @@ User.schema.virtual('name').get(function () {
 	return `${this.firstname || ''}${this.firstname ? ' ' : ''}${this.lastname || ''}`;
 });
 // const User = mongoose.model('User', schema);
-module.exports = User;
+export default User;

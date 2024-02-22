@@ -1,10 +1,10 @@
 /** @format */
 
-const mongoose = require('../../config/mongoose');
-const { seedActivities } = require('./activities');
-const { seedActivityTypes } = require('./activity-types');
-const {seedFactors} = require('./factors');
-const { seedUsers } = require('./users');
+import mongoose from "../../config/mongoose";
+import { seedActivities } from "./activities";
+import { seedActivityTypes } from "./activity-types";
+import { seedFactors } from "./factors";
+import { seedUsers } from "./users";
 // open mongoose connection
 mongoose.connect();
 

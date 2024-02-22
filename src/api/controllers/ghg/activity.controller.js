@@ -1,17 +1,16 @@
 /** @format */
 
-const httpStatus = require('http-status');
-const { omit } = require('lodash');
-const Activity = require('../../models/ghg/activity.model');
-const GhgController = require('../../base/GhgController');
+import GhgController from '../../base/GhgController.js';
+import Activity from '../../models/ghg/activity.model.js';
 
 const Context = Activity;
 
 
 class ActivityController extends GhgController {
 	constructor() {
-		super({ model: Activity, subjective: true });
+		super({ model: Context, subjective: true });
 	}
 }
 
-module.exports = new ActivityController();
+export default new ActivityController();
+

@@ -1,11 +1,11 @@
 /** @format */
 
-const express = require('express');
-const validate = require('express-validation');
-const controller = require('../../../controllers/ghg/factor.controller');
-const { authorize, ADMIN, LOGGED_USER } = require('../../../middlewares/auth');
-const { listFactors, createFactor, replaceFactor, updateFactor } = require('../../../validations/ghg/factor.validation');
-
+import express from "express";
+import validate from "express-validation";
+import controller from "../../../controllers/ghg/factor.controller.js";
+import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
+import validitions from "../../../validations/ghg/factor.validation.js";
+const { createFactor, listFactors, replaceFactor, updateFactor } = validitions;
 const router = express.Router();
 
 
@@ -158,4 +158,4 @@ router
 	 */
 	.delete(authorize(LOGGED_USER), controller.remove);
 
-module.exports = router;
+export default router;

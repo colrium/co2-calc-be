@@ -1,9 +1,8 @@
 /** @format */
 
-const Joi = require('joi');
-const Factor = require('../../models/ghg/factor.model');
+import Joi from "joi";
 
-module.exports = {
+export default {
 	// GET /v1/factors
 	listFactors: {
 		query: {

@@ -1,7 +1,6 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const GhgModel = require('../../base/GhgModel');
+import GhgModel from "../../base/GhgModel.js";
 
 const Industry = GhgModel.create(
 	'Industry',
@@ -24,4 +23,4 @@ const Industry = GhgModel.create(
 	}
 );
 // const Industry = mongoose.model('Industry', schema);
-module.exports = Industry;
+export default Industry;

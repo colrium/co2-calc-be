@@ -1,13 +1,13 @@
 /** @format */
 
-const Factor = require('../../models/ghg/factor.model');
-const seeds = require('./seeds.json');
+import Factor from "../../models/ghg/factor.model.js";
+import seeds from "./seeds.json";
 /** @format */
 
 
 const Context = Factor;
 const uniqueField = 'name';
-exports.seedFactors = async () => {
+export const seedFactors = async () => {
 	const uniqueFieldValues = seeds.map((seed) => seed[uniqueField]);
 	const existing = await Context.find({}).lean();
 	const existingValues = Array.isArray(existing) ? existing.map((doc) => doc[uniqueField]) : [];

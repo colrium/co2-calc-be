@@ -1,8 +1,8 @@
 /** @format */
 
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-exports.loadLookups = async (model) => {
+export const loadLookups = async (model) => {
 	const paths = model.schema.paths;
 	const lookups = {};
 	for (const [name, path] of Object.entries(paths)) {

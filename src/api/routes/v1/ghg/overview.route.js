@@ -1,10 +1,11 @@
 /** @format */
 
-const express = require('express');
-const validate = require('express-validation');
-const controller = require('../../../controllers/ghg/overview.controller');
-const { listResults } = require('../../../validations/ghg/result.validation');
-const { authorize, ADMIN, LOGGED_USER } = require('../../../middlewares/auth');
+import express from "express";
+import validate from "express-validation";
+import * as controller from "../../../controllers/ghg/overview.controller.js";
+import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
+import validitions from "../../../validations/ghg/result.validation.js";
+const { listResults } = validitions;
 const router = express.Router();
 
 router
@@ -23,4 +24,4 @@ router
 	 */
 	.get(authorize(LOGGED_USER), validate(listResults), controller.totals);
 
-module.exports = router;
+export default router;
