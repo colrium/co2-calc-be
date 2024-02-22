@@ -1,7 +1,7 @@
 /** @format */
 
 import Joi from "joi";
-import Model from "../../models/ghg/result.model.js";
+import Model from "../../models/ghg/calculation.model.js";
 
 const validatorFns = {
 	String: Joi.string(),

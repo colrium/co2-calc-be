@@ -7,22 +7,23 @@ import mongoose from "mongoose";
  * @private
  */
 const passwordResetTokenSchema = new mongoose.Schema({
-  resetToken: {
-    type: String,
-    required: true,
-    index: true,
-  },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-  },
-  userEmail: {
-    type: 'String',
-    ref: 'User',
-    required: true,
-  },
-  expires: { type: Date },
+	resetToken: {
+		type: String,
+		required: true,
+		index: true
+	},
+	userId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User',
+		required: true,
+		displayValue: 'firstname lastname'
+	},
+	userEmail: {
+		type: 'String',
+		ref: 'User',
+		required: true
+	},
+	expires: { type: Date }
 });
 
 passwordResetTokenSchema.statics = {

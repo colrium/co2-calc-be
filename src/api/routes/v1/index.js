@@ -4,12 +4,12 @@ import userRoutes from "./user.route.js";
 //
 import activityRoutes from "./ghg/activity.route.js";
 import activityTypeRoutes from "./ghg/activityType.route.js";
+import calculationRoutes from "./ghg/calculation.route.js";
 import domainRoutes from "./ghg/domain.route.js";
 import factorRoutes from "./ghg/factor.route.js";
 import helpRoutes from "./ghg/help.route.js";
 import industryRoutes from "./ghg/industry.route.js";
 import overViewRoutes from "./ghg/overview.route.js";
-import resultRoutes from "./ghg/result.route.js";
 //
 const router = express.Router();
 
@@ -25,7 +25,7 @@ router.use('/docs', express.static('docs'));
 //
 router.use('/overview', overViewRoutes);
 router.use('/factors', factorRoutes);
-router.use('/results', resultRoutes);
+router.use('/calculations', calculationRoutes);
 router.use('/activity-types', activityTypeRoutes);
 router.use('/activities', activityRoutes);
 router.use('/industries', industryRoutes);

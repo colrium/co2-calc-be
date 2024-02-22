@@ -4,7 +4,7 @@ import lodash from 'lodash';
 import mongoose from "mongoose";
 import { defaultPagination } from '../../config/vars.js';
 const { omit } = lodash;
-export const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup'];
+export const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup', 'lean'];
 export const omitReservedKeys = (q) => {
 	return omit({ ...q }, reservedWords);
 };
@@ -51,12 +51,14 @@ class GhgSchema extends mongoose.Schema {
 				const json = this.toJSON();
 				const transformed = {};
 				const fields = ['id', ...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
-
+				
 				fields.forEach((field) => {
 					transformed[field] = this[field];
 				});
-
-				return { ...json, ...transformed };
+				const data = { ...json, ...transformed };
+				delete data.__v;
+				delete data._id;
+				return data;
 			}
 		});
 	}
@@ -64,7 +66,6 @@ class GhgSchema extends mongoose.Schema {
 	initGhgStatics() {
 		const currentStatics = this.statics;
 		this.statics = {
-			
 			/**
 			 * Get record
 			 *
@@ -86,14 +87,8 @@ class GhgSchema extends mongoose.Schema {
 					status: httpStatus.NOT_FOUND
 				});
 			},
-			/**
-			 * List factors in descending order of 'createdAt' timestamp.
-			 *
-			 * @param {number} skip - Number of factors to be skipped.
-			 * @param {number} limit - Limit number of factors to be returned.
-			 * @returns {Promise<Factor[]>}
-			 */
-			async list({
+			
+			parseQuery({
 				page = 1,
 				perPage = defaultPagination,
 				sort = 'createdAt',
@@ -101,9 +96,9 @@ class GhgSchema extends mongoose.Schema {
 				select,
 				populate = null,
 				lookup = false,
+
 				...query
 			}) {
-				const lookupsa = this.schema.lookups;
 				const findQuery = omitReservedKeys(query);
 				const options = Object.entries(findQuery).reduce((acc, [key, value]) => {
 					try {
@@ -119,18 +114,21 @@ class GhgSchema extends mongoose.Schema {
 				}
 				if (lookup) {
 					const lookups = this.schema.lookups;
-					for (const {foreignField, localField, ref, virtualField, displayField} of lookups) {
+					for (const { foreignField, localField, ref, virtualField, displayField } of lookups) {
 						findQ = findQ.populate({
 							path: virtualField,
 							select: `${displayField}`,
 							transform: (doc, id) => {
 								if (!doc) {
-									return id
+									return id;
 								}
-								return displayField.split(" ").reduce((acc, key) => {
-									acc += doc[key]? ' '+doc[key] : ''
-									return acc
-								}, '').trim()
+								return displayField
+									.split(' ')
+									.reduce((acc, key) => {
+										acc += doc[key] ? ' ' + doc[key] : '';
+										return acc;
+									}, '')
+									.trim();
 							}
 						});
 					}
@@ -144,10 +142,16 @@ class GhgSchema extends mongoose.Schema {
 				if (perPage >= 1 && page >= 1) {
 					findQ = findQ.skip(perPage * (page - 1)).limit(perPage);
 				}
-				const results = await findQ.exec();
+				
+				return findQ;
+			},
+			async list(query) {
+				const findQuery = this.parseQuery(query);
+				
+				const results = await findQuery.exec();
 				return await results;
 			},
-			count({ page = 1, perPage = defaultPagination, sort, sortDir, select, populate, shallowPopulate, ...query }) {
+			count({ page = 1, perPage = defaultPagination, sort, sortDir, select, populate, shallowPopulate, lean, ...query }) {
 				const findQuery = omitReservedKeys(query);
 				const options = Object.entries(findQuery).reduce((acc, [key, value]) => {
 					try {

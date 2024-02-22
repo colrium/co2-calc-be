@@ -7,22 +7,23 @@ import mongoose from "mongoose";
  * @private
  */
 const refreshTokenSchema = new mongoose.Schema({
-  token: {
-    type: String,
-    required: true,
-    index: true,
-  },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-  },
-  userEmail: {
-    type: 'String',
-    ref: 'User',
-    required: true,
-  },
-  expires: { type: Date },
+	token: {
+		type: String,
+		required: true,
+		index: true
+	},
+	userId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User',
+		required: true,
+		displayValue: 'firstname lastname'
+	},
+	userEmail: {
+		type: 'String',
+		ref: 'User',
+		required: true
+	},
+	expires: { type: Date }
 });
 
 refreshTokenSchema.statics = {

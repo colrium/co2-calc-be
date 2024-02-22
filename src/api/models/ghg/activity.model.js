@@ -49,7 +49,7 @@ const Activity = GhgModel.create(
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
-			displayValue: 'firstName',
+			displayValue: 'firstname lastname',
 			default: null
 		}
 	},

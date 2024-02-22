@@ -1,7 +1,7 @@
 /** @format */
 
 import { defaultPagination } from "../../../config/vars.js";
-import Result from "../../models/ghg/result.model.js";
+import Result from "../../models/ghg/calculation.model.js";
 
 const Context = Result;
 

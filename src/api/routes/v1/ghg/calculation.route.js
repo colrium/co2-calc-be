@@ -2,7 +2,7 @@
 
 import express from "express";
 import validate from "express-validation";
-import controller from "../../../controllers/ghg/result.controller.js";
+import controller from "../../../controllers/ghg/calculation.controller.js";
 import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
 import validitions from "../../../validations/ghg/result.validation.js";
 const { createResult, listResults, replaceResult, updateResult } = validitions;

@@ -2,7 +2,7 @@
 
 import express from "express";
 import validate from "express-validation";
-import * as controller from "../../../controllers/ghg/overview.controller.js";
+import Controller from '../../../controllers/ghg/calculation.controller.js';
 import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
 import validitions from "../../../validations/ghg/result.validation.js";
 const { listResults } = validitions;
@@ -22,6 +22,6 @@ router
 	 *
 	 * @apiSuccess {Object{}} overviews.
 	 */
-	.get(authorize(LOGGED_USER), validate(listResults), controller.totals);
+	.get(authorize(LOGGED_USER), validate(listResults), Controller.totals);
 
 export default router;

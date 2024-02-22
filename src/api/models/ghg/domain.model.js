@@ -15,7 +15,7 @@ const Domain = GhgModel.create(
 			type: String
 		},
 		industryId: {
-			type: mongoose.Schema.Types.ObjectId,			
+			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Industry',
 			default: null
 		},
@@ -29,7 +29,8 @@ const Domain = GhgModel.create(
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
-			default: null
+			default: null,
+			displayValue: 'firstname lastname'
 		}
 	},
 	{

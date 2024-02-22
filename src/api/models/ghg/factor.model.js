@@ -2,7 +2,8 @@
 
 import GhgModel from "../../base/GhgModel.js";
 
-const Factor = GhgModel.create('Factor',
+const Factor = GhgModel.create(
+	'Factor',
 	{
 		name: {
 			type: String,
@@ -47,7 +48,8 @@ const Factor = GhgModel.create('Factor',
 		userId: {
 			type: String,
 			ref: 'User',
-			default: null
+			default: null,
+			displayValue: 'firstname lastname'
 		}
 	},
 	{

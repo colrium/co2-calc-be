@@ -12,6 +12,9 @@ try {
 } catch (error) {
 	
 }
+if (isNaN(pagination)) {
+	pagination = 50;
+}
 
 
 	export const env =  process.env.NODE_ENV;

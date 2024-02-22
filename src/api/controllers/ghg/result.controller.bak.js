@@ -2,8 +2,8 @@
 
 import httpStatus from "http-status";
 import lodash from 'lodash';
+import Result from "../../models/ghg/calculation.model.js";
 import Domain from "../../models/ghg/domain.model.js";
-import Result from "../../models/ghg/result.model.js";
 import { loadLookups } from "./utils.js";
 const { omit } = lodash;
 

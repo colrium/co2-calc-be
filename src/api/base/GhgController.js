@@ -2,11 +2,22 @@
 
 import httpStatus from "http-status";
 import lodash from "lodash";
-import { defaultPagination } from '../../config/vars.js';
+import { defaultPagination } from "../../config/vars.js";
 const { omit } = lodash;
 
-class GhgController {
+export default class GhgController {
 	constructor(config = {}) {
+		const { model, subjectFilter, subjective } = config;
+		this.model = model;
+		this.subjectFilter = subjectFilter;
+		this.subjective = subjective;
+		this.loadLookups = this.loadLookups.bind(this);
+		this.get = this.get.bind(this);
+		this.create = this.create.bind(this);
+		this.list = this.list.bind(this);
+		this.replace = this.replace.bind(this);
+		this.update = this.update.bind(this);
+		this.remove = this.remove.bind(this);
 		Object.assign(this, config);
 	}
 	loadLookups = async (req) => {
@@ -39,19 +50,22 @@ class GhgController {
 			return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
 		}
 	};
-	create = async (req, res) => {
-		let data = {...req.body}
+	create = async (req, res, next) => {
+		let data = { ...req.body };
 		if (this.subjective) {
 			const subject = this.subject || 'userId';
 			const user = req.user;
 			let userId = user?._id || user?.id;
-			const subjectdata =typeof this.subject === 'function'? this.subject(req) :  {
-				[subject]: user?.role === 'admin' && subject in req.body ? req.query[subject] : userId
-			};
+			const subjectdata =
+				typeof this.subject === 'function'
+					? this.subject(req)
+					: {
+							[subject]: user?.role === 'admin' && subject in req.body ? req.query[subject] : userId
+					  };
 			data = { ...data, ...subjectdata };
 		}
 		try {
-			const doc = new Activity(data);
+			const doc = new this.model(data);
 			const savedDoc = await doc.save();
 			res.status(httpStatus.CREATED);
 			res.json(savedDoc.transform());
@@ -60,8 +74,9 @@ class GhgController {
 		}
 	};
 
-	list = async (req, res) => {
+	list = async (req, res, next) => {
 		const ContextModel = this.model;
+		const loadSubjectQuery = this.subjectQuery;
 		let query = { ...req.query };
 		if (this.subjective) {
 			const subject = this.subject || 'userId';
@@ -71,6 +86,9 @@ class GhgController {
 				[subject]: user?.role === 'admin' && subject in req.query ? req.query[subject] : { $in: [null, userId] }
 			};
 			query = { ...req.query, ...subjectQuery };
+		} else if (typeof loadSubjectQuery === 'function') {
+			const listQuery = await loadSubjectQuery(req);
+			query = { ...req.query, ...listQuery };
 		}
 		try {
 			const { page = 1, perPage = defaultPagination } = query;
@@ -130,5 +148,3 @@ class GhgController {
 			.catch((e) => next(e));
 	};
 }
-
-export default GhgController;
