@@ -137,8 +137,8 @@ export default class GhgController {
 			const ommitUserId = user.role !== 'admin' ? 'userId' : '';
 			const newRecordObject = omit(newRecord.toObject(), '_id', ommitUserId);
 
-			await Activity.updateOne(newRecordObject, { override: true, upsert: true });
-			const savedDoc = await Activity.findById(req.params.id);
+			await ContextModel.updateOne(newRecordObject, { override: true, upsert: true });
+			const savedDoc = await ContextModel.findById(req.params.id);
 
 			res.json(savedDoc.transform());
 		} catch (error) {
@@ -150,13 +150,20 @@ export default class GhgController {
 	 * Update existing activity
 	 * @public
 	 */
-	update(req, res, next) {
+	update = async (req, res, next) => {
 		const data = req.body;
 		const id = req.params.id;
-		this.model
-			.findByIdAndUpdate(id, data)
-			.then((savedDoc) => res.json(savedDoc.transform()))
-			.catch((e) => next(e));
+		try {
+			const doc = await this.model.findByIdAndUpdate(id, omit(data, 'id'));
+			if (doc) {
+				const updatedDoc = await this.model.findById(id);
+				res.json(updatedDoc.transform());
+			} else {
+				return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
+			}
+		} catch (error) {
+			next(error)
+		}
 	}
 
 	/**
