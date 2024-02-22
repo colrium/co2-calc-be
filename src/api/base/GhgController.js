@@ -2,6 +2,7 @@
 
 import httpStatus from "http-status";
 import lodash from "lodash";
+import mongoose from 'mongoose';
 import { defaultPagination } from "../../config/vars.js";
 const { omit } = lodash;
 
@@ -21,33 +22,56 @@ export default class GhgController {
 		Object.assign(this, config);
 	}
 	loadLookups = async (req) => {
+		const paths = this.model.schema.paths;
 		const lookups = {};
+		for (const [name, path] of Object.entries(paths)) {
+			if (path instanceof mongoose.Schema.Types.ObjectId && name !== '_id') {
+				const modelName = path.options.ref;
+				const displayValue = path.options.displayValue || 'name';
+				const Model = mongoose.model(modelName);
+				if (Model) {
+					lookups[modelName] = await Model.find({}).then((docs) => docs.map((doc) => {
+							let labelParts = displayValue.split(' ');
+							let label = '';
+							for (const labelPart of labelParts) {
+								label += ` ${doc[labelPart]}`;
+							}
+							label = label.trim();
+							return ({ value: doc._id, label: label })
+						}));
+				}
+				const pathModel = console.log('path', Model);
+			}
+		}
 		return lookups;
 	};
 	get = async (req, res) => {
 		const ContextModel = this.model;
 		try {
 			const id = req.params?.id;
+			const response = {
+				data: null,
+				lookups: {}
+			};
+			if (Boolean(req.query.lookups)) {
+				response.lookups = await this.loadLookups(req);
+			}
 			if (id && /^[a-fA-F0-9]{24}$/.test(id)) {
 				const doc = await ContextModel?.get(id);
 				if (doc) {
-					return res.status(httpStatus.OK).json(doc.transform());
+					response.data = doc.transform();
+					return res.status(httpStatus.OK).json(response);
 				} else {
 					return res.status(httpStatus.NOT_FOUND).json({ message: httpStatus['404_MESSAGE'] });
 				}
 			} else if (['new', '0', 0].includes(id)) {
-				const response = {
-					data: new ContextModel({}).transform()
-				};
-				if (Boolean(req.query.lookups)) {
-					response.lookups = await this.loadLookups(req);
-				}
+				response.data = new ContextModel({}).transform();				
 				return res.status(httpStatus.OK).json(response);
 			} else {
 				return res.status(httpStatus.BAD_REQUEST).json({ message: httpStatus['422_MESSAGE'] });
 			}
 		} catch (error) {
-			return res.status(httpStatus.INTERNAL_SERVER_ERROR).json(error);
+			return res.status(error.status || httpStatus.INTERNAL_SERVER_ERROR).json(error);
 		}
 	};
 	create = async (req, res, next) => {

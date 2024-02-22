@@ -1,8 +1,10 @@
 /** @format */
 
+import httpStatus from 'http-status';
 import lodash from 'lodash';
 import mongoose from "mongoose";
 import { defaultPagination } from '../../config/vars.js';
+import APIError from '../errors/api-error.js';
 const { omit } = lodash;
 export const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'populate', 'lookup', 'lean'];
 export const omitReservedKeys = (q) => {
