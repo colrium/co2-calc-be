@@ -25,7 +25,7 @@ export const evalSoftLookups = async (model) => {
 	}
 	return lookups;
 };
-class GhgSchema extends mongoose.Schema {
+export class GhgSchema extends mongoose.Schema {
 	constructor(...args) {
 		super(...args);
 		this.initGhgMethods = this.initGhgMethods.bind(this);

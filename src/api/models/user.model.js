@@ -4,9 +4,10 @@ import bcrypt from "bcryptjs";
 import httpStatus from "http-status";
 import jwt from "jwt-simple";
 import moment from "moment-timezone";
+import mongoose from 'mongoose';
 import uuidv4 from "uuid/v4.js";
 import { env, jwtExpirationInterval, jwtSecret } from "../../config/vars.js";
-import GhgModel from "../base/GhgModel.js";
+import { GhgSchema } from "../base/GhgModel.js";
 import APIError from "../errors/api-error.js";
 
 /**
@@ -18,9 +19,7 @@ const roles = ['user', 'admin'];
  * User Schema
  * @private
  */
-const User = GhgModel.create(
-	'User',
-	{
+const schema = new GhgSchema({
 		email: {
 			type: String,
 			match: /^\S+@\S+\.\S+$/,
@@ -73,11 +72,11 @@ const User = GhgModel.create(
  * - virtuals
 //  */
 
-User.roles = roles;
+schema.roles = roles;
 /**
  * Methods
  */
-User.schema.addMethods({
+schema.addMethods({
 	sanitize: function () {
 		if (this.isModified('firstname')) {
 			this.firstname = `${this.firstname?.trim()?.charAt(0)?.toUpperCase()}${this.firstname?.slice(1)?.toLowerCase()}`;
@@ -109,7 +108,7 @@ User.schema.addMethods({
 /**
  * Statics
  */
-User.schema.addStatics({
+schema.addStatics({
 	roles,
 
 	/**
@@ -191,7 +190,7 @@ User.schema.addStatics({
 
 
 
-User.schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function save(next) {
+schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function save(next) {
 	try {
 		this.sanitize();
 		return next();
@@ -200,8 +199,8 @@ User.schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|
 	}
 });
 
-User.schema.virtual('name').get(function () {
+schema.virtual('name').get(function () {
 	return `${this.firstname || ''}${this.firstname ? ' ' : ''}${this.lastname || ''}`;
 });
-// const User = mongoose.model('User', schema);
+const User = mongoose.model('User', schema);
 export default User;
