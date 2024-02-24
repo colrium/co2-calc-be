@@ -1,6 +1,7 @@
 /** @format */
 
 import GhgController from '../../base/GhgController.js';
+import ActivityType from '../../models/ghg/activityType.model.js';
 import Calculation from '../../models/ghg/calculation.model.js';
 import Domain from '../../models/ghg/domain.model.js';
 
@@ -59,7 +60,12 @@ class CalculationController extends GhgController {
 		const subjectQuery = await CalculationController.subjectFilter(req);
 		const q = { ...req.query, ...subjectQuery };
 		try {
-			const findQ = Calculation.parseQuery({...q})
+			const findQ = Calculation.parseQuery({...q});
+			const activityTypeDocs = await ActivityType.find({}).lean();
+			const activityTypeLabels = activityTypeDocs.reduce((acc, curr) => {
+				acc[curr.name] = curr.label;
+				return acc
+			}, {});
 			const docs = await findQ.lean().exec();
 			const data = docs.reduce(
 				(acc, curr) => {
@@ -67,7 +73,7 @@ class CalculationController extends GhgController {
 						byScope: { scope1 = 0, scope2 = 0, scope3us = 0, scope3ds = 0 },
 						byemissionType: { biogenic = 0, fossil = 0 },
 						activities={},
-						activityTypes: {}
+						activityTypes={}
 					} = {
 						byScope: {
 							scope1: 0,
@@ -94,7 +100,8 @@ class CalculationController extends GhgController {
 								if (Array.isArray(entry.section)) {
 									for (const activityType of entry.section) {
 										const currActivityTypeTotal = activityTypes[activityType] || 0;
-										activityTypes[activityType] = currActivityTypeTotal + entry.emission;
+										const activityTypeLabel = activityTypeLabels[activityType] || activityType;
+										activityTypes[activityTypeLabel] = currActivityTypeTotal + entry.emission;
 									}
 								}
 								
