@@ -22,6 +22,6 @@ router
 	 *
 	 * @apiSuccess {Object{}} overviews.
 	 */
-	.get(authorize(LOGGED_USER), validate(listResults), Controller.totals);
+	.get(authorize(LOGGED_USER), validate(listResults), Controller.overview);
 
 export default router;

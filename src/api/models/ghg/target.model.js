@@ -11,8 +11,9 @@ const Target = GhgModel.create(
 			required: true,
 			default: 0
 		},
-		deadline: {
+		targetDate: {
 			type: Date,
+			
 			required: true
 		},
 		domainId: {

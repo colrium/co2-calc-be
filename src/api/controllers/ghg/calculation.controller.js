@@ -50,7 +50,7 @@ class CalculationController extends GhgController {
 			next(error);
 		}
 	};
-	totals = async (req, res, next) => {
+	overview = async (req, res, next) => {
 		const user = req.user;
 		let userId = user?._id || user?.id;
 		if (user?.role === 'admin' && req.query?.userId) {
@@ -65,7 +65,9 @@ class CalculationController extends GhgController {
 				(acc, curr) => {
 					const {
 						byScope: { scope1 = 0, scope2 = 0, scope3us = 0, scope3ds = 0 },
-						byemissionType: { biogenic = 0, fossil = 0 }
+						byemissionType: { biogenic = 0, fossil = 0 },
+						activities={},
+						activityTypes: {}
 					} = {
 						byScope: {
 							scope1: 0,
@@ -83,6 +85,24 @@ class CalculationController extends GhgController {
 					if (typeof acc.yearly[curr.year] !== 'number' || isNaN(acc.yearly[curr.year])) {
 						acc.yearly[curr.year] = 0;
 					}
+					
+					if (curr.activities) {
+						for (const [scope, entries] of Object.entries(curr.activities)) {
+							for (const entry of entries) {
+								const currActivityTotal = activities[entry.name] || 0;
+								activities[entry.name] = currActivityTotal + entry.emission;
+								if (Array.isArray(entry.section)) {
+									for (const activityType of entry.section) {
+										const currActivityTypeTotal = activityTypes[activityType] || 0;
+										activityTypes[activityType] = currActivityTypeTotal + entry.emission;
+									}
+								}
+								
+							}
+						}
+						acc.activities = activities;
+						acc.activityTypes = activityTypes;
+					}
 					acc.scope.scope1 += scope1;
 					acc.scope.scope2 += scope2;
 					acc.scope.scope3us += scope3us;
@@ -91,9 +111,12 @@ class CalculationController extends GhgController {
 					acc.emissionType.fossil += fossil;
 					acc.yearly[curr.year] += resTotal;
 					acc.total += resTotal;
+					
 					return acc;
 				},
 				{
+					activities: {},
+					activityTypes: {},
 					yearly: {},
 					scope: { scope1: 0, scope2: 0, scope3us: 0, scope3ds: 0 },
 					emissionType: { biogenic: 0, fossil: 0 },
