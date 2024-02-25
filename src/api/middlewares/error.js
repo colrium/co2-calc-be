@@ -1,7 +1,7 @@
+import express from 'express';
 import httpStatus from "http-status";
 import { env } from "../../config/vars.js";
 import APIError from "../errors/api-error.js";
-
 /**
  * Error handler. Send stacktrace only during development
  * @public
