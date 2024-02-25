@@ -1,7 +1,7 @@
 /** @format */
 
 import ActivityType from "../../models/ghg/activityType.model.js";
-import seeds from "./seeds.json";
+import seeds from "./seeds.json" with { type: "json" };
 /** @format */
 
 

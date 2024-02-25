@@ -11,6 +11,11 @@
 		"yarn": "*"
 	},
 	"type": "module",
+	"exports": {
+		"./package.json": "./package.json",
+		"./api/*": "./src/api/*",
+		"./config/*": "./src/config/*"
+	},
 	"scripts": {
 		"seed": "node --experimental-modules ./src/api/seed/seeder.js",
 		"prestart": "yarn docs",
@@ -44,6 +49,7 @@
 		"cookie-parser": "^1.4.6",
 		"cors": "^2.8.3",
 		"cross-env": "^7.0.3",
+		"dayjs": "^1.11.10",
 		"dotenv-safe": "^8.2.0",
 		"email-templates": "^6.0.3",
 		"express": "^4.15.2",

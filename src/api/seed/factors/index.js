@@ -1,7 +1,7 @@
 /** @format */
 
 import Factor from "../../models/ghg/factor.model.js";
-import seeds from "./seeds.json";
+import seeds from "./seeds.json" with { type: "json" };
 /** @format */
 
 

@@ -2,7 +2,7 @@
 
 import { adminUser } from "../../../config/vars.js";
 import User from "../../models/user.model.js";
-import otherSeeds from "./seeds.json";
+import otherSeeds from "./seeds.json" with { type: "json" };
 
 const Context = User;
 const uniqueField = 'email';
