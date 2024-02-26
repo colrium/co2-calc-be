@@ -107,7 +107,7 @@ export default class GhgController {
 			const user = req.user;
 			let userId = user?._id || user?.id;
 			const subjectQuery = {
-				[subject]: user?.role === 'admin' && subject in req.query ? req.query[subject] : { $in: [userId] }
+				[subject]: user?.role === 'admin' && subject in req.query ? req.query[subject] : { $in: [userId, null] }
 			};
 			query = { ...req.query, ...subjectQuery };
 		} else if (typeof subjectFilter === 'function') {
