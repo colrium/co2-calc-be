@@ -110,8 +110,8 @@ export default class GhgController {
 				[subject]: user?.role === 'admin' && subject in req.query ? req.query[subject] : { $in: [userId] }
 			};
 			query = { ...req.query, ...subjectQuery };
-		} else if (typeof loadSubjectQuery === 'function') {
-			const listQuery = await loadSubjectQuery(req);
+		} else if (typeof subjectFilter === 'function') {
+			const listQuery = await subjectFilter(req);
 			query = { ...req.query, ...listQuery };
 		}
 		try {

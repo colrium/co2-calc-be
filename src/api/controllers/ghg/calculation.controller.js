@@ -8,7 +8,7 @@ import Domain from '../../models/ghg/domain.model.js';
 
 class CalculationController extends GhgController {
 	constructor() {
-		super({ model: Calculation });
+		super({ model: Calculation, subjectFilter: CalculationController.subjectFilter });
 	}
 	static subjectFilter = async (req) => {
 		const subject = 'domainId';
