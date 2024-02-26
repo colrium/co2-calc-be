@@ -18,7 +18,7 @@ router
 	 * @apiGroup ActivityType
 	 * @apiPermission admin
 	 *
-	 * @apiHeader {String} Authorization   ActivityType's access token
+	 * @apiHeader {String} Authorization  access token
 	 *
 	 * @apiParam  {Number{1-}}         [page=1]     List page
 	 * @apiParam  {Number{1-100}}      [perPage=1]  ActivityTypes per page

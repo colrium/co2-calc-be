@@ -45,7 +45,6 @@ router
 	 * @apiParam  {String}             email     Activity's email
 	 * @apiParam  {String{6..128}}     password  Activity's password
 	 * @apiParam  {String{..128}}      [name]    Activity's name
-	 * @apiParam  {String=activity,admin}  [role]    Activity's role
 	 *
 	 * @apiSuccess (Created 201) {String}  id         Activity's id
 	 * @apiSuccess (Created 201) {String}  name       Activity's name
