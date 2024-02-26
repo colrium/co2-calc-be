@@ -100,7 +100,7 @@ export default class GhgController {
 
 	list = async (req, res, next) => {
 		const ContextModel = this.model;
-		const loadSubjectQuery = this.subjectQuery;
+		const subjectFilter = this.subjectFilter;
 		let query = { ...req.query };
 		if (this.subjective) {
 			const subject = this.subject || 'userId';
