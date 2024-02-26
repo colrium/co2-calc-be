@@ -171,7 +171,7 @@ class CalculationController extends GhgController {
 					activityCount: activityCount
 				}
 			);
-			res.json(data);
+			res.json({...data, total: data.total.toFixed(3)});
 		} catch (error) {
 			next(error);
 		}
