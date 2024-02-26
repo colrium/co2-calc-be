@@ -5,7 +5,7 @@ import validate from "express-validation";
 import controller from "../../../controllers/ghg/calculation.controller.js";
 import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
 import validitions from "../../../validations/ghg/calculation.validation.js";
-const { createCalculation, listCalculations, replaceCalculation, updateCalculation } = validitions;
+const { create, list, replace, update } = validitions;
 const router = express.Router();
 
 router
@@ -28,7 +28,7 @@ router
 	 * @apiError (Unauthorized 401)  Unauthorized  Only authenticated calculations can access the data
 	 * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
 	 */
-	.get(authorize(LOGGED_USER), validate(listCalculations), controller.list)
+	.get(authorize(LOGGED_USER), validate(list), controller.list)
 	/**
 	 * @api {post} v1/calculations Create Calculation
 	 * @apiDescription Create a new calculation
@@ -46,15 +46,13 @@ router
 	 *
 	 * @apiSuccess (Created 201) {String}  id         Calculation's id
 	 * @apiSuccess (Created 201) {String}  name       Calculation's name
-	 * @apiSuccess (Created 201) {String}  email      Calculation's email
-	 * @apiSuccess (Created 201) {String}  role       Calculation's role
 	 * @apiSuccess (Created 201) {Date}    createdAt  Timestamp
 	 *
 	 * @apiError (Bad Request 400)   ValidationError  Some parameters may contain invalid values
 	 * @apiError (Unauthorized 401)  Unauthorized     Only authenticated calculations can create the data
 	 * @apiError (Forbidden 403)     Forbidden        Only admins can create the data
 	 */
-	.post(authorize(LOGGED_USER), validate(createCalculation), controller.create);
+	.post(authorize(LOGGED_USER), validate(create), controller.create);
 
 router
 	.route('/:id')
@@ -106,7 +104,7 @@ router
 	 * @apiError (Forbidden 403)    Forbidden    Only calculation with same id or admins can modify the data
 	 * @apiError (Not Found 404)    NotFound     Calculation does not exist
 	 */
-	.put(authorize(LOGGED_USER), validate(replaceCalculation), controller.replace)
+	.put(authorize(LOGGED_USER), validate(replace), controller.replace)
 	/**
 	 * @api {patch} v1/calculations/:id Update Calculation
 	 * @apiDescription Update some fields of a calculation document
@@ -134,7 +132,7 @@ router
 	 * @apiError (Forbidden 403)    Forbidden    Only calculation with same id or admins can modify the data
 	 * @apiError (Not Found 404)    NotFound     Calculation does not exist
 	 */
-	.patch(authorize(LOGGED_USER), validate(updateCalculation), controller.update)
+	.patch(authorize(LOGGED_USER), validate(update), controller.update)
 	/**
 	 * @api {patch} v1/calculations/:id Delete Calculation
 	 * @apiDescription Delete a calculation
