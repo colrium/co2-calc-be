@@ -6,7 +6,6 @@ import activityRoutes from "./ghg/activity.route.js";
 import activityTypeRoutes from "./ghg/activityType.route.js";
 import calculationRoutes from "./ghg/calculation.route.js";
 import domainRoutes from "./ghg/domain.route.js";
-import factorRoutes from "./ghg/factor.route.js";
 import helpRoutes from "./ghg/help.route.js";
 import industryRoutes from "./ghg/industry.route.js";
 import overViewRoutes from "./ghg/overview.route.js";
@@ -24,7 +23,6 @@ router.get('/status', (req, res) => res.send('OK'));
 router.use('/docs', express.static('docs'));
 //
 router.use('/overview', overViewRoutes);
-router.use('/factors', factorRoutes);
 router.use('/calculations', calculationRoutes);
 router.use('/activity-types', activityTypeRoutes);
 router.use('/activities', activityRoutes);

@@ -19,7 +19,9 @@
 	"scripts": {
 		"seed": "node --experimental-modules ./src/api/seed/seeder.js",
 		"prestart": "yarn docs",
-		"start": "cross-env NODE_ENV=production pm2 start",
+		"pm2": "cross-env NODE_ENV=production pm2 start ecosystem.config.cjs",
+		"start": "cross-env NODE_ENV=production forever start ./src/index.js",
+		"stop": "forever stop ./src/index.js",
 		"dev": "nodemon ./src/index.js",
 		"lint": "eslint ./src/ --ignore-path .gitignore --ignore-pattern internals/scripts",
 		"lint:fix": "yarn lint --fix",

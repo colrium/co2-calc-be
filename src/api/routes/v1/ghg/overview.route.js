@@ -11,16 +11,16 @@ const router = express.Router();
 router
 	.route('/')
 	/**
-	 * @api {get} v1/overview List Overviews
-	 * @apiDescription Get a list of overviews
+	 * @api {get} v1/overview Get Overview
+	 * @apiDescription Get a overview summary
 	 * @apiVersion 1.0.0
-	 * @apiName ListOverviews
+	 * @apiName GetOverview
 	 * @apiGroup Overview
-	 * @apiPermission admin
+	 * @apiPermission user
 	 *
 	 * @apiHeader {String} Authorization  access token
 	 *
-	 * @apiSuccess {Object{}} overviews.
+	 * @apiSuccess {Object} overviews.
 	 */
 	.get(authorize(LOGGED_USER), validate(listResults), Controller.overview);
 
