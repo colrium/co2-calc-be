@@ -15,7 +15,7 @@ class CalculationController extends GhgController {
 		const user = req.user;
 		let userId = user?._id || user?.id;
 		const domains = await Domain.find({
-			userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [null, userId] }
+			userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [userId] }
 		})
 			.lean()
 			.exec();
