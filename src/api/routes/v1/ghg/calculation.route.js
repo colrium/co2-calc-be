@@ -4,7 +4,9 @@ import express from "express";
 import validate from "express-validation";
 import controller from "../../../controllers/ghg/calculation.controller.js";
 import { LOGGED_USER, authorize } from "../../../middlewares/auth.js";
-import validitions from "../../../validations/ghg/calculation.validation.js";
+import validitions from '../../../validations/ghg/calculation.validation.js';
+
+
 const { create, list, replace, update } = validitions;
 const router = express.Router();
 

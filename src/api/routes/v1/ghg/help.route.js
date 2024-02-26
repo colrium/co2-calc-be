@@ -4,13 +4,13 @@ import express from "express";
 import validate from "express-validation";
 import controller from "../../../controllers/ghg/activityType.controller.js";
 import validitions from "../../../validations/ghg/activityType.validation.js";
-const { listHelpRecords } = validitions;
+const { list } = validitions;
 const router = express.Router();
 
 router
 	.route('/')
 	/**
-	 * @api {get} v1/activityTypes List HelpRecords
+	 * @api {get} v1/help List HelpRecords
 	 * @apiDescription Get a list of activityTypes
 	 * @apiVersion 1.0.0
 	 * @apiName ListHelpRecords
@@ -27,7 +27,7 @@ router
 	 *
 	 * @apiSuccess {Object[]} activityTypes List of activityTypes.
 	 */
-	.get(validate(listHelpRecords), controller.help);
+	.get(validate(list), controller.help);
 
 
     export default router;

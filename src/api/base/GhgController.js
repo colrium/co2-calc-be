@@ -40,7 +40,7 @@ export default class GhgController {
 							return ({ value: doc._id, label: label })
 						}));
 				}
-				const pathModel = console.log('path', Model);
+				
 			}
 		}
 		return lookups;

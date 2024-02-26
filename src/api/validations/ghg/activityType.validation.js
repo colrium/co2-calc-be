@@ -26,7 +26,7 @@ const getValidations = (list = false) => {
 
 export default {
 	// GET /v1/activityTypes
-	listActivityTypes: {
+	list: {
 		query: {
 			page: Joi.number().min(1),
 			perPage: Joi.number().min(1).max(10000),
@@ -35,31 +35,31 @@ export default {
 	},
 
 	// POST /v1/activityTypes
-	createActivityType: {
+	create: {
 		body: {
 			...getValidations()
 		}
 	},
 
-	// PUT /v1/activityTypes/:activityTypeId
-	replaceActivityType: {
+	// PUT /v1/activityTypes/:id
+	replace: {
 		body: {
 			...getValidations()
 		},
 		params: {
-			activityTypeId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}
 	},
 
-	// PATCH /v1/activityTypes/:activityTypeId
-	updateActivityType: {
+	// PATCH /v1/activityTypes/:id
+	update: {
 		body: {
 			...getValidations()
 		},
 		params: {
-			activityTypeId: Joi.string()
+			id: Joi.string()
 				.regex(/^[a-fA-F0-9]{24}$/)
 				.required()
 		}
