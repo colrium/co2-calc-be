@@ -14,11 +14,8 @@ class CalculationController extends GhgController {
 		const subject = 'domainId';
 		const user = req.user;
 		let userId = user?._id || user?.id;
-		const domains = await Domain.find({
-			userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [userId] }
-		})
-			.lean()
-			.exec();
+		const domainsQuery = { userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [userId] } };
+		const domains = await Domain.find(domainsQuery).lean().exec();
 		const subjectQuery = {
 			domainId: user?.role === 'admin' && 'domainId' in req.query ? req.query[subject] : { $in: domains.map(({ _id }) => _id) }
 		};
@@ -35,23 +32,16 @@ class CalculationController extends GhgController {
 		return subjectdata;
 	};
 
-	/* list = async (req, res, next) => {
-		const ContextModel = this.model;
-		const loadSubjectQuery = CalculationController.subjectFilter;
-		let query = { ...req.query };
-		const listQuery = await loadSubjectQuery(req);
-		query = { ...req.query, ...listQuery };
-		try {
-			const { page = 1, perPage = defaultPagination } = query;
-			const count = await ContextModel.count(query);
-			const docs = await ContextModel.list(query);
-			const data = docs.map((doc) => doc.transform());
-			const pages = Math.ceil(count / perPage);
-			res.json({ data: data, pages: pages, page, perPage, count });
-		} catch (error) {
-			next(error);
+	getLookupQueries = async (req) => {
+		const user = req.user;
+		let userId = user?._id || user?.id;
+		const domains = await Domain.find({
+			userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [userId] }
+		});
+		return {
+			domainId: {$in: domains.map(({_id}) => _id)}
 		}
-	}; */
+	};
 	overview = async (req, res, next) => {
 		const user = req.user;
 		let userId = user?._id || user?.id;
@@ -171,7 +161,7 @@ class CalculationController extends GhgController {
 					activityCount: activityCount
 				}
 			);
-			res.json({...data, total: data.total.toFixed(3)});
+			res.json({...data, total: parseFloat(data.total.toFixed(3))});
 		} catch (error) {
 			next(error);
 		}

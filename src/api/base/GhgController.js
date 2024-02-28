@@ -3,6 +3,7 @@
 import httpStatus from "http-status";
 import lodash from "lodash";
 import mongoose from 'mongoose';
+import pluralize from "pluralize";
 import { defaultPagination } from "../../config/vars.js";
 const { omit } = lodash;
 
@@ -23,22 +24,33 @@ export default class GhgController {
 	}
 	loadLookups = async (req) => {
 		const paths = this.model.schema.paths;
+		const user = req.user;
+		let userId = user?._id || user?.id;
+		const lookupQueries = {
+			...(typeof this.getLookupQueries === 'function' ? await this.getLookupQueries(req) : { ...this.lookupQueries })
+		};
 		const lookups = {};
 		for (const [name, path] of Object.entries(paths)) {
 			if (path instanceof mongoose.Schema.Types.ObjectId && name !== '_id') {
 				const modelName = path.options.ref;
 				const displayValue = path.options.displayValue || 'name';
+				const foreignKey = path.options.foreignKey || '_id';
 				const Model = mongoose.model(modelName);
+
 				if (Model) {
-					lookups[modelName] = await Model.find({}).then((docs) => docs.map((doc) => {
+					const lookupName = pluralize(modelName);
+					const lookupQuery = name in lookupQueries ? { [foreignKey]: lookupQueries[name] } : {};
+					lookups[lookupName] = await Model.find(lookupQuery).then((docs) =>
+						docs.map((doc) => {
 							let labelParts = displayValue.split(' ');
 							let label = '';
 							for (const labelPart of labelParts) {
 								label += ` ${doc[labelPart]}`;
 							}
 							label = label.trim();
-							return ({ value: doc._id, label: label })
-						}));
+							return { value: doc[foreignKey], label: label };
+						})
+					);
 				}
 				
 			}
@@ -81,10 +93,10 @@ export default class GhgController {
 			const user = req.user;
 			let userId = user?._id || user?.id;
 			const subjectdata =
-				typeof this.subject === 'function'
-					? this.subject(req)
+				typeof this.subjectData === 'function'
+					? await this.subjectData(req)
 					: {
-							[subject]: user?.role === 'admin' && subject in req.body ? req.query[subject] : userId
+							[subject]: user?.role === 'admin' && subject in req.body ? req.body[subject] : userId
 					  };
 			data = { ...data, ...subjectdata };
 		}
@@ -97,6 +109,7 @@ export default class GhgController {
 			next(error);
 		}
 	};
+
 
 	list = async (req, res, next) => {
 		const ContextModel = this.model;
