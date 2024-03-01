@@ -86,21 +86,21 @@ export default class GhgController {
 			return res.status(error.status || httpStatus.INTERNAL_SERVER_ERROR).json(error);
 		}
 	};
-	create = async (req, res, next) => {
-		let data = { ...req.body };
-		if (this.subjective) {
-			const subject = this.subject || 'userId';
-			const user = req.user;
-			let userId = user?._id || user?.id;
-			const subjectdata =
-				typeof this.subjectData === 'function'
-					? await this.subjectData(req)
-					: {
-							[subject]: user?.role === 'admin' && subject in req.body ? req.body[subject] : userId
-					  };
-			data = { ...data, ...subjectdata };
-		}
+	create = async (req, res, next) => {		
 		try {
+			let data = { ...req.body };
+			if (this.subjective) {
+				const subject = this.subject || 'userId';
+				const user = req.user;
+				let userId = user?._id || user?.id;
+				const subjectdata =
+					typeof this.subjectData === 'function'
+						? await this.subjectData(req)
+						: {
+								[subject]: user?.role === 'admin' ? (subject in req.body ? req.body[subject] : {userId}) : userId
+						  };
+				data = { ...data, ...subjectdata };
+			}
 			const doc = new this.model(data);
 			const savedDoc = await doc.save();
 			res.status(httpStatus.CREATED);

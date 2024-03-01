@@ -60,7 +60,7 @@ router
 	.post(authorize(LOGGED_USER), validate(create), controller.create);
 
 router
-	.route('/:activityTypeId')
+	.route('/:id')
 	/**
 	 * @api {get} v1/activity-types/:id Get ActivityType
 	 * @apiDescription Get activityType information
