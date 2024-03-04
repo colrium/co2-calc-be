@@ -39,7 +39,7 @@ export class GhgSchema extends mongoose.Schema {
 		const paths = Object.values(this.paths);
 		const excludedPathnames = paths.reduce(
 			(acc, curr, index) => {
-				if (curr.internal) {
+				if (curr.internal || curr.private) {
 					acc.push(pathnames[index]);
 				}
 				return acc;
@@ -116,24 +116,27 @@ export class GhgSchema extends mongoose.Schema {
 				}
 				if (lookup) {
 					const lookups = this.schema.lookups;
-					for (const { foreignField, localField, ref, virtualField, displayField } of lookups) {
-						findQ = findQ.populate({
-							path: virtualField,
-							select: `${displayField}`,
-							transform: (doc, id) => {
-								if (!doc) {
-									return id;
+					if (Array.isArray(lookups)) {
+						for (const { foreignField, localField, ref, virtualField, displayField } of lookups) {
+							findQ = findQ.populate({
+								path: virtualField,
+								select: `${displayField}`,
+								transform: (doc, id) => {
+									if (!doc) {
+										return id;
+									}
+									return displayField
+										.split(' ')
+										.reduce((acc, key) => {
+											acc += doc[key] ? ' ' + doc[key] : '';
+											return acc;
+										}, '')
+										.trim();
 								}
-								return displayField
-									.split(' ')
-									.reduce((acc, key) => {
-										acc += doc[key] ? ' ' + doc[key] : '';
-										return acc;
-									}, '')
-									.trim();
-							}
-						});
+							});
+						}
 					}
+					
 				}
 				if (typeof select === 'string') {
 					findQ = findQ.select(select.replaceAll(',', ' '));

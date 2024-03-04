@@ -8,7 +8,7 @@ export default {
   listUsers: {
     query: {
       page: Joi.number().min(1),
-      perPage: Joi.number().min(1).max(100),
+      perPage: Joi.number().min(1).max(10000),
       name: Joi.string(),
       email: Joi.string(),
       role: Joi.string().valid(User.roles),
@@ -25,7 +25,7 @@ export default {
     },
   },
 
-  // PUT /v1/users/:userId
+  // PUT /v1/users/:id
   replaceUser: {
     body: {
       email: Joi.string().email().required(),
@@ -34,11 +34,11 @@ export default {
       role: Joi.string().valid(User.roles),
     },
     params: {
-      userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/).required(),
+      id: Joi.string().regex(/^[a-fA-F0-9]{24}$/).required(),
     },
   },
 
-  // PATCH /v1/users/:userId
+  // PATCH /v1/users/:id
   updateUser: {
     body: {
       email: Joi.string().email(),
@@ -47,7 +47,7 @@ export default {
       role: Joi.string().valid(User.roles),
     },
     params: {
-      userId: Joi.string().regex(/^[a-fA-F0-9]{24}$/).required(),
+      id: Joi.string().regex(/^[a-fA-F0-9]{24}$/).required(),
     },
   },
 };

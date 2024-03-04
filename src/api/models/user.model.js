@@ -19,7 +19,8 @@ const roles = ['user', 'admin'];
  * User Schema
  * @private
  */
-const schema = new GhgSchema({
+const schema = new GhgSchema(
+	{
 		email: {
 			type: String,
 			match: /^\S+@\S+\.\S+$/,
@@ -32,7 +33,8 @@ const schema = new GhgSchema({
 			type: String,
 			required: true,
 			minlength: 6,
-			internal: true
+			internal: true,
+			private: true
 		},
 		firstname: {
 			type: String,
