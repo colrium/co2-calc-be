@@ -10,6 +10,13 @@ export const reservedWords = ['perPage', 'page', 'sort', 'sortDir', 'select', 'p
 export const omitReservedKeys = (q) => {
 	return omit({ ...q }, reservedWords);
 };
+export const deleteAtPath = (obj, path, index) => {
+	if (index === path.length - 1) {
+		delete obj[path[index]];
+		return;
+	}
+	deleteAtPath(obj[path[index]], path, index + 1);
+};
 export const evalSoftLookups = async (model) => {
 	const paths = model.schema.paths;
 	const lookups = {};
@@ -39,7 +46,7 @@ export class GhgSchema extends mongoose.Schema {
 		const paths = Object.values(this.paths);
 		const excludedPathnames = paths.reduce(
 			(acc, curr, index) => {
-				if (curr.internal || curr.private) {
+				if (curr.options.internal || curr.options.private) {
 					acc.push(pathnames[index]);
 				}
 				return acc;
@@ -51,13 +58,13 @@ export class GhgSchema extends mongoose.Schema {
 		this.method({
 			transform() {
 				const json = this.toJSON();
-				const transformed = {};
-				const fields = ['id', ...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
+				const transformed = { id: json._id };
+				const fields = [...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
 				
 				fields.forEach((field) => {
-					transformed[field] = this[field];
+					transformed[field] = json[field];
 				});
-				const data = { ...json, ...transformed };
+				const data = transformed;
 				delete data.__v;
 				delete data._id;
 				return data;
@@ -204,6 +211,7 @@ export class GhgSchema extends mongoose.Schema {
 }
 class GhgModel {
 	static create(name, ...args) {
+		const [paths, options = {}, ...rest] = args;
 		const schema = new GhgSchema(...args);
 		
 		const lookups = [];
@@ -227,14 +235,38 @@ class GhgModel {
 				}
 			}
 		}
-		const model = mongoose.model(name, schema);
 		schema.set('toObject', { virtuals: true });
-		schema.set('toJSON', { virtuals: true });
 		for (const { virtualField, ...lookup } of lookups) {
 			schema.virtual(virtualField, lookup);
 		}
+		
 		schema.lookups = lookups;
 		schema.lookupFields = lookupFields;
+		
+		const model = mongoose.model(name, schema);
+		const toJSON = schema.options.toJSON;
+		const jsonTransformer = schema.options.toJSON?.transform;
+		schema.set('toJSON', {
+			virtuals: true,
+			transform: function (doc, ret, options) {
+				ret.id = ret._id.toString();
+				const vPathsToOmit = Object.keys(schema.virtuals)
+					.filter((vPath) => /^[A-Z]/.test(vPath))
+					.map((vPathToDelete) => vPathToDelete);
+				const privatePathnames = Object.entries(schema.paths)
+					.filter(([, pProps]) => pProps?.options?.private || pProps?.options?.internal)
+					.map(([pName]) => pName);
+
+				vPathsToOmit.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+				privatePathnames.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+				delete ret._id;
+				delete ret.__v;
+				if (jsonTransformer) {
+					jsonTransformer(doc, ret, options);
+				}
+			}
+		});
+		
 		
 		
 		return model;
