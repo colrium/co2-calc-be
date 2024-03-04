@@ -58,7 +58,7 @@ export class GhgSchema extends mongoose.Schema {
 		this.method({
 			transform() {
 				const json = this.toJSON();
-				const transformed = { id: json._id };
+				const transformed = { id: json._id || json.id };
 				const fields = [...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
 				
 				fields.forEach((field) => {
@@ -259,11 +259,13 @@ class GhgModel {
 
 				vPathsToOmit.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
 				privatePathnames.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+
 				delete ret._id;
 				delete ret.__v;
 				if (jsonTransformer) {
-					jsonTransformer(doc, ret, options);
+					return jsonTransformer(doc, ret, options);
 				}
+				return ret
 			}
 		});
 		
