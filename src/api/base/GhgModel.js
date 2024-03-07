@@ -37,13 +37,48 @@ export class GhgSchema extends mongoose.Schema {
 		super(...args);
 		this.initGhgMethods = this.initGhgMethods.bind(this);
 		this.initGhgStatics = this.initGhgStatics.bind(this);
+		this.initVirtuals = this.initVirtuals.bind(this);
 		this.initGhgMethods();
 		this.initGhgStatics();
+		this.initVirtuals();
+	}
+
+	initVirtuals(){
+		const { transform: jsonTransformer, ...toJSON } = { ...this.options.toJSON };
+		this.set('toJSON', {
+			virtuals: true,
+			getters: true,
+			...toJSON,
+			transform: function (model, ret, options) {
+				ret.id = ret._id.toString();
+				const virtualPaths = model.schema.virtuals;
+				const vPaths = Object.entries(virtualPaths)
+					.filter(([vPathName, vPath]) => !(vPath.private || vPath.internal))
+					.map(([vPathName]) => vPathName);
+				const privatePathnames = Object.entries(model.schema.paths)
+					.filter(([, pProps]) => pProps?.options?.private || pProps?.options?.internal)
+					.map(([pName]) => pName);
+
+				// vPaths.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+				vPaths.forEach((vPathName) => {
+					ret[vPathName] = ret[vPathName];
+				});
+				privatePathnames.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+
+				delete ret._id;
+				delete ret.__v;
+				if (jsonTransformer) {
+					return jsonTransformer(model, ret, options);
+				}
+				return ret;
+			}
+		});
 	}
 
 	initGhgMethods() {
 		const pathnames = Object.keys(this.paths);
 		const paths = Object.values(this.paths);
+		const virtuals = Object.values(this.virtuals);
 		const excludedPathnames = paths.reduce(
 			(acc, curr, index) => {
 				if (curr.options.internal || curr.options.private) {
@@ -58,7 +93,8 @@ export class GhgSchema extends mongoose.Schema {
 		this.method({
 			transform() {
 				const json = this.toJSON();
-				const transformed = { id: json._id || json.id };
+				
+				const transformed = { id: json._id || json.id, ...json };
 				const fields = [...pathnames.filter((pathname) => !excludedPathnames.includes(pathname))];
 				
 				fields.forEach((field) => {
@@ -244,30 +280,35 @@ class GhgModel {
 		schema.lookupFields = lookupFields;
 		
 		const model = mongoose.model(name, schema);
-		const toJSON = schema.options.toJSON;
-		const jsonTransformer = schema.options.toJSON?.transform;
+		/* const { transform: jsonTransformer, ...toJSON } = {...schema.options.toJSON};
 		schema.set('toJSON', {
 			virtuals: true,
-			transform: function (doc, ret, options) {
+			getters: true,
+			...toJSON,
+			transform: function (model, ret, options) {
 				ret.id = ret._id.toString();
-				const vPathsToOmit = Object.keys(schema.virtuals)
-					.filter((vPath) => /^[A-Z]/.test(vPath))
-					.map((vPathToDelete) => vPathToDelete);
-				const privatePathnames = Object.entries(schema.paths)
+				const virtualPaths = model.schema.virtuals;
+				const vPaths = Object.entries(virtualPaths)
+					.filter(([vPathName, vPath]) => !(vPath.private || vPath.internal))
+					.map(([vPathName]) => vPathName);
+				const privatePathnames = Object.entries(model.schema.paths)
 					.filter(([, pProps]) => pProps?.options?.private || pProps?.options?.internal)
 					.map(([pName]) => pName);
 
-				vPathsToOmit.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+				// vPaths.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
+				vPaths.forEach((vPathName) => {
+					ret[vPathName] = ret[vPathName];
+				});
 				privatePathnames.forEach((pName) => deleteAtPath(ret, pName.split('.'), 0));
 
 				delete ret._id;
 				delete ret.__v;
 				if (jsonTransformer) {
-					return jsonTransformer(doc, ret, options);
+					return jsonTransformer(model, ret, options);
 				}
 				return ret
 			}
-		});
+		}); */
 		
 		
 		

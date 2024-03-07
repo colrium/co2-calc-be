@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import GhgModel from "../../base/GhgModel.js";
 
 const Activity = GhgModel.create(
-	'Activity',
+	'activity',
 	{
 		name: {
 			type: String,
