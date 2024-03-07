@@ -187,13 +187,55 @@ schema.addStatics({
 			name,
 			picture
 		});
+	},
+	sanitize: function (doc) {
+		const isNew = this.model?.isNew || this.isNew;
+		const update = this.getUpdate?.();
+		const updateSet = this.getUpdate?.();
+		const modifiedPaths = this.modifiedPaths?.();
+		const modifiedFields = Object.keys(this.getUpdate?.()?.$set || this.getUpdate?.() || this.modifiedPaths?.() || {});
+		if (modifiedFields.includes('firstname')) {
+			this.firstname = `${this.firstname?.trim()?.charAt(0)?.toUpperCase()}${this.firstname?.slice(1)?.toLowerCase()}`;
+		}
+		if (modifiedFields.includes('lastname')) {
+			this.lastname = `${this.lastname?.trim()?.charAt(0)?.toUpperCase()}${this.lastname?.slice(1)?.toLowerCase()}`;
+		}
+		if (modifiedFields.includes('password')) {
+			const rounds = env === 'test' ? 1 : 10;
+			const hash = bcrypt.hashSync(this.password, rounds);
+			this.password = hash;
+		}
+	},
+	token() {
+		const payload = {
+			exp: moment().add(jwtExpirationInterval, 'minutes').unix(),
+			iat: moment().unix(),
+			sub: this._id
+		};
+		return jwt.encode(payload, jwtSecret);
+	},
+
+	async passwordMatches(password) {
+		return bcrypt.compare(password, this.password);
 	}
 });
 
-
-
-schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function save(next) {
+schema.pre(/^(findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|update)$/, async function(...args) {
+	const [next] = args;
 	try {
+		const doc = this;
+		const modifiedFields = this.getUpdate();
+		this.model.sanitize.apply(this);
+		// return next();
+	} catch (error) {
+		return next(error);
+	}
+});
+
+schema.pre(/^(save)$/, async function save(next) {
+	try {
+		const doc = this;
+		const modifiedPaths = this.modifiedPaths();
 		this.sanitize();
 		return next();
 	} catch (error) {
@@ -201,8 +243,11 @@ schema.pre(/^(save|findOneAndUpdate|findOneAndReplace|updateOne|replaceOne|updat
 	}
 });
 
+const User = mongoose.model('User', schema);
+
+
+
 schema.virtual('name').get(function () {
 	return `${this.firstname || ''}${this.firstname ? ' ' : ''}${this.lastname || ''}`;
 });
-const User = mongoose.model('User', schema);
 export default User;

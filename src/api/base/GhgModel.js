@@ -199,7 +199,7 @@ export class GhgSchema extends mongoose.Schema {
 				const results = await findQuery.exec();
 				return await results;
 			},
-			count({ page = 1, perPage = defaultPagination, sort, sortDir, select, populate, shallowPopulate, lean, ...query }) {
+			count({ page = 1, perPage = defaultPagination, sort, sortDir, select, populate, shallowPopulate, lean, lookups, lookup, ...query }) {
 				const findQuery = omitReservedKeys(query);
 				const options = Object.entries(findQuery).reduce((acc, [key, value]) => {
 					try {
