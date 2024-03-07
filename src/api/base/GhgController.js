@@ -129,11 +129,16 @@ export default class GhgController {
 		}
 		try {
 			const { page = 1, perPage = defaultPagination } = query;
+
 			const count = await ContextModel.count(query);
 			const docs = await ContextModel.list(query);
 			const data = docs.map((doc) => doc.transform());
 			const pages = Math.ceil(count / perPage);
-			res.json({ data: data, pages: pages, page, perPage, count });
+			const response = { data: data, pages: pages, page, perPage, count };
+			if (Boolean(req.query.lookups)) {
+				response.lookups = await this.loadLookups(req);
+			}
+			res.json(response);
 		} catch (error) {
 			next(error);
 		}

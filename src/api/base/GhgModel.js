@@ -141,7 +141,7 @@ export class GhgSchema extends mongoose.Schema {
 				select,
 				populate = null,
 				lookup = false,
-
+				lookups,
 				...query
 			}) {
 				const findQuery = omitReservedKeys(query);
