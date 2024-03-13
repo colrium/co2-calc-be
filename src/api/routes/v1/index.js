@@ -9,6 +9,7 @@ import domainRoutes from "./ghg/domain.route.js";
 import helpRoutes from "./ghg/help.route.js";
 import industryRoutes from "./ghg/industry.route.js";
 import overViewRoutes from "./ghg/overview.route.js";
+import targetRoutes from './ghg/target.route.js';
 //
 const router = express.Router();
 
@@ -29,6 +30,7 @@ router.use('/activities', activityRoutes);
 router.use('/industries', industryRoutes);
 router.use('/domains', domainRoutes);
 router.use('/help', helpRoutes);
+router.use('/targets', targetRoutes);
 
 
 router.use('/users', userRoutes);

@@ -14,7 +14,7 @@ const Target = GhgModel.create(
 		targetDate: {
 			type: Date,
 			
-			required: true
+			default: Date.now
 		},
 		domainId: {
 			type: mongoose.Schema.Types.ObjectId,
