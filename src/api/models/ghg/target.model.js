@@ -1,5 +1,6 @@
 /** @format */
 
+import dayjs from "dayjs";
 import mongoose from "mongoose";
 import GhgModel from "../../base/GhgModel.js";
 
@@ -11,10 +12,9 @@ const Target = GhgModel.create(
 			required: true,
 			default: 0
 		},
-		targetDate: {
-			type: Date,
-			
-			default: Date.now
+		year: {
+			type: Number,			
+			default: dayjs().year()
 		},
 		domainId: {
 			type: mongoose.Schema.Types.ObjectId,

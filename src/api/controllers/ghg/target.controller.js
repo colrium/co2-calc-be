@@ -9,7 +9,7 @@ const Context = Target;
 
 class TargetController extends GhgController {
 	constructor() {
-		super({ model: Context, subjectFilter: TargetController.subjectFilter  });
+		super({ model: Context, subjectFilter: TargetController.subjectFilter });
 	}
 	static subjectFilter = async (req) => {
 		const subject = 'domainId';
@@ -22,7 +22,16 @@ class TargetController extends GhgController {
 		};
 		return subjectQuery;
 	};
-
+	getLookupQueries = async (req) => {
+		const user = req.user;
+		let userId = user?._id || user?.id;
+		const domains = await Domain.find({
+			userId: user?.role === 'admin' && 'userId' in req.query ? req.query[subject] : { $in: [userId] }
+		});
+		return {
+			domainId: { $in: domains.map(({ _id }) => _id) }
+		};
+	};
 }
 
 export default new TargetController();
