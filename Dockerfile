@@ -14,5 +14,5 @@ RUN yarn global add pm2 nodemon
 RUN yarn --pure-lockfile
 ADD . /app
 RUN yarn docs
-RUN yarn seed
+# RUN yarn seed
 CMD ["yarn", "docker:start"]
