@@ -1,10 +1,11 @@
 # FROM node:8-alpine
 FROM node
 
-EXPOSE 5000
+EXPOSE 80
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
+ENV PORT 80
 
 RUN mkdir /app
 WORKDIR /app
